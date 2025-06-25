@@ -6,8 +6,8 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Xieyuanli Chen"
-description              : "Associate Professor at NUDT"
+title                    : "Shijie Li"
+description              : "Scientist at A*STAR"
 repository               : "Chen-Xieyuanli/Chen-Xieyuanli.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -22,15 +22,15 @@ baidu_site_verification  : code-ZxFK3f4pfb
     
 # Site Author
 author:
-  name             : "Xieyuanli Chen"
-  avatar           : "images/my-photo-new.png"
-  bio              : "陈谢沅澧"
-  location         : "China"
+  name             : "Shijie Li"
+  avatar           : "images/my-photo-new.jpg"
+  bio              : "李仕杰"
+  location         : "Singapore"
   employer         :
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=DvrngV4AAAAJ"
-  email            : "xieyuanli.chen@hotmail.com"
-  researchgate     : "https://www.researchgate.net/profile/Xieyuanli-Chen"
+  googlescholar    : "https://scholar.google.com/citations?user=kl3niOYAAAAJ&hl=en"
+  email            : "Li_Shijie@i2r.a-star.edu.sg"
+  researchgate     : 
   uri              :
   bitbucket        :
   codepen          :
@@ -38,13 +38,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "Chen-Xieyuanli"
+  github           : "sj-li"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : 
+  linkedin         : "https://www.linkedin.com/in/shijie-li-0000000000/"
   dblp             : #"https://dblp.org/pid/207/2256.html"
   orcid            : #"https://orcid.org/my-orcid?orcid=0000-0003-0955-6681"
   pinterest        :

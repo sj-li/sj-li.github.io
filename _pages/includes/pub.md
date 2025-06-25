@@ -2,11 +2,17 @@
 
 # 📝 Publications
 ##  2025
-- [RING#: PR-by-PE Global Localization with Roto-translation Equivariant Gram Learning](https://arxiv.org/abs/2409.00206) [[PDF]](https://arxiv.org/pdf/2409.00206)  [![](https://img.shields.io/github/stars/lus6-Jenny/RINGSharp?style=social&label=Code+Stars)](https://github.com/lus6-Jenny/RINGSharp)
+- [Global-Aware Monocular Semantic Scene Completion with State Space Models](https://arxiv.org/pdf/2503.06569) [[PDF]](https://arxiv.org/pdf/2503.06569)  [![](https://img.shields.io/github/stars/lus6-Jenny/RINGSharp?style=social&label=Code+Stars)](https://github.com/lus6-Jenny/RINGSharp)
 
-  *IEEE Transactions on Robotics (**T-RO**)*
+  *International Conference on Computer Vision (**ICCV**)*
   
-  Sha Lu, Xuecheng Xu, Yuxuan Wu, Haojian Lu, **<u>Xieyuanli Chen</u>**, Rong Xiong, Yue Wang
+  **<u>Shijie Li</u>**, Zhongyao Cheng, Rong Li, Shuai Li, Juergen Gall, Xun Xu, Xulei Yang
+
+- [Future-Aware Interaction Network For Motion Forecasting](https://arxiv.org/pdf/2503.06565) [[PDF]](https://arxiv.org/pdf/2503.06565)  [![](https://img.shields.io/github/stars/lus6-Jenny/RINGSharp?style=social&label=Code+Stars)](https://github.com/lus6-Jenny/RINGSharp)
+
+  *International Conference on Computer Vision (**ICCV**)*
+  
+  **<u>Shijie Li</u>**, Xun Xu, Si Yong Yeo, Xulei Yang
 
  - [SegNet4D: Efficient Instance-Aware 4D Semantic Segmentation for LiDAR Point Cloud](https://ieeexplore.ieee.org/abstract/document/10993479/) [[PDF]](https://ieeexplore.ieee.org/abstract/document/10993479/)  [![](https://img.shields.io/github/stars/nubot-nudt/SegNet4D?style=social&label=Code+Stars)](https://github.com/nubot-nudt/SegNet4D)
 

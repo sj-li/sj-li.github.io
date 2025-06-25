@@ -4,13 +4,13 @@
 ##  2025
 - [Global-Aware Monocular Semantic Scene Completion with State Space Models](https://arxiv.org/pdf/2503.06569) [[PDF]](https://arxiv.org/pdf/2503.06569)  [![](https://img.shields.io/github/stars/lus6-Jenny/RINGSharp?style=social&label=Code+Stars)](https://github.com/lus6-Jenny/RINGSharp)
 
-  *International Conference on Computer Vision (**ICCV**)*
+  *IEEE/CVF International Conference on Computer Vision (**ICCV**)*
   
   **<u>Shijie Li</u>**, Zhongyao Cheng, Rong Li, Shuai Li, Juergen Gall, Xun Xu, Xulei Yang
 
 - [Future-Aware Interaction Network For Motion Forecasting](https://arxiv.org/pdf/2503.06565) [[PDF]](https://arxiv.org/pdf/2503.06565)  [![](https://img.shields.io/github/stars/lus6-Jenny/RINGSharp?style=social&label=Code+Stars)](https://github.com/lus6-Jenny/RINGSharp)
 
-  *International Conference on Computer Vision (**ICCV**)*
+  *IEEE/CVF International Conference on Computer Vision (**ICCV**)*
   
   **<u>Shijie Li</u>**, Xun Xu, Si Yong Yeo, Xulei Yang
 

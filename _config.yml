@@ -8,11 +8,11 @@
 # Site Settings
 title                    : "Shijie Li"
 description              : "Scientist at A*STAR"
-repository               : "Chen-Xieyuanli/Chen-Xieyuanli.github.io"
+repository               : "sj-li/sj-li.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
-google_analytics_id      : G-SWFCX99KQZ
+google_analytics_id      : G-SWFCX99KQZ # TODO_me: add google analytics id
 
 # SEO Related
 google_site_verification : b_BbOIt7d513ZXYDw-YRMicO6O5tthYiouqWDdWjGTU

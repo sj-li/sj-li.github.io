@@ -1,17 +1,38 @@
 <span id="educations"></span>
 
 # 📖 Educations
-- **2018.09 - 2022.08**, Dr.‑Ing., University of Bonn,  ‑ <strong>summa cum laude</strong> (with distinction, best possible grade)<br>
-  _Bonn, Germany, SUPERVISOR: Prof. Dr. Cyrill Stachniss_<br>
-  THESIS: LiDAR‑Based Semantic Perception for Autonomous Vehicles
 
-- **2015.09 - 2017.12**, M.S. in Robotics, National University of Defense Technology<br>
-  _Hunan, China, SUPERVISOR: Prof. Dr. Hui Zhang_<br>
-  THESIS: Binary Visual Feature‑based Monocular SLAM
 
-- **2011.09 - 2015.07**, B.S. in Electrical Engineering and Automation, Hunan University<br>
-  _Hunan, China, SUPERVISOR: Prof. Dr. Jianhao Tan_<br>
-  THESIS: Control for a Quadrotor UVA
+<div style="display: flex; justify-content: space-between; gap: 40px; margin: 24px 0;">
+
+  <div style="display: flex; align-items: center; flex: 1;">
+    <img src="https://sj-li.github.io/images/logos/uni_bonn.jpeg" alt="UniBonn" style="height: 3em; margin-right: 10px;">
+    <div>
+      <strong>2019.10 ‑ 2024.4</strong> PhD, supervised by Prof. Dr. Juergen Gall<br>
+      <span style="font-size: 90%;">University of Bonn @ Bonn, Germany</span>
+    </div>
+  </div>
+
+  <!-- 右侧经历 -->
+  <div style="display: flex; align-items: center; flex: 1;">
+    <img src="https://sj-li.github.io/images/logos/nankai.png" alt="Nankai" style="height: 3em; margin-right: 10px;">
+    <div>
+      <strong>2016.09 ‑ 2019.06</strong> Master, supervised by Prof. Dr Ming-Ming Cheng<br>
+      <span style="font-size: 90%;">Nankai University @ Tianjin, China</span>
+    </div>
+  </div>
+
+</div>
+
+  <div style="display: flex; align-items: center; flex: 1;">
+    <img src="https://sj-li.github.io/images/logos/uestc.png" alt="UESTC" style="height: 3em; margin-right: 10px;">
+    <div>
+      <strong>2019.10 ‑ 2024.4</strong> Bachlor, supervised by Prof. Dr. Hong Cheng<br>
+      <span style="font-size: 90%;">University of Electronic Science and Technology of China @ Chengdu, Germany</span>
+    </div>
+  </div>
+
+
 
 <span id="experience"></span>
 # 👨‍🔧 Working Experience
@@ -23,7 +44,7 @@
     <img src="https://sj-li.github.io/images/logos/astar.jpeg" alt="A*STAR" style="height: 3em; margin-right: 10px;">
     <div>
       <strong>2024.03 ‑ Present</strong> Scientist<br>
-      <span style="font-size: 90%;">Agency for Science, Technology and Research (A*STAR)</span>
+      <span style="font-size: 90%;">Agency for Science, Technology and Research (A*STAR) @ Singapore</span>
     </div>
   </div>
 

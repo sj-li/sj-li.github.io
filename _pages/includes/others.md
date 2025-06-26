@@ -27,7 +27,7 @@
 
   ## WORKING EXPERIENCE
 <div style="display: flex; align-items: center; line-height: 1.2; margin: 0;">
-  <img src="https://sj-li.github.io/images/logos/astar" alt="A*STAR" style="height: 1.5em; margin-right: 8px;">
+  <img src="https://sj-li.github.io/images/logos/astar.jepg" alt="A*STAR" style="height: 1.5em; margin-right: 8px;">
   <div>
     <strong>2022.12 ‑ Present</strong> Associate Professor<br>
     <span style="font-size: 90%;">

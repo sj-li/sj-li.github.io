@@ -1,8 +1,8 @@
 <span id="experience"></span>
 
-# Experience
+# 📖 Experience
 
-## 📖 Educations
+##  Educations
 
 
 <div style="display: flex; justify-content: space-between; gap: 40px; margin: 24px 0;">
@@ -40,7 +40,7 @@
 
 
 <span id="experience"></span>
-## 👨‍🔧 Working Experience
+## Working Experience
 
 
 <div style="display: flex; justify-content: space-between; gap: 40px; margin: 24px 0;">

@@ -15,26 +15,7 @@
 
 <span id="experience"></span>
 # 👨‍🔧 Working Experience
-<!-- ## ACADEMIC WORKING EXPERIENCE
-- <p style="margin: 0; line-height: 1.2;">
-  <strong>2022.12 ‑ Present</strong> Associate Professor<br>
-  <span style="font-size: 90%;">National University of Defense Technology </span>
-  </p>
-- <p style="margin: 0; line-height: 1.2;">
-  <strong>2019.09 ‑ 2022.09</strong> Research Assistant<br>
-  <span style="font-size: 90%;">University of Bonn </span>
-  </p> -->
 
-  <!-- ## WORKING EXPERIENCE -->
-<!-- <div style="display: flex; align-items: center; line-height: 1.2; margin: 0;">
-  <img src="https://sj-li.github.io/images/logos/astar.jpeg" alt="A*STAR" style="height: 3em; margin-right: 8px;">
-  <div>
-    <strong>2024.3 ‑ Present</strong> Scientist<br>
-    <span style="font-size: 90%;">
-      Agency for Science, Technology and Research (A*STAR), Singapore
-    </span>
-  </div>
-</div> -->
 
 <div style="display: flex; justify-content: space-between; gap: 40px;">
 

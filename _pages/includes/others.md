@@ -110,10 +110,10 @@
 
 <!-- <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Bmh5caoqsoBzhkM4US0IEvmg-GE-3BRI0uWzGKOg1ow&cl=ffffff&w=a"></script> -->
 
-<div style="text-align: center; transform: scale(0.6); transform-origin: center;">
+<!-- <div style="text-align: center; transform: scale(0.6); transform-origin: center;">
   <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Bmh5caoqsoBzhkM4US0IEvmg-GE-3BRI0uWzGKOg1ow&cl=ffffff&w=a"></script>
 </div>
-  
+   -->
 <!-- ## RESEARCH COMMITTEE MEMBERSHIP
 - <p style="margin: 0; line-height: 1.2;">
   <strong>2022.09 ‑ Present</strong> Associate Editor <br>

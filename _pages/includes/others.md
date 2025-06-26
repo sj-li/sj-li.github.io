@@ -36,9 +36,8 @@
   </div>
 </div> -->
 
-<div style="display: flex; justify-content: space-between; gap: 40px;">
+<!-- <div style="display: flex; justify-content: space-between; gap: 40px;"> -->
 
-  <!-- 左侧经历 -->
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/astar.jpeg" alt="A*STAR" style="height: 3em; margin-right: 10px;">
     <div>
@@ -56,7 +55,7 @@
     </div>
   </div>
 
-</div>
+<!-- </div> -->
 
 
 <!-- <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Bmh5caoqsoBzhkM4US0IEvmg-GE-3BRI0uWzGKOg1ow&cl=ffffff&w=a"></script> -->

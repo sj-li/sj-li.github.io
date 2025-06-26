@@ -8,7 +8,8 @@
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/uni_bonn.jpeg" alt="UniBonn" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2019.10 ‑ 2024.4</strong> PhD, supervised by Prof. Dr. Juergen Gall<br>
+      <strong>2019.10 ‑ 2024.4</strong> PhD<br>
+      <span style="font-size: 90%;">Supervisor: Prof. Dr. Juergen Gall</span>
       <span style="font-size: 90%;">University of Bonn @ Bonn, Germany</span>
     </div>
   </div>
@@ -17,7 +18,8 @@
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/nankai.png" alt="Nankai" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2016.09 ‑ 2019.06</strong> Master, supervised by Prof. Dr Ming-Ming Cheng<br>
+      <strong>2016.09 ‑ 2019.06</strong> Master<br>
+      <span style="font-size: 90%;">Supervisor: Prof. Dr. Ming-Ming Cheng</span>
       <span style="font-size: 90%;">Nankai University @ Tianjin, China</span>
     </div>
   </div>
@@ -27,7 +29,9 @@
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/uestc.png" alt="UESTC" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2019.10 ‑ 2024.4</strong> Bachlor, supervised by Prof. Dr. Hong Cheng<br>
+      <strong>2019.10 ‑ 2024.4</strong> Bachlor<br>
+      <span style="font-size: 90%;">Supervisor: Prof. Dr. Hong Cheng</span>
+
       <span style="font-size: 90%;">University of Electronic Science and Technology of China @ Chengdu, China</span>
     </div>
   </div>

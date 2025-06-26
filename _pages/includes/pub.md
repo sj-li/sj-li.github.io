@@ -71,7 +71,7 @@
 ## 2020
 - **[AAAI 2020]** MiniSeg: An Extremely Minimum Network for Efficient COVID-19 Segmentation [[PDF]](https://arxiv.org/pdf/2004.09750) [[code]](https://github.com/yun-liu/MiniSeg) 
   
-  Yu Qiu, Yun Liu, **<u>Shijie Li</u>**, Jian Xu
+  Yu Qiu, Yun Liu, **<u>Shijie Li</u>**, Jing Xu
 
 - **[RA-L 2020]**Pose Refinement Graph Convolutional Network for Skeleton-based Action Recognition [[PDF]](https://arxiv.org/pdf/2010.07367)  [[code]](https://github.com/sj-li/PR-GCN)
   

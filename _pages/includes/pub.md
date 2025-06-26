@@ -39,8 +39,6 @@
   **<u>Shijie Li</u>**, Yazan Abu Farha, Yun Liu, Ming-Ming Cheng, Juergen Gall
 
 - **[CCDC 2023]** Foresight Social-aware Reinforcement Learning for Robot Navigation [[PDF]](https://arxiv.org/pdf/2105.13409)  
-
-   *Chinese Control and Decision Conference (**CCDC**)*
   
   Yanying Zhou, **<u>Shijie Li</u>**, Jochen Garcke
 
@@ -59,8 +57,6 @@
   **<u>Shijie Li</u>**, Xieyuanli Chen, Yun Liu, Dengxin Dai, Cyrill Stachniss, Juergen Gall
 
 - **[TNNLS]** Rethinking 3-D LiDAR point cloud segmentation [[PDF]](https://arxiv.org/pdf/2008.03928) [[code]](https://github.com/sj-li/UnpNet)
-
-   *IEEE Transactions on Neural Networks and Learning Systems (**TNNLS**)*
   
   **<u>Shijie Li</u>**, Yun Liu, Juergen Gall
 

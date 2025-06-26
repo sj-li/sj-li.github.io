@@ -28,7 +28,7 @@
     <img src="https://sj-li.github.io/images/logos/uestc.png" alt="UESTC" style="height: 3em; margin-right: 10px;">
     <div>
       <strong>2019.10 ‑ 2024.4</strong> Bachlor, supervised by Prof. Dr. Hong Cheng<br>
-      <span style="font-size: 90%;">University of Electronic Science and Technology of China @ Chengdu, Germany</span>
+      <span style="font-size: 90%;">University of Electronic Science and Technology of China @ Chengdu, China</span>
     </div>
   </div>
 
@@ -72,26 +72,33 @@
 
   <!-- 右侧经历 -->
   <div style="display: flex; align-items: center; flex: 1;">
-    <img src="https://sj-li.github.io/images/logos/alibaba.jpeg" alt="Alibaba" style="height: 3em; margin-right: 10px;">
+    <img src="https://sj-li.github.io/images/logos/tum.jpeg" alt="TUM" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2018.6 ‑ 2018.8</strong> Research Intern<br>
-      <span style="font-size: 90%;">Alibaba DAMO Academy @ Beijing, China</span>
+      <strong>2018.10 ‑ 2018.12</strong> Visisting Student<br>
+      <span style="font-size: 90%;">Technical University of Munich @ Munich, Germany</span>
     </div>
   </div>
 
 </div>
 
-
 <div style="display: flex; justify-content: space-between; gap: 40px; margin: 24px 0;">
 
   <div style="display: flex; align-items: center; flex: 1;">
-    <img src="https://sj-li.github.io/images/logos/uisee.jpeg" alt="UISEE" style="height: 3em; margin-right: 10px;">
+    <img src="https://sj-li.github.io/images/logos/intel.jpeg" alt="Intel" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2017.6 ‑ 2018.2</strong> Research Intern<br>
-      <span style="font-size: 90%;">UISEE @ Beijing, China</span>
+      <strong>2023.1 ‑ 2023.5</strong> Research Intern<br>
+      <span style="font-size: 90%;">Intel Labs @ Munich, Germany</span>
     </div>
   </div>
 
+  <!-- 右侧经历 -->
+  <div style="display: flex; align-items: center; flex: 1;">
+    <img src="https://sj-li.github.io/images/logos/tum.jpeg" alt="TUM" style="height: 3em; margin-right: 10px;">
+    <div>
+      <strong>2018.6 ‑ 2018.8</strong> Visisting Student<br>
+      <span style="font-size: 90%;">Technical University of Munich @ Munich, Germany</span>
+    </div>
+  </div>
 
 </div>
 

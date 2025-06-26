@@ -49,65 +49,47 @@
   
   Xieyuanli Chen, **<u>Shijie Li</u>**, Benedikt Mersch, Lukas Wiesmann, Juergen Gall, Jens Behley, Cyrill Stachniss
 
-- Multi-scale interaction for real-time lidar data segmentation on an embedded platform [[PDF]](https://arxiv.org/pdf/2008.09162) [[code]](https://github.com/sj-li/MINet)
-
-   *IEEE Robotics and Automation Letters (**RA-L**)*
+- **[RA-L 2021]** Multi-scale interaction for real-time lidar data segmentation on an embedded platform [[PDF]](https://arxiv.org/pdf/2008.09162) [[code]](https://github.com/sj-li/MINet)
   
   **<u>Shijie Li</u>**, Xieyuanli Chen, Yun Liu, Dengxin Dai, Cyrill Stachniss, Juergen Gall
 
-- Rethinking 3-D LiDAR point cloud segmentation [[PDF]](https://arxiv.org/pdf/2008.03928) [[code]](https://github.com/sj-li/UnpNet)
+- **[TNNLS]** Rethinking 3-D LiDAR point cloud segmentation [[PDF]](https://arxiv.org/pdf/2008.03928) [[code]](https://github.com/sj-li/UnpNet)
 
    *IEEE Transactions on Neural Networks and Learning Systems (**TNNLS**)*
   
   **<u>Shijie Li</u>**, Yun Liu, Juergen Gall
 
-- Spatial-temporal consistency network for low-latency trajectory forecasting [[PDF]](https://openaccess.thecvf.com/content/ICCV2021/papers/Li_Spatial-Temporal_Consistency_Network_for_Low-Latency_Trajectory_Forecasting_ICCV_2021_paper.pdf)  
-
-   *IEEE/CVF International Conference on Computer Vision (**ICCV**)*
+- **[ICCV 2021]** Spatial-temporal consistency network for low-latency trajectory forecasting [[PDF]](https://openaccess.thecvf.com/content/ICCV2021/papers/Li_Spatial-Temporal_Consistency_Network_for_Low-Latency_Trajectory_Forecasting_ICCV_2021_paper.pdf)  
   
   **<u>Shijie Li</u>**, Yanying Zhou, Jinhui Yi, Juergen Gall
 
 ## 2020
-- MiniSeg: An Extremely Minimum Network for Efficient COVID-19 Segmentation [[PDF]](https://arxiv.org/pdf/2004.09750) [[code]](https://github.com/yun-liu/MiniSeg) 
-
-   *AAAI Conference on Artificial Intelligence (**AAAI**)*
+- **[AAAI 2020]** MiniSeg: An Extremely Minimum Network for Efficient COVID-19 Segmentation [[PDF]](https://arxiv.org/pdf/2004.09750) [[code]](https://github.com/yun-liu/MiniSeg) 
   
   Yu Qiu, Yun Liu, **<u>Shijie Li</u>**, Jian Xu
 
-- Pose Refinement Graph Convolutional Network for Skeleton-based Action Recognition [[PDF]](https://arxiv.org/pdf/2010.07367)  [[code]](https://github.com/sj-li/PR-GCN)
-
-   *IEEE Robotics and Automation Letters (**RA-L**)*
+- **[RA-L 2020]**Pose Refinement Graph Convolutional Network for Skeleton-based Action Recognition [[PDF]](https://arxiv.org/pdf/2010.07367)  [[code]](https://github.com/sj-li/PR-GCN)
   
   **<u>Shijie Li</u>**, Jinhui Yi, Yazan Abu Farha, Juergen Gall
 
-- Refinedbox: Refining for fewer and high-quality object proposals [[PDF]](https://mftp.mmcheng.net/Papers/20NeucomRefinedBoxes.pdf)  
-
-   *Neurocomputing*
+- **[Neurocomputing]** Refinedbox: Refining for fewer and high-quality object proposals [[PDF]](https://mftp.mmcheng.net/Papers/20NeucomRefinedBoxes.pdf)  
   
   Yun Liu, **<u>Shijie Li</u>**, Ming-Ming Cheng
 
 ## 2019
-- Joint salient object detection and existence prediction [[PDF]](https://mftp.mmcheng.net/Papers/JointSalExist.pdf)  
-
-   *Frontiers of Computer Science*
+- **[Frontiers of Computer Science]** Joint salient object detection and existence prediction [[PDF]](https://mftp.mmcheng.net/Papers/JointSalExist.pdf)  
   
   Huaizu Jiang, Ming-Ming Cheng, **<u>Shijie Li</u>**, Ali Borji, Jingdong Wang
 
 ## 2018
-- Del: Deep embedding learning for efficient image segmentation [[PDF]](https://www.ijcai.org/proceedings/2018/0120.pdf)  [[code]](https://github.com/yun-liu/DEL)
-
-   *International Joint Conference on Artificial Intelligence (**IJCAI**)*
+- **[IJCAI 2018]** Del: Deep embedding learning for efficient image segmentation [[PDF]](https://www.ijcai.org/proceedings/2018/0120.pdf)  [[code]](https://github.com/yun-liu/DEL)
   
   Yun Liu, Peng-Tao Jiang, Vahan Petrosyan, **<u>Shijie Li</u>**, Jiawang Bian, Le Zhang, Ming-Ming Cheng
 
-- Direct line guidance odometry [[PDF]](https://www.robots.ox.ac.uk/~lav/Papers/li_etal_icra2018/li_etal_icra2018.pdf)  
-
-   *IEEE International Conference on Robotics and Automation (**ICRA**)*
+- **[ICRA 2018]** Direct line guidance odometry [[PDF]](https://www.robots.ox.ac.uk/~lav/Papers/li_etal_icra2018/li_etal_icra2018.pdf)  
   
   **<u>Shijie Li</u>**, Bo Ren, Yun Liu, Ming-Ming Cheng, Duncan Frost, Victor Adrian Prisacariu
 
-- Structured skip list: A compact data structure for 3D reconstruction [[PDF]](https://ora.ox.ac.uk/objects/uuid:75d46621-7ccd-486b-808a-1b772a39b164/files/m6e5ebcdc74b5c966cf2d4c94bcc179f0)  
-
-   *IEEE/RSJ International Conference on Intelligent Robots and Systems (**IROS**)*
+- **[IROS 2018]** Structured skip list: A compact data structure for 3D reconstruction [[PDF]](https://ora.ox.ac.uk/objects/uuid:75d46621-7ccd-486b-808a-1b772a39b164/files/m6e5ebcdc74b5c966cf2d4c94bcc179f0)  
   
   **<u>Shijie Li</u>**, Ming-Ming Cheng, Yun Liu, Shao-Ping Lu, YaHui Wang, Victor Adrian Prisacariu

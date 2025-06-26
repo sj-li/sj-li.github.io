@@ -10,19 +10,19 @@
   Yifan Liu, Xun Xu, **<u>Shijie Li</u>**, Jingyi Liao, Xulei Yang
 
 ## 2025
-- Global-Aware Monocular Semantic Scene Completion with State Space Models [[PDF]](https://arxiv.org/pdf/2503.06569)
+- Global-Aware Monocular Semantic Scene Completion with State Space Models [[PDF]](https://arxiv.org/pdf/2503.06569) [[code]](https://github.com/sj-li/GA-MonoSSC)
 
   *IEEE/CVF International Conference on Computer Vision (**ICCV**)*
   
   **<u>Shijie Li</u>**, Zhongyao Cheng, Rong Li, Shuai Li, Juergen Gall, Xun Xu, Xulei Yang
 
-- Future-Aware Interaction Network For Motion Forecasting [[PDF]](https://arxiv.org/pdf/2503.06565) 
+- Future-Aware Interaction Network For Motion Forecasting [[PDF]](https://arxiv.org/pdf/2503.06565) [[code]](https://github.com/sj-li/FINet)
 
   *IEEE/CVF International Conference on Computer Vision (**ICCV**)*
   
   **<u>Shijie Li</u>**, Xun Xu, Si Yong Yeo, Xulei Yang
 
-- Seeground: See and ground for zero-shot open-vocabulary 3d visual grounding [[PDF]](https://arxiv.org/pdf/2412.04383)  
+- Seeground: See and ground for zero-shot open-vocabulary 3d visual grounding [[PDF]](https://arxiv.org/pdf/2412.04383)  [[code]](https://github.com/iris0329/SeeGround)
 
   *IEEE/CVF Conference on Computer Vision and Pattern Recognition (**CVPR**)*
   
@@ -46,7 +46,7 @@
 ## 2023
 
 
-- MS-TCN++: Multi-Stage Temporal Convolutional Network for Action Segmentation [[PDF]](https://arxiv.org/pdf/2006.09220) 
+- MS-TCN++: Multi-Stage Temporal Convolutional Network for Action Segmentation [[PDF]](https://arxiv.org/pdf/2006.09220) [[code]](https://github.com/sj-li/MS-TCN2)
 
    *IEEE Transactions on Pattern Analysis and Machine Intelligence (**TPAMI**)*
   
@@ -59,26 +59,26 @@
   Yanying Zhou, **<u>Shijie Li</u>**, Jochen Garcke
 
 ## 2022
-- Dual Pyramid Generative Adversarial Networks for Semantic Image Synthesis [[PDF]](https://arxiv.org/pdf/2210.04085)  
+- Dual Pyramid Generative Adversarial Networks for Semantic Image Synthesis [[PDF]](https://arxiv.org/pdf/2210.04085) [[code]](https://github.com/sj-li/DP_GAN) 
 
    *British Machine Vision Conference (**BMVC**)*
   
   **<u>Shijie Li</u>**, Ming-Ming Cheng, Juergen Gall
 
 ## 2021
-- Moving object segmentation in 3D LiDAR data: A learning-based approach exploiting sequential data [[PDF]](https://arxiv.org/pdf/2105.08971)  
+- Moving object segmentation in 3D LiDAR data: A learning-based approach exploiting sequential data [[PDF]](https://arxiv.org/pdf/2105.08971)  [[code]](https://github.com/PRBonn/LiDAR-MOS)
 
    *IEEE Robotics and Automation Letters (**RA-L**)*
   
   Xieyuanli Chen, **<u>Shijie Li</u>**, Benedikt Mersch, Lukas Wiesmann, Juergen Gall, Jens Behley, Cyrill Stachniss
 
-- Multi-scale interaction for real-time lidar data segmentation on an embedded platform [[PDF]](https://arxiv.org/pdf/2008.09162)  
+- Multi-scale interaction for real-time lidar data segmentation on an embedded platform [[PDF]](https://arxiv.org/pdf/2008.09162) [[code]](https://github.com/sj-li/MINet)
 
    *IEEE Robotics and Automation Letters (**RA-L**)*
   
   **<u>Shijie Li</u>**, Xieyuanli Chen, Yun Liu, Dengxin Dai, Cyrill Stachniss, Juergen Gall
 
-- Rethinking 3-D LiDAR point cloud segmentation [[PDF]](https://arxiv.org/pdf/2008.03928)  
+- Rethinking 3-D LiDAR point cloud segmentation [[PDF]](https://arxiv.org/pdf/2008.03928) [[code]](https://github.com/sj-li/UnpNet)
 
    *IEEE Transactions on Neural Networks and Learning Systems (**TNNLS**)*
   
@@ -91,13 +91,13 @@
   **<u>Shijie Li</u>**, Yanying Zhou, Jinhui Yi, Juergen Gall
 
 ## 2020
-- MiniSeg: An Extremely Minimum Network for Efficient COVID-19 Segmentation [[PDF]](https://arxiv.org/pdf/2004.09750)  
+- MiniSeg: An Extremely Minimum Network for Efficient COVID-19 Segmentation [[PDF]](https://arxiv.org/pdf/2004.09750) [[code]](https://github.com/yun-liu/MiniSeg) 
 
    *AAAI Conference on Artificial Intelligence (**AAAI**)*
   
   Yu Qiu, Yun Liu, **<u>Shijie Li</u>**, Jian Xu
 
-- Pose Refinement Graph Convolutional Network for Skeleton-based Action Recognition [[PDF]](https://arxiv.org/pdf/2010.07367)  
+- Pose Refinement Graph Convolutional Network for Skeleton-based Action Recognition [[PDF]](https://arxiv.org/pdf/2010.07367)  [[code]](https://github.com/sj-li/PR-GCN)
 
    *IEEE Robotics and Automation Letters (**RA-L**)*
   
@@ -117,7 +117,7 @@
   Huaizu Jiang, Ming-Ming Cheng, **<u>Shijie Li</u>**, Ali Borji, Jingdong Wang
 
 ## 2018
-- Del: Deep embedding learning for efficient image segmentation [[PDF]](https://www.ijcai.org/proceedings/2018/0120.pdf)  
+- Del: Deep embedding learning for efficient image segmentation [[PDF]](https://www.ijcai.org/proceedings/2018/0120.pdf)  [[code]](https://github.com/yun-liu/DEL)
 
    *International Joint Conference on Artificial Intelligence (**IJCAI**)*
   

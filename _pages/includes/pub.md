@@ -3,9 +3,9 @@
 # 📝 Publications
 
 ## Preprint
-- [Multi-View Industrial Anomaly Detection with Epipolar Constrained Cross-View Fusion] [[PDF]](https://arxiv.org/pdf/2503.11088)  
+- Multi-View Industrial Anomaly Detection with Epipolar Constrained Cross-View Fusion [[PDF]](https://arxiv.org/pdf/2503.11088)  
 
-  *arXiv Preprint*
+  *arXiv Preprint， 2025*
   
   Yifan Liu, Xun Xu, **<u>Shijie Li</u>**, Jingyi Liao, Xulei Yang
 

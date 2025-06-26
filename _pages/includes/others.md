@@ -87,7 +87,7 @@
 <div style="display: flex; justify-content: space-between; gap: 40px; margin: 24px 0;">
 
   <div style="display: flex; align-items: center; flex: 1;">
-    <img src="https://sj-li.github.io/images/logos/intel.jpeg" alt="Intel" style="height: 3em; margin-right: 10px;">
+    <img src="https://sj-li.github.io/images/logos/alibaba.jpeg" alt="Intel" style="height: 3em; margin-right: 10px;">
     <div>
       <strong>2018.6 ‑ 2018.8</strong> Research Intern<br>
       <span style="font-size: 90%;">Alibaba DAMO Academy @ Beijing, China</span>

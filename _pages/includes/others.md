@@ -25,22 +25,23 @@
   <span style="font-size: 90%;">University of Bonn </span>
   </p> -->
 
-  ## ACADEMIC WORKING EXPERIENCE
+  ## WORKING EXPERIENCE
 - <p style="margin: 0; line-height: 1.2;">
   <strong>2022.12 ‑ Present</strong> Associate Professor<br>
   <span style="font-size: 90%;">
-    <img src="https://sj-li.github.io/images/my-photo-new.jpg" alt="NUDT" style="height: 1em; vertical-align: middle; margin-right: 4px;">
-    National University of Defense Technology
+    <img src="https://sj-li.github.io/images/logos/astar" alt="A*STAR" style="height: 1em; vertical-align: middle; margin-right: 4px;">
+    Agency for Science, Technology and Research (A*STAR)
   </span>
 </p>
 
 - <p style="margin: 0; line-height: 1.2;">
-  <strong>2019.09 ‑ 2022.09</strong> Research Assistant<br>
+  <strong>2022.12 ‑ Present</strong> Associate Professor<br>
   <span style="font-size: 90%;">
-    <img src="https://sj-li.github.io/images/my-photo-new.jpg" alt="Bonn" style="height: 1em; vertical-align: middle; margin-right: 4px;">
-    University of Bonn
+    <img src="https://sj-li.github.io/images/logos/astar" alt="NUDT" style="height: 1em; vertical-align: middle; margin-right: 4px;">
+    National University of Defense Technology
   </span>
 </p>
+
 
 <!-- <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Bmh5caoqsoBzhkM4US0IEvmg-GE-3BRI0uWzGKOg1ow&cl=ffffff&w=a"></script> -->
 

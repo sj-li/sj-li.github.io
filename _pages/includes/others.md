@@ -64,10 +64,10 @@
 <div style="display: flex; justify-content: space-between; gap: 40px; margin: 24px 0;">
 
   <div style="display: flex; align-items: center; flex: 1;">
-    <img src="https://sj-li.github.io/images/logos/intel.jpeg" alt="Intel" style="height: 3em; margin-right: 10px;">
+    <img src="https://sj-li.github.io/images/logos/uisee.jpeg" alt="UISEE" style="height: 3em; margin-right: 10px;">
     <div>
       <strong>2023.1 ‑ 2023.5</strong> Research Intern<br>
-      <span style="font-size: 90%;">Intel Labs</span>
+      <span style="font-size: 90%;">UISEE</span>
     </div>
   </div>
 

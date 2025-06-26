@@ -13,7 +13,7 @@
 - **[ICCV 2025]** Future-Aware Interaction Network For Motion Forecasting [[PDF]](https://arxiv.org/pdf/2503.06565) [[code]](https://github.com/sj-li/FINet)  
   **<u>Shijie Li</u>**, Xun Xu, Si Yong Yeo, Xulei Yang
 
-- **[CVPR 2025]**Seeground: See and ground for zero-shot open-vocabulary 3d visual grounding [[PDF]](https://arxiv.org/pdf/2412.04383)  [[code]](https://github.com/iris0329/SeeGround)  
+- **[CVPR 2025]** Seeground: See and ground for zero-shot open-vocabulary 3d visual grounding [[PDF]](https://arxiv.org/pdf/2412.04383)  [[code]](https://github.com/iris0329/SeeGround)  
   Rong Li, **<u>Shijie Li</u>**, Lingdong Kong, Xulei Yang, Junwei Liang
 
 - **[WACV 2025]** VaLID: Variable-Length Input Diffusion for Novel View Synthesis [[PDF]](https://arxiv.org/pdf/2312.08892)    
@@ -22,38 +22,30 @@
 ## 2024
 
 
-- Tfnet: Exploiting temporal cues for fast and accurate lidar semantic segmentation [[PDF]](https://arxiv.org/pdf/2309.07849)  
-
-   *IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshop (**CVPRW**)*
+- **[CVPRW 2024]** Tfnet: Exploiting temporal cues for fast and accurate lidar semantic segmentation [[PDF]](https://arxiv.org/pdf/2309.07849)  
   
   Rong Li, **<u>Shijie Li</u>**, Xieyuanli Chen, Teli Ma, Juergen Gall, Junwei Liang
 
 ## 2023
 
 
-- MS-TCN++: Multi-Stage Temporal Convolutional Network for Action Segmentation [[PDF]](https://arxiv.org/pdf/2006.09220) [[code]](https://github.com/sj-li/MS-TCN2)
-
-   *IEEE Transactions on Pattern Analysis and Machine Intelligence (**TPAMI**)*
+- **[TPAMI]** MS-TCN++: Multi-Stage Temporal Convolutional Network for Action Segmentation [[PDF]](https://arxiv.org/pdf/2006.09220) [[code]](https://github.com/sj-li/MS-TCN2)
   
   **<u>Shijie Li</u>**, Yazan Abu Farha, Yun Liu, Ming-Ming Cheng, Juergen Gall
 
-- Foresight Social-aware Reinforcement Learning for Robot Navigation [[PDF]](https://arxiv.org/pdf/2105.13409)  
+- **[CCDC 2023]** Foresight Social-aware Reinforcement Learning for Robot Navigation [[PDF]](https://arxiv.org/pdf/2105.13409)  
 
    *Chinese Control and Decision Conference (**CCDC**)*
   
   Yanying Zhou, **<u>Shijie Li</u>**, Jochen Garcke
 
 ## 2022
-- Dual Pyramid Generative Adversarial Networks for Semantic Image Synthesis [[PDF]](https://arxiv.org/pdf/2210.04085) [[code]](https://github.com/sj-li/DP_GAN) 
-
-   *British Machine Vision Conference (**BMVC**)*
+- **[BMVC 2022]** Dual Pyramid Generative Adversarial Networks for Semantic Image Synthesis [[PDF]](https://arxiv.org/pdf/2210.04085) [[code]](https://github.com/sj-li/DP_GAN) 
   
   **<u>Shijie Li</u>**, Ming-Ming Cheng, Juergen Gall
 
 ## 2021
-- Moving object segmentation in 3D LiDAR data: A learning-based approach exploiting sequential data [[PDF]](https://arxiv.org/pdf/2105.08971)  [[code]](https://github.com/PRBonn/LiDAR-MOS)
-
-   *IEEE Robotics and Automation Letters (**RA-L**)*
+- **[RA-L 2021]** Moving object segmentation in 3D LiDAR data: A learning-based approach exploiting sequential data [[PDF]](https://arxiv.org/pdf/2105.08971)  [[code]](https://github.com/PRBonn/LiDAR-MOS)
   
   Xieyuanli Chen, **<u>Shijie Li</u>**, Benedikt Mersch, Lukas Wiesmann, Juergen Gall, Jens Behley, Cyrill Stachniss
 

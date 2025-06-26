@@ -1,6 +1,10 @@
 <span id="publications"></span>
 
 # 📝 Publications
+##   Preprint
+- [Multi-View Industrial Anomaly Detection with Epipolar Constrained Cross-View Fusion](https://arxiv.org/abs/2503.11088) [[PDF]](https://arxiv.org/pdf/2503.11088)  
+
+  Yun Liu, Xun Xu, **<u>Shijie Li</u>**, Jian Liao, Xulei Yang
 ##  2025
 - [Global-Aware Monocular Semantic Scene Completion with State Space Models](https://arxiv.org/pdf/2503.06569) [[PDF]](https://arxiv.org/pdf/2503.06569)
 
@@ -14,17 +18,13 @@
   
   **<u>Shijie Li</u>**, Xun Xu, Si Yong Yeo, Xulei Yang
 
-- [VaLID: Variable-Length Input Diffusion for Novel View Synthesis](https://arxiv.org/abs/2503.06569) [[PDF]](https://arxiv.org/pdf/2503.06569)  
+- [VaLID: Variable-Length Input Diffusion for Novel View Synthesis](https://arxiv.org/pdf/2312.08892) [[PDF]](https://arxiv.org/pdf/2312.08892)  
 
   *IEEE/CVF Winter Conference on Applications of Computer Vision (**WACV**)*
   
   **<u>Shijie Li</u>**, Farhad G. Zanjani, Hatem B. Yahia, Yuki M. Asano, Juergen Gall, Amir Habibian
 
-- [Multi-View Industrial Anomaly Detection with Epipolar Constrained Cross-View Fusion](https://arxiv.org/abs/2503.11088) [[PDF]](https://arxiv.org/pdf/2503.11088)  
 
-  *arXiv preprint*
-  
-  Yun Liu, Xun Xu, **<u>Shijie Li</u>**, Jian Liao, Xulei Yang
 
 ## 2024
 - [Tfnet: Exploiting temporal cues for fast and accurate lidar semantic segmentation](https://arxiv.org/abs/2403.12345) [[PDF]](https://arxiv.org/pdf/2403.12345)  

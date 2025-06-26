@@ -25,7 +25,7 @@
   <span style="font-size: 90%;">University of Bonn </span>
   </p> -->
 
-  ## WORKING EXPERIENCE
+  <!-- ## WORKING EXPERIENCE -->
 <!-- <div style="display: flex; align-items: center; line-height: 1.2; margin: 0;">
   <img src="https://sj-li.github.io/images/logos/astar.jpeg" alt="A*STAR" style="height: 3em; margin-right: 8px;">
   <div>

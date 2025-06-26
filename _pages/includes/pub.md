@@ -22,12 +22,20 @@
   
   **<u>Shijie Li</u>**, Xun Xu, Si Yong Yeo, Xulei Yang
 
-## 2024
 - [Seeground: See and ground for zero-shot open-vocabulary 3d visual grounding](https://arxiv.org/pdf/2412.04383) [[PDF]](https://arxiv.org/pdf/2412.04383)  
 
   🏆 *IEEE/CVF Conference on Computer Vision and Pattern Recognition (**CVPR**)*
   
   Rong Li, **<u>Shijie Li</u>**, Lingdong Kong, Xulei Yang, Junwei Liang
+
+- [VaLID: Variable-Length Input Diffusion for Novel View Synthesis](https://arxiv.org/pdf/2312.08892) [[PDF]](https://arxiv.org/pdf/2312.08892)  
+
+  ❄️ *IEEE/CVF Winter Conference on Applications of Computer Vision (**WACV**)*
+  
+  **<u>Shijie Li</u>**, Farhad G. Zanjani, Haitam Ben Yahia, Yuki M. Asano, Juergen Gall, Amirhossein Habibian
+
+## 2024
+
 
 - [Tfnet: Exploiting temporal cues for fast and accurate lidar semantic segmentation](https://arxiv.org/pdf/2309.07849) [[PDF]](https://arxiv.org/pdf/2309.07849)  
 
@@ -36,11 +44,7 @@
   Rong Li, **<u>Shijie Li</u>**, Xieyuanli Chen, Teli Ma, Juergen Gall, Junwei Liang
 
 ## 2023
-- [VaLID: Variable-Length Input Diffusion for Novel View Synthesis](https://arxiv.org/pdf/2312.08892) [[PDF]](https://arxiv.org/pdf/2312.08892)  
 
-  ❄️ *IEEE/CVF Winter Conference on Applications of Computer Vision (**WACV**)*
-  
-  **<u>Shijie Li</u>**, Farhad G. Zanjani, Haitam Ben Yahia, Yuki M. Asano, Juergen Gall, Amirhossein Habibian
 
 - [MS-TCN++: Multi-Stage Temporal Convolutional Network for Action Segmentation](https://arxiv.org/pdf/2006.09220) [[PDF]](https://arxiv.org/pdf/2006.09220) 
 

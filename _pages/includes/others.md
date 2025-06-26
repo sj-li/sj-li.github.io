@@ -22,7 +22,7 @@
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/astar.jpeg" alt="A*STAR" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2022.12 ‑ Present</strong> Associate Professor<br>
+      <strong>2024.03 ‑ Present</strong> Scientist<br>
       <span style="font-size: 90%;">Agency for Science, Technology and Research (A*STAR)</span>
     </div>
   </div>
@@ -31,8 +31,8 @@
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/qualcomm.jpeg" alt="Qualcomm" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2019.09 ‑ 2022.09</strong> Research Assistant<br>
-      <span style="font-size: 90%;">University of Bonn</span>
+      <strong>2019.09 ‑ 2022.09</strong> Research Intern<br>
+      <span style="font-size: 90%;">Qualcomm AI Research</span>
     </div>
   </div>
 

@@ -17,7 +17,7 @@
 # 👨‍🔧 Working Experience
 
 
-<div style="display: flex; justify-content: space-between; gap: 40px;">
+<div style="display: flex; justify-content: space-between; gap: 40px; margin: 24px 0;">
 
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/astar.jpeg" alt="A*STAR" style="height: 3em; margin-right: 10px;">
@@ -39,7 +39,7 @@
 </div>
 
 
-<div style="display: flex; justify-content: space-between; gap: 40px;">
+<div style="display: flex; justify-content: space-between; gap: 40px; margin: 24px 0;">
 
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/astar.jpeg" alt="A*STAR" style="height: 3em; margin-right: 10px;">

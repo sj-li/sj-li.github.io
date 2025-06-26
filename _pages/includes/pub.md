@@ -2,7 +2,7 @@
 
 # 📝 Publications
 ##  2025
-- [Global-Aware Monocular Semantic Scene Completion with State Space Models](https://arxiv.org/pdf/2503.06569) [[PDF]](https://arxiv.org/pdf/2503.06569)  [![](https://img.shields.io/github/stars/lus6-Jenny/RINGSharp?style=social&label=Code+Stars)](https://github.com/lus6-Jenny/RINGSharp)
+- [Global-Aware Monocular Semantic Scene Completion with State Space Models](https://arxiv.org/pdf/2503.06569) [[PDF]](https://arxiv.org/pdf/2503.06569)
 
   *IEEE/CVF International Conference on Computer Vision (**ICCV**)*
   

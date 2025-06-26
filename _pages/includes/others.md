@@ -66,7 +66,7 @@
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/uisee.jpeg" alt="UISEE" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2023.1 ‑ 2023.5</strong> Research Intern<br>
+      <strong>2017.6 ‑ 2018.2</strong> Research Intern<br>
       <span style="font-size: 90%;">UISEE</span>
     </div>
   </div>

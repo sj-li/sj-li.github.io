@@ -1,6 +1,6 @@
 <span id="publications"></span>
 
-#  Publications
+# 📝 Publications
 
 ## Preprint
 - [Multi-View Industrial Anomaly Detection with Epipolar Constrained Cross-View Fusion](https://arxiv.org/pdf/2503.11088) [[PDF]](https://arxiv.org/pdf/2503.11088)  

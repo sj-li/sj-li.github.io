@@ -41,8 +41,10 @@
     University of Bonn
   </span>
 </p>
+
+<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Bmh5caoqsoBzhkM4US0IEvmg-GE-3BRI0uWzGKOg1ow&cl=ffffff&w=a"></script>
   
-## RESEARCH COMMITTEE MEMBERSHIP
+<!-- ## RESEARCH COMMITTEE MEMBERSHIP
 - <p style="margin: 0; line-height: 1.2;">
   <strong>2022.09 ‑ Present</strong> Associate Editor <br>
   <span style="font-size: 90%;">IEEE Robotics and Automation Letters (RA‑L) </span>
@@ -58,9 +60,9 @@
 - <p style="margin: 0; line-height: 1.2;">
   <strong>2019.07 ‑ 2023.07</strong> Technical Committee <br>
   <span style="font-size: 90%;">RoboCup Rescue Robot League </span>
-  </p>
+  </p> -->
 
 
-<div style="float: left;">
+<!-- <div style="float: left;">
   <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=080808&w=400&t=tt&d=Rb-iP8f5--b43X14KVkJwMa0-GzAr8QqOIuZinWaTII&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080"></script>
-</div>
+</div> -->

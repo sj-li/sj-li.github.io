@@ -39,6 +39,27 @@
 </div>
 
 
+<div style="display: flex; justify-content: space-between; gap: 40px;">
+
+  <div style="display: flex; align-items: center; flex: 1;">
+    <img src="https://sj-li.github.io/images/logos/astar.jpeg" alt="A*STAR" style="height: 3em; margin-right: 10px;">
+    <div>
+      <strong>2022.12 ‑ Present</strong> Associate Professor<br>
+      <span style="font-size: 90%;">Agency for Science, Technology and Research (A*STAR)</span>
+    </div>
+  </div>
+
+  <!-- 右侧经历 -->
+  <div style="display: flex; align-items: center; flex: 1;">
+    <img src="https://sj-li.github.io/images/logos/qualcomm.jpeg" alt="Qualcomm" style="height: 3em; margin-right: 10px;">
+    <div>
+      <strong>2019.09 ‑ 2022.09</strong> Research Assistant<br>
+      <span style="font-size: 90%;">University of Bonn</span>
+    </div>
+  </div>
+
+</div>
+
 <!-- <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Bmh5caoqsoBzhkM4US0IEvmg-GE-3BRI0uWzGKOg1ow&cl=ffffff&w=a"></script> -->
 
 <div style="text-align: center; transform: scale(0.6); transform-origin: center;">

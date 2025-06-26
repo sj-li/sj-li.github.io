@@ -4,19 +4,24 @@
 
 ## Preprint
 - **[arXiv 2025]** Multi-View Industrial Anomaly Detection with Epipolar Constrained Cross-View Fusion [[PDF]](https://arxiv.org/pdf/2503.11088)  
+
   Yifan Liu, Xun Xu, **<u>Shijie Li</u>**, Jingyi Liao, Xulei Yang
 
 ## 2025
 - **[ICCV 2025]** Global-Aware Monocular Semantic Scene Completion with State Space Models [[PDF]](https://arxiv.org/pdf/2503.06569) [[code]](https://github.com/sj-li/GA-MonoSSC)  
+
   **<u>Shijie Li</u>**, Zhongyao Cheng, Rong Li, Shuai Li, Juergen Gall, Xun Xu, Xulei Yang
 
 - **[ICCV 2025]** Future-Aware Interaction Network For Motion Forecasting [[PDF]](https://arxiv.org/pdf/2503.06565) [[code]](https://github.com/sj-li/FINet)  
+
   **<u>Shijie Li</u>**, Xun Xu, Si Yong Yeo, Xulei Yang
 
 - **[CVPR 2025]** Seeground: See and ground for zero-shot open-vocabulary 3d visual grounding [[PDF]](https://arxiv.org/pdf/2412.04383)  [[code]](https://github.com/iris0329/SeeGround)  
+
   Rong Li, **<u>Shijie Li</u>**, Lingdong Kong, Xulei Yang, Junwei Liang
 
 - **[WACV 2025]** VaLID: Variable-Length Input Diffusion for Novel View Synthesis [[PDF]](https://arxiv.org/pdf/2312.08892)    
+
   **<u>Shijie Li</u>**, Farhad G. Zanjani, Haitam Ben Yahia, Yuki M. Asano, Juergen Gall, Amirhossein Habibian
 
 ## 2024

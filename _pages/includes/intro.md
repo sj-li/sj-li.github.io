@@ -5,7 +5,7 @@
 
 <!-- <a href='https://scholar.google.com/citations?user=kl3niOYAAAAJ&hl=en'><img src="https://img.shields.io/endpoint?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FChen-Xieyuanli%2Fchen-xieyuanli.github.io@google-scholar-stats%2Fgs_data_shieldsio.json&labelColor=f6f6f6&color=9cf&style=flat&label=Google%20Scholar"></a> -->
 
-- Here is my extended CV ([pdf](cv/chen_cv.pdf)).
+<!-- - Here is my extended CV ([pdf](cv/chen_cv.pdf)). -->
 
 - <strong> I'm always open to collaboration and in-depth discussions. If you're interested in my research, feel free to get in touch! </strong>
 

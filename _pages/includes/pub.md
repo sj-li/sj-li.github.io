@@ -18,17 +18,18 @@
   
   **<u>Shijie Li</u>**, Xun Xu, Si Yong Yeo, Xulei Yang
 
-- [VaLID: Variable-Length Input Diffusion for Novel View Synthesis](https://arxiv.org/pdf/2312.08892) [[PDF]](https://arxiv.org/pdf/2312.08892)  
 
-  *IEEE/CVF Winter Conference on Applications of Computer Vision (**WACV**)*
-  
-  **<u>Shijie Li</u>**, Farhad G. Zanjani, Hatem B. Yahia, Yuki M. Asano, Juergen Gall, Amir Habibian
 
 - [Seeground: See and ground for zero-shot open-vocabulary 3d visual grounding](https://arxiv.org/pdf/2412.04383) [[PDF]](https://arxiv.org/pdf/2412.04383)  
 
   *IEEE/CVF Conference on Computer Vision and Pattern Recognition (**CVPR**)*
   Rong Li, **<u>Shijie Li</u>**, Lei Kong, Xulei Yang, Jian Liang
+  
+- [VaLID: Variable-Length Input Diffusion for Novel View Synthesis](https://arxiv.org/pdf/2312.08892) [[PDF]](https://arxiv.org/pdf/2312.08892)  
 
+  *IEEE/CVF Winter Conference on Applications of Computer Vision (**WACV**)*
+  
+  **<u>Shijie Li</u>**, Farhad G. Zanjani, Hatem B. Yahia, Yuki M. Asano, Juergen Gall, Amir Habibian
 ## 2024
 - [Tfnet: Exploiting temporal cues for fast and accurate lidar semantic segmentation](https://arxiv.org/pdf/2309.07849) [[PDF]](https://arxiv.org/pdf/2309.07849)  
 

@@ -10,7 +10,7 @@
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/uni_bonn.jpeg" alt="UniBonn" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2019.10 ‑ 2024.4</strong>, PhD<br>
+      <strong>2019.10 ‑ 2024.4</strong>, Doctor<br>
       <span style="font-size: 90%;">Supervisor: Prof. Dr. Juergen Gall</span> <br>
       <span style="font-size: 90%;">University of Bonn @ Bonn, Germany</span>
     </div>
@@ -31,7 +31,7 @@
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/uestc.png" alt="UESTC" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2019.10 ‑ 2024.4</strong>, Bachlor<br>
+      <strong>2012.09 ‑ 2016.06</strong>, Bachlor<br>
       <span style="font-size: 90%;">Supervisor: Prof. Dr. Hong Cheng</span> <br>
       <span style="font-size: 90%;">University of Electronic Science and Technology of China @ Chengdu, China</span>
     </div>

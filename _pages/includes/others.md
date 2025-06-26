@@ -15,7 +15,7 @@
 
 <span id="experience"></span>
 # 👨‍🔧 Working Experience
-## ACADEMIC WORKING EXPERIENCE
+<!-- ## ACADEMIC WORKING EXPERIENCE
 - <p style="margin: 0; line-height: 1.2;">
   <strong>2022.12 ‑ Present</strong> Associate Professor<br>
   <span style="font-size: 90%;">National University of Defense Technology </span>
@@ -23,7 +23,24 @@
 - <p style="margin: 0; line-height: 1.2;">
   <strong>2019.09 ‑ 2022.09</strong> Research Assistant<br>
   <span style="font-size: 90%;">University of Bonn </span>
-  </p>
+  </p> -->
+
+  ## ACADEMIC WORKING EXPERIENCE
+- <p style="margin: 0; line-height: 1.2;">
+  <strong>2022.12 ‑ Present</strong> Associate Professor<br>
+  <span style="font-size: 90%;">
+    <img src="https://sj-li.github.io/images/my-photo-new.jpg" alt="NUDT" style="height: 1em; vertical-align: middle; margin-right: 4px;">
+    National University of Defense Technology
+  </span>
+</p>
+
+- <p style="margin: 0; line-height: 1.2;">
+  <strong>2019.09 ‑ 2022.09</strong> Research Assistant<br>
+  <span style="font-size: 90%;">
+    <img src="https://sj-li.github.io/images/my-photo-new.jpg" alt="Bonn" style="height: 1em; vertical-align: middle; margin-right: 4px;">
+    University of Bonn
+  </span>
+</p>
   
 ## RESEARCH COMMITTEE MEMBERSHIP
 - <p style="margin: 0; line-height: 1.2;">

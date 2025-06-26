@@ -46,7 +46,7 @@
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/astar.jpeg" alt="A*STAR" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2024.03 ‑ Present</strong> Scientist<br>
+      <strong>2024.03 ‑ Present</strong>, Scientist<br>
       <span style="font-size: 90%;">Agency for Science, Technology and Research (A*STAR) @ Singapore</span>
     </div>
   </div>
@@ -55,7 +55,7 @@
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/qualcomm.jpeg" alt="Qualcomm" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2023.07 ‑ 2023.11</strong> Research Intern<br>
+      <strong>2023.07 ‑ 2023.11</strong>, Research Intern<br>
       <span style="font-size: 90%;">Qualcomm AI Research @ Amsterdam, Netherlands</span>
     </div>
   </div>
@@ -68,7 +68,7 @@
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/intel.jpeg" alt="Intel" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2023.1 ‑ 2023.5</strong> Research Intern<br>
+      <strong>2023.1 ‑ 2023.5</strong>, Research Intern<br>
       <span style="font-size: 90%;">Intel Labs @ Munich, Germany</span>
     </div>
   </div>
@@ -77,7 +77,7 @@
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/tum.jpeg" alt="TUM" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2018.10 ‑ 2018.12</strong> Visisting Student<br>
+      <strong>2018.10 ‑ 2018.12</strong>, Visisting Student<br>
       <span style="font-size: 90%;">Technical University of Munich @ Munich, Germany</span>
     </div>
   </div>
@@ -89,7 +89,7 @@
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/alibaba.jpeg" alt="Intel" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2018.6 ‑ 2018.8</strong> Research Intern<br>
+      <strong>2018.6 ‑ 2018.8</strong>, Research Intern<br>
       <span style="font-size: 90%;">Alibaba DAMO Academy @ Beijing, China</span>
     </div>
   </div>
@@ -98,7 +98,7 @@
   <div style="display: flex; align-items: center; flex: 1;">
     <img src="https://sj-li.github.io/images/logos/uisee.jpeg" alt="UISEE" style="height: 3em; margin-right: 10px;">
     <div>
-      <strong>2017.6 ‑ 2018.2</strong> Research Intern <br>
+      <strong>2017.6 ‑ 2018.2</strong>, Research Intern <br>
       <span style="font-size: 90%;">UISEE @ Beijing, China</span>
     </div>
   </div>

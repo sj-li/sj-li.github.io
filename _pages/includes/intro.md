@@ -5,4 +5,7 @@
 
 - Here is my extended CV ([pdf](cv/chen_cv.pdf)).
 
+- <strong> I'm always open to collaboration and in-depth discussions. If you're interested in my research, feel free to get in touch! </strong>
+
+
 

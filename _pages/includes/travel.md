@@ -1,6 +1,6 @@
-<span id="travel"></span>
+<span id="misc"></span>
 
-# 🌏  Travel
+# 🌏  Misc.
 
 I enjoy exploring different places—here’s a list of countries I’ve visited so far 😊
 

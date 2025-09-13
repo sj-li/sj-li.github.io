@@ -24,6 +24,10 @@
 
   **<u>Shijie Li</u>**, Farhad G. Zanjani, Haitam Ben Yahia, Yuki M. Asano, Juergen Gall, Amirhossein Habibian
 
+- **[Neurocomputing]** SiFH: Siamese Frequency Harmonization Self-Supervised Learning for Motion Forecasting [[PDF]](https://arxiv.org/pdf/2312.08892)    
+
+  Chunyu Liu, Zeyu Liu, Tiechui Yao, **<u>Shijie Li</u>**
+
 ## 2024
 
 

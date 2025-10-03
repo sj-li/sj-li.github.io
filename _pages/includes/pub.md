@@ -3,9 +3,21 @@
 # 📝 Publications
 
 ## Preprint
+- **[arXiv 2025]** Patch-as-Decodable-Token: Towards Unified Multi-Modal Vision Tasks in MLLMs [[PDF]](https://arxiv.org/pdf/2510.01954)
+
+  Yongyi Su, Haojie Zhang, **<u>Shijie Li</u>**, Nanqing Liu, Jingyi Liao, Junyi Pan, Yuan Liu, Xiaofen Xing, Chong Sun, Chen Li, Nancy F. Chen, Shuicheng Yan, Xulei Yang and Xun Xu
+  
+- **[arXiv 2025]** DiffPCN: Latent Diffusion Model Based on Multi-view Depth Images for Point Cloud Completion [[PDF]](https://arxiv.org/pdf/2509.23723)
+
+  Zijun Li, Hongyu Yan, **<u>Shijie Li</u>**, Kunming Luo, Li Lu, Xulei Yang, Weisi Lin
+
 - **[arXiv 2025]** Multi-View Industrial Anomaly Detection with Epipolar Constrained Cross-View Fusion [[PDF]](https://arxiv.org/pdf/2503.11088)  
 
   Yifan Liu, Xun Xu, **<u>Shijie Li</u>**, Jingyi Liao, Xulei Yang
+
+
+  
+
 
 ## 2025
 - **[ICCV 2025]** Global-Aware Monocular Semantic Scene Completion with State Space Models [[PDF]](https://arxiv.org/pdf/2503.06569) [[code]](https://github.com/sj-li/GA-MonoSSC)  

@@ -4,15 +4,19 @@
 
 ## Preprint
 - **[arXiv 2025]** SpatialReasoner: Active Perception for Large-Scale 3D Scene Understanding [[PDF]](https://arxiv.org/abs/2512.03284)
+
   Hongpei Zheng,  **<u>Shijie Li</u>**, Yanran Li, Hujun Yin
 
 - **[arXiv 2025]** Thinking Ahead: Foresight Intelligence in MLLMs and World Models [[PDF]](https://arxiv.org/abs/2511.18735)
+
   Zhantao Gong, Liaoyuan Fan, Qing Guo, Xun Xu, Xulei Yang, **<u>Shijie Li</u>**
 
 - **[arXiv 2025]** MonoSR: Open-Vocabulary Spatial Reasoning from Monocular Images [[PDF]](https://arxiv.org/abs/2511.18735)
+
   Qirui Wang, Jingyi He, Yining Pan, Si Yong Yeo, Xulei Yang, **<u>Shijie Li</u>**
 
 - **[arXiv 2025]** Improving the Generalization of Segmentation Foundation Models via Weakly-Supervised and Unsupervised Adaptation
+
   Haojie Zhang, Yongyi Su, Nanqing Liu, **<u>Shijie Li</u>**, Xulei Yang, Xiangyu Yue, Kui Jia, Xun Xu
 
 - **[arXiv 2025]** Patch-as-Decodable-Token: Towards Unified Multi-Modal Vision Tasks in MLLMs [[PDF]](https://arxiv.org/pdf/2510.01954)

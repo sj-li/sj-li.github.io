@@ -3,6 +3,10 @@
 # 📝 Publications
 
 ## Preprint
+- **[arXiv 2026]** One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation [[PDF]](https://arxiv.org/abs/2602.15400)
+
+  Zerui Li, Hongpei Zheng, Fangguo Zhao, Aidan Chan, Jian Zhou, Sihao Lin, **<u>Shijie Li</u>**, Qi Wu
+  
 - **[arXiv 2025]** SpatialReasoner: Active Perception for Large-Scale 3D Scene Understanding [[PDF]](https://arxiv.org/abs/2512.03284)
 
   Hongpei Zheng,  **<u>Shijie Li</u>**, Yanran Li, Hujun Yin

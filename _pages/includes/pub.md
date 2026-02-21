@@ -35,14 +35,17 @@
 
   
 ## 2026
-- **[ICASSP 2026]** Sam-Guided Multi-View Fusion for Weakly Supervised 3D Point Cloud Segmentation
+- **[CVPR 2026]** PanDA: Panoptic Domain Adaptation for Multimodal Perception in Autonomous Driving
 
-    Yuena Qiao, Nanqing Liu, Yongyi Su, **<u>Shijie Li</u>**, Xulei Yang, Bihan Wen, Nancy Chen, Tianrui Li, Xun Xu
-
+    Yining Pan, **<u>Shijie Li</u>**, Yuchen Wu, Xulei Yang, Na Zhao
 
 - **[ICLR 2026]** Patch-as-Decodable-Token: Towards Unified Multi-Modal Vision Tasks in MLLMs [[PDF]](https://arxiv.org/pdf/2510.01954) [[code]](https://github.com/Gorilla-Lab-SCUT/PaDT)  
 
   Yongyi Su, Haojie Zhang, **<u>Shijie Li</u>**, Nanqing Liu, Jingyi Liao, Junyi Pan, Yuan Liu, Xiaofen Xing, Chong Sun, Chen Li, Nancy F. Chen, Shuicheng Yan, Xulei Yang and Xun Xu
+
+- **[ICASSP 2026]** Sam-Guided Multi-View Fusion for Weakly Supervised 3D Point Cloud Segmentation
+
+    Yuena Qiao, Nanqing Liu, Yongyi Su, **<u>Shijie Li</u>**, Xulei Yang, Bihan Wen, Nancy Chen, Tianrui Li, Xun Xu
 
 ## 2025
 - **[ICCV 2025]** Global-Aware Monocular Semantic Scene Completion with State Space Models [[PDF]](https://arxiv.org/pdf/2503.06569) [[code]](https://github.com/sj-li/GA-MonoSSC)  

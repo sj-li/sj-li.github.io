@@ -6,7 +6,7 @@ I enjoy exploring different places—here’s a list of countries I’ve visited
 
 - Asia: 🇨🇳 🇸🇬 🇲🇾 🇮🇩 🇶🇦 🇦🇪 🇰🇷
 
-- Europe: 🇸🇪 🇵🇱 🇬🇧 🇨🇿 🇦🇹 🇮🇹 🇲🇨 🇫🇷 🇵🇹 🇪🇸 🇨🇭 🇧🇪 🇩🇪 🇳🇱 🇱🇺
+- Europe: 🇸🇪 🇳🇴 🇫🇮 🇵🇱 🇬🇧 🇨🇿 🇦🇹 🇮🇹 🇲🇨 🇫🇷 🇵🇹 🇪🇸 🇨🇭 🇧🇪 🇩🇪 🇳🇱 🇱🇺
 
 - North America: 🇺🇸
 

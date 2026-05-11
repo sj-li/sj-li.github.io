@@ -39,7 +39,7 @@
 
   
 ## 2026
-- **[CVPR 2026]** PanDA: Panoptic Domain Adaptation for Multimodal Perception in Autonomous Driving
+- **[CVPR 2026]** PanDA: Panoptic Domain Adaptation for Multimodal Perception in Autonomous Driving [[PDF]](https://arxiv.org/pdf/2604.19379)
 
     Yining Pan, **<u>Shijie Li</u>**, Yuchen Wu, Xulei Yang, Na Zhao
 
@@ -47,7 +47,7 @@
 
   Yongyi Su, Haojie Zhang, **<u>Shijie Li</u>**, Nanqing Liu, Jingyi Liao, Junyi Pan, Yuan Liu, Xiaofen Xing, Chong Sun, Chen Li, Nancy F. Chen, Shuicheng Yan, Xulei Yang and Xun Xu
 
-- **[ICASSP 2026]** Sam-Guided Multi-View Fusion for Weakly Supervised 3D Point Cloud Segmentation
+- **[ICASSP 2026]** Sam-Guided Multi-View Fusion for Weakly Supervised 3D Point Cloud Segmentation [[PDF]](https://alex-xun-xu.github.io/Doc/Publication/2026/QiaoEtAl_ICASSP26.pdf)
 
     Yuena Qiao, Nanqing Liu, Yongyi Su, **<u>Shijie Li</u>**, Xulei Yang, Bihan Wen, Nancy Chen, Tianrui Li, Xun Xu
 

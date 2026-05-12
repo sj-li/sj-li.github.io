@@ -15,6 +15,10 @@
 
   Qirui Wang, Jingyi He, Yining Pan, Xulei Yang, **<u>Shijie Li</u>**
 
+- **[arXiv 2026]** IntentionNav: A Benchmark for Intent-Driven Object Navigation from Implicit Human Instruction [[Project]](/PROJ/IntentionNav/)
+
+  Lin Qian, **<u>Shijie Li</u>**, Sihao Lin, Xuan Zhang, Bangya Liu, Yanran Li, Hujun Yin
+
 - **[arXiv 2026]** One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation [[PDF]](https://arxiv.org/abs/2602.15400)
 
   Zerui Li, Hongpei Zheng, Fangguo Zhao, Aidan Chan, Jian Zhou, Sihao Lin, **<u>Shijie Li</u>**, Qi Wu

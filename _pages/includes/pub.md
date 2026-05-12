@@ -3,6 +3,18 @@
 # 📝 Publications
 
 ## Preprint
+- **[arXiv 2026]** Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning [PDF]
+
+  Qinchuan Cheng, Zhantao Gong, Pengzhan Sun, Angela Yao, Xulei Yang, **<u>Shijie Li</u>**
+
+- **[arXiv 2026]** PRISM: Planning and Reasoning with Intent in Simulated embodied environments [PDF]
+
+  Yunn Kang Lim, Pengzhan Sun, Ziyi Bai, Xun Xu, Angela Yao, Xulei Yang, **<u>Shijie Li</u>**
+
+- **[arXiv 2026]** Grounding by Remembering: Cross-Scene and In-Scene Memory for 3D Functional Affordances [PDF]
+
+  Qirui Wang, Jingyi He, Yining Pan, Xulei Yang, **<u>Shijie Li</u>**
+
 - **[arXiv 2026]** One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation [[PDF]](https://arxiv.org/abs/2602.15400)
 
   Zerui Li, Hongpei Zheng, Fangguo Zhao, Aidan Chan, Jian Zhou, Sihao Lin, **<u>Shijie Li</u>**, Qi Wu

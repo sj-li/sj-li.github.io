@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Grounding by Remembering: Cross-Scene and In-Scene Memory for 3D Functional Affordances">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grounding by Remembering: Cross-Scene and In-Scene Memory for 3D Functional Affordances</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/nerfies_static/css/bulma.min.css">
+  <link rel="stylesheet" href="../assets/nerfies_static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../assets/nerfies_static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../assets/nerfies_static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../assets/nerfies_static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../assets/nerfies_static/js/fontawesome.all.min.js"></script>
+  <script src="../assets/nerfies_static/js/bulma-carousel.min.js"></script>
+  <script src="../assets/nerfies_static/js/bulma-slider.min.js"></script>
+  <script src="../assets/nerfies_static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Grounding by Remembering: Cross-Scene and In-Scene Memory for 3D Functional Affordances</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Qirui Wang</span> <span class="author-block">Jingyi He</span> <span class="author-block">Yining Pan</span> <span class="author-block">Xulei Yang</span> <span class="author-block">Shijie Li</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="far fa-images"></i></span>
+                  <span>Data</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Functional affordance grounding requires more than recognizing an object: an agent must localize the specific region that supports an interaction, such as the handle to pull or the button to press. This is difficult for training-free vision-language pipelines because actionable regions are often small, visually ambiguous, and repeated across multiple same-category instances in a scene. We propose AffordMem, a framework that grounds 3D functional affordances by remembering geometry at two levels. The first is cross-scene affordance memory: the agent maintains a category-level memory bank of RGB images with affordance regions rendered as overlays, and recalls the most informative examples at query time to guide a frozen VLM toward small operable subregions that text-only prompting consistently misses. The second is in-scene spatial memory: as the agent processes the scene, it organizes candidate instances and their 3D spatial relations into a structured scene graph, enabling the language model to resolve references over distant or currently unobserved candidates such as ''the second handle from the top.'' AffordMem requires no model fine-tuning and no target-scene annotation, using a reusable memory bank built from source scenes. On SceneFun3D, our method improves over the prior training-free state of the art by +3.23 AP50 on Split 0 and +3.7 AP50 on Split 1. Ablation studies support complementary benefits: cross-scene memory improves fine-grained localization, while in-scene memory provides the larger gain on spatially qualified queries.</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+</body>
+</html>

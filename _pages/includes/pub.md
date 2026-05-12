@@ -3,15 +3,15 @@
 # 📝 Publications
 
 ## Preprint
-- **[arXiv 2026]** Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning [PDF]
+- **[arXiv 2026]** Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning [[Project]](/Ego2World/)
 
   Qinchuan Cheng, Zhantao Gong, Pengzhan Sun, Angela Yao, Xulei Yang, **<u>Shijie Li</u>**
 
-- **[arXiv 2026]** PRISM: Planning and Reasoning with Intent in Simulated embodied environments [PDF]
+- **[arXiv 2026]** PRISM: Planning and Reasoning with Intent in Simulated embodied environments [[Project]](/PRISM/)
 
   Yunn Kang Lim, Pengzhan Sun, Ziyi Bai, Xun Xu, Angela Yao, Xulei Yang, **<u>Shijie Li</u>**
 
-- **[arXiv 2026]** Grounding by Remembering: Cross-Scene and In-Scene Memory for 3D Functional Affordances [PDF]
+- **[arXiv 2026]** Grounding by Remembering: Cross-Scene and In-Scene Memory for 3D Functional Affordances [[Project]](/AffordMem/)
 
   Qirui Wang, Jingyi He, Yining Pan, Xulei Yang, **<u>Shijie Li</u>**
 

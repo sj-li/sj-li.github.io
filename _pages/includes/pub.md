@@ -11,7 +11,7 @@
 
   Yunn Kang Lim, Pengzhan Sun, Ziyi Bai, Xun Xu, Angela Yao, Xulei Yang, **<u>Shijie Li</u>**
 
-- **[arXiv 2026]** Grounding by Remembering: Cross-Scene and In-Scene Memory for 3D Functional Affordances [[Project]](/PROJ/AffordMem/)
+- **[arXiv 2026]** Grounding by Remembering: Cross-Scene and In-Scene Memory for 3D Functional Affordances [[PDF]](https://arxiv.org/pdf/2605.11616)
 
   Qirui Wang, Jingyi He, Yining Pan, Xulei Yang, **<u>Shijie Li</u>**
 

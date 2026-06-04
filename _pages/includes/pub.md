@@ -19,6 +19,10 @@
 
   Lin Qian, **<u>Shijie Li</u>**, Sihao Lin, Xuan Zhang, Bangya Liu, Yanran Li, Hujun Yin
 
+- **[arXiv 2026]** AI for Auto-Research: Roadmap & User Guide [[PDF]](https://arxiv.org/pdf/2605.18661)
+
+  Lingdong Kong, Xian Sun, Wei Chow, Linfeng Li, Kevin Qinghong Lin, Xuan Billy Zhang, Song Wang, Rong Li, Qing Wu, Wei Gao, Yingshuo Wang, Shaoyuan Xie, Jiachen Liu, Leigang Qu, **<u>Shijie Li</u>**, Lai Xing Ng, Benoit R Cottereau, Ziwei Liu, Tat-Seng Chua, Wei Tsang Ooi
+
 - **[arXiv 2026]** One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation [[PDF]](https://arxiv.org/abs/2602.15400)
 
   Zerui Li, Hongpei Zheng, Fangguo Zhao, Aidan Chan, Jian Zhou, Sihao Lin, **<u>Shijie Li</u>**, Qi Wu

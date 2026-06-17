@@ -15,7 +15,7 @@
 
   Qirui Wang, Jingyi He, Yining Pan, Xulei Yang, **<u>Shijie Li</u>**
 
-- **[arXiv 2026]** IntentionNav: A Benchmark for Intent-Driven Object Navigation from Implicit Human Instruction [[Project]](/PROJ/IntentionNav/)
+- **[arXiv 2026]** IntentionNav: A Benchmark for Intent-Driven Object Navigation from Implicit Human Instruction [[PDF]](https://arxiv.org/pdf/2605.23187)
 
   Lin Qian, **<u>Shijie Li</u>**, Sihao Lin, Xuan Zhang, Bangya Liu, Yanran Li, Hujun Yin
 

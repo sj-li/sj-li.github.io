@@ -12,9 +12,6 @@ main:
   - title: "Publications"
     url: "#publications"
 
-  - title: "Projects"
-    url: "#projects"
-
   - title: "Misc."
     url: "#misc"
 
@@ -23,4 +20,3 @@ main:
 
   # - title: "Educations"
   #   url: "#educations"
-

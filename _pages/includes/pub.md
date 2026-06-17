@@ -27,10 +27,7 @@
 
   Zerui Li, Hongpei Zheng, Fangguo Zhao, Aidan Chan, Jian Zhou, Sihao Lin, **<u>Shijie Li</u>**, Qi Wu
 
-- **[arXiv 2026]** Perception-Aware Multimodal Spatial Reasoning from Monocular Images [[PDF]](https://arxiv.org/abs/2603.06985)
 
-  Yanchun Cheng, Rundong Wang, Xulei Yang, Alok Prakash, Daniela Rus, Marcelo H Ang Jr, **<u>Shijie Li</u>**
-  
 - **[arXiv 2025]** SpatialReasoner: Active Perception for Large-Scale 3D Scene Understanding [[PDF]](https://arxiv.org/abs/2512.03284)
 
   Hongpei Zheng,  **<u>Shijie Li</u>**, Yanran Li, Hujun Yin
@@ -66,6 +63,15 @@
 - **[ICLR 2026]** Patch-as-Decodable-Token: Towards Unified Multi-Modal Vision Tasks in MLLMs [[PDF]](https://arxiv.org/pdf/2510.01954) [[code]](https://github.com/Gorilla-Lab-SCUT/PaDT)  
 
   Yongyi Su, Haojie Zhang, **<u>Shijie Li</u>**, Nanqing Liu, Jingyi Liao, Junyi Pan, Yuan Liu, Xiaofen Xing, Chong Sun, Chen Li, Nancy F. Chen, Shuicheng Yan, Xulei Yang and Xun Xu
+
+- **[IROS 2026]** Perception-Aware Multimodal Spatial Reasoning from Monocular Images [[PDF]](https://arxiv.org/abs/2603.06985)
+
+  Yanchun Cheng, Rundong Wang, Xulei Yang, Alok Prakash, Daniela Rus, Marcelo H Ang Jr, **<u>Shijie Li</u>**
+
+- **[IROS 2026]** Talk2Escape: Conversational Grounding for Vision-and-Language Navigation 
+
+  Zerui Li, Sihao Lin, Yanyan Shao, Jiwen Zhang, Xiangyu Shi, **<u>Shijie Li</u>**, Qi Wu
+  
 
 - **[ICASSP 2026]** Sam-Guided Multi-View Fusion for Weakly Supervised 3D Point Cloud Segmentation [[PDF]](https://alex-xun-xu.github.io/Doc/Publication/2026/QiaoEtAl_ICASSP26.pdf)
 

@@ -73,6 +73,10 @@
 - **[IROS 2026]** Talk2Escape: Conversational Grounding for Vision-and-Language Navigation 
 
   Zerui Li, Sihao Lin, Yanyan Shao, Jiwen Zhang, Xiangyu Shi, **<u>Shijie Li</u>**, Qi Wu
+
+- **[RA-L 2026]** Efficient Online Robotic Reinforcement Learning with Explicit Manifold Alignment 
+
+  Wenkai Guo, Peizhi Tang, Yukun Bai, Ziming Yan, Haoyuan Deng, Guanxing Lu, **<u>Shijie Li</u>**, Ziwei Wang
   
 
 - **[ICASSP 2026]** Sam-Guided Multi-View Fusion for Weakly Supervised 3D Point Cloud Segmentation [[PDF]](https://alex-xun-xu.github.io/Doc/Publication/2026/QiaoEtAl_ICASSP26.pdf)

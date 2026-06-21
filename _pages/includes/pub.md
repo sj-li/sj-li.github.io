@@ -2,7 +2,9 @@
 
 # 📝 Publications
 
-## Preprint
+<details markdown="1">
+<summary><span style="font-size: 1.2em; font-weight: 700;">Preprint</span></summary>
+
 - **[arXiv 2026]** Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning [[PDF]](https://arxiv.org/pdf/2605.13335)
 
   Qinchuan Cheng, Zhantao Gong, Pengzhan Sun, Angela Yao, Xulei Yang, **<u>Shijie Li</u>**
@@ -53,7 +55,8 @@
   Yifan Liu, Xun Xu, **<u>Shijie Li</u>**, Jingyi Liao, Xulei Yang
 
 
-  
+</details>
+
 ## 2026
 - **[CVPR 2026]** PanDA: Panoptic Domain Adaptation for Multimodal Perception in Autonomous Driving [[PDF]](https://arxiv.org/pdf/2604.19379)
 

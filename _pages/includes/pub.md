@@ -85,6 +85,10 @@
 - **[RA-L 2026]** Efficient Online Robotic Reinforcement Learning with Explicit Manifold Alignment 
 
   Wenkai Guo, Peizhi Tang, Yukun Bai, Ziming Yan, Haoyuan Deng, Guanxing Lu, **<u>Shijie Li</u>**, Ziwei Wang
+
+- **[BMVC 2026]** Prioritizing Faithfulness: Efficient Zero-Shot Novel View Synthesis via Homography-Guided SA-RePaint [[PDF]](https://alex-xun-xu.github.io/Doc/Publication/2026/QiaoEtAl_ICASSP26.pdf)
+
+    Ryotaro Kakuda, Chen Li, **<u>Shijie Li</u>**, Xiaofeng Yang, Guosheng Lin, Fayao Liu
   
 
 - **[ICASSP 2026]** Sam-Guided Multi-View Fusion for Weakly Supervised 3D Point Cloud Segmentation [[PDF]](https://alex-xun-xu.github.io/Doc/Publication/2026/QiaoEtAl_ICASSP26.pdf)

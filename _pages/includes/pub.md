@@ -30,10 +30,6 @@
 
   Lingdong Kong, Xian Sun, Wei Chow, Linfeng Li, Kevin Qinghong Lin, Xuan Billy Zhang, Song Wang, Rong Li, Qing Wu, Wei Gao, Yingshuo Wang, Shaoyuan Xie, Jiachen Liu, Leigang Qu, **<u>Shijie Li</u>**, Lai Xing Ng, Benoit R Cottereau, Ziwei Liu, Tat-Seng Chua, Wei Tsang Ooi
 
-- **[arXiv 2026]** One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation [[PDF]](https://arxiv.org/abs/2602.15400)
-
-  Zerui Li, Hongpei Zheng, Fangguo Zhao, Aidan Chan, Jian Zhou, Sihao Lin, **<u>Shijie Li</u>**, Qi Wu
-
 
 - **[arXiv 2025]** SpatialReasoner: Active Perception for Large-Scale 3D Scene Understanding [[PDF]](https://arxiv.org/abs/2512.03284)
 
@@ -73,6 +69,10 @@
 - **[ECCV 2026]** MonoSR: Open-Vocabulary Spatial Reasoning from Monocular Images [[PDF]](https://arxiv.org/abs/2511.18735)
 
   Qirui Wang, Jingyi He, Yining Pan, Si Yong Yeo, Xulei Yang, **<u>Shijie Li</u>**
+
+- **[CoRL 2026]** One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation [[PDF]](https://arxiv.org/abs/2602.15400)
+
+  Zerui Li, Hongpei Zheng, Fangguo Zhao, Aidan Chan, Jian Zhou, Sihao Lin, **<u>Shijie Li</u>**, Qi Wu
 
 - **[IROS 2026]** Perception-Aware Multimodal Spatial Reasoning from Monocular Images [[PDF]](https://arxiv.org/abs/2603.06985)
 

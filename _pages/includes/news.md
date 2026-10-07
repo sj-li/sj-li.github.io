@@ -2,6 +2,7 @@
 <span id="news"></span>
 
 # 🔥 News
+- <strong>2026-09</strong>: Starting from 2026.9, I serve as an Associate Editor for ICRA 2027 and IEEE Robotics and Automation Letters (RA-L).
 - <strong>2026-05</strong>: We will host <a href="https://robotpad2026.github.io/">RobotPAD workshop</a> (NeurIPS26, Paris), <a href="https://emr-workshop.github.io/">EMR workshop</a> (ECCV26, Malmö).
 - <strong>2026-05</strong>: I will give an invited short talk at <a href="https://singaporevisionday.github.io/svd2026/">Singapore Vision Day 2026</a> (NUS).
 - <strong>2026</strong>: One paper was accepted to CVPR, one paper was accepted to ICLR, two papers were accepted to ECCV, one paper was accepted to CoRL, two papers were accepted to IROS, one paper was accepted to RA-L, one paper was accepted to BMVC, and one paper was accepted to ICASSP.

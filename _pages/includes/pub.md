@@ -5,6 +5,14 @@
 <details markdown="1">
 <summary><span style="font-size: 1.2em; font-weight: 700;">Preprint</span></summary>
 
+- **[arXiv 2026]** GeoReader: Learning Latent Geometry for Spatial Reasoning in Vision-Language Models [[PDF]](https://arxiv.org/pdf/2610.18694)
+
+  Rong Li, **<u>Shijie Li</u>**, Jiangyong Huang, Lingdong Kong, Jiaming Zhou, Dongyue Lu, Zeying Gong, Baoxiong Jia, Junwei Liang, Siyuan Huang
+
+- **[arXiv 2026]** Aligning Thoughts with Answers: Probability Rewards to Tame Thinking Drift [[PDF]](https://arxiv.org/pdf/2609.39183)
+
+  Pengzhan Sun, Shiu-hong Kao, **<u>Shijie Li</u>**, Yongyi Su, Junbin Xiao, Arjun Reddy Akula, Angela Yao
+
 - **[arXiv 2026]** Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning [[PDF]](https://arxiv.org/pdf/2605.13335)
 
   Qinchuan Cheng, Zhantao Gong, Pengzhan Sun, Angela Yao, Xulei Yang, **<u>Shijie Li</u>**

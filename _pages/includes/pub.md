@@ -13,9 +13,9 @@
 
   Pengzhan Sun, Shiu-hong Kao, **<u>Shijie Li</u>**, Yongyi Su, Junbin Xiao, Arjun Reddy Akula, Angela Yao
 
-- **[arXiv 2026]** Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning [[PDF]](https://arxiv.org/pdf/2605.13335)
+- **[arXiv 2026]** Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning [[PDF]](https://arxiv.org/pdf/2610.02715)
 
-  Qinchuan Cheng, Zhantao Gong, Pengzhan Sun, Angela Yao, Xulei Yang, **<u>Shijie Li</u>**
+  Qinchuan Cheng, Zhantao Gong, Pengzhan Sun, Angela Yao, **<u>Shijie Li</u>**
 
 - **[arXiv 2026]** PRISM: Planning and Reasoning with Intent in Simulated embodied environments [[PDF]](https://arxiv.org/pdf/2605.11534)
 
@@ -39,13 +39,13 @@
   Lingdong Kong, Xian Sun, Wei Chow, Linfeng Li, Kevin Qinghong Lin, Xuan Billy Zhang, Song Wang, Rong Li, Qing Wu, Wei Gao, Yingshuo Wang, Shaoyuan Xie, Jiachen Liu, Leigang Qu, **<u>Shijie Li</u>**, Lai Xing Ng, Benoit R Cottereau, Ziwei Liu, Tat-Seng Chua, Wei Tsang Ooi
 
 
-- **[arXiv 2025]** SpatialReasoner: Active Perception for Large-Scale 3D Scene Understanding [[PDF]](https://arxiv.org/abs/2512.03284)
+- **[arXiv 2025]** Think, Then Look: Active Spatial Reasoning for House-Scale 3D Scene Understanding [[PDF]](https://arxiv.org/pdf/2512.03284)
 
-  Hongpei Zheng,  **<u>Shijie Li</u>**, Yanran Li, Hujun Yin
+  Hongpei Zheng, **<u>Shijie Li</u>**, Lin Qian, Zhenghao Li, Qijun Yang, Yanran Li, Hujun Yin
 
 
 
-- **[arXiv 2025]** Improving the Generalization of Segmentation Foundation Models via Weakly-Supervised and Unsupervised Adaptation
+- **[Preprint 2025]** Improving the Generalization of Segmentation Foundation Models via Weakly-Supervised and Unsupervised Adaptation [[paper]](https://www.preprints.org/manuscript/202510.1640)
 
   Haojie Zhang, Yongyi Su, Nanqing Liu, **<u>Shijie Li</u>**, Xulei Yang, Xiangyu Yue, Kui Jia, Xun Xu
 
@@ -75,31 +75,31 @@
 
   Yongyi Su, Haojie Zhang, **<u>Shijie Li</u>**, Nanqing Liu, Jingyi Liao, Junyi Pan, Yuan Liu, Xiaofen Xing, Chong Sun, Chen Li, Nancy F. Chen, Shuicheng Yan, Xulei Yang and Xun Xu
 
-- **[ECCV 2026]** Thinking Ahead: Foresight Intelligence in MLLMs and World Models [[PDF]](https://arxiv.org/abs/2511.18735)
+- **[ECCV 2026]** Thinking Ahead: Foresight Intelligence in MLLMs and World Models [[PDF]](https://arxiv.org/pdf/2511.18735)
 
   Zhantao Gong, Liaoyuan Fan, Qing Guo, Xun Xu, Xulei Yang, **<u>Shijie Li</u>**
 
-- **[ECCV 2026]** MonoSR: Open-Vocabulary Spatial Reasoning from Monocular Images [[PDF]](https://arxiv.org/abs/2511.18735)
+- **[ECCV 2026]** MonoSR: Open-Vocabulary Spatial Reasoning from Monocular Images [[PDF]](https://arxiv.org/pdf/2511.19119)
 
   Qirui Wang, Jingyi He, Yining Pan, Si Yong Yeo, Xulei Yang, **<u>Shijie Li</u>**
 
-- **[CoRL 2026]** One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation [[PDF]](https://arxiv.org/abs/2602.15400)
+- **[CoRL 2026]** One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation [[PDF]](https://arxiv.org/pdf/2602.15400)
 
   Zerui Li, Hongpei Zheng, Fangguo Zhao, Aidan Chan, Jian Zhou, Sihao Lin, **<u>Shijie Li</u>**, Qi Wu
 
-- **[IROS 2026]** Perception-Aware Multimodal Spatial Reasoning from Monocular Images [[PDF]](https://arxiv.org/abs/2603.06985)
+- **[IROS 2026]** Perception-Aware Multimodal Spatial Reasoning from Monocular Images [[PDF]](https://arxiv.org/pdf/2603.06985)
 
   Yanchun Cheng, Rundong Wang, Xulei Yang, Alok Prakash, Daniela Rus, Marcelo H Ang Jr, **<u>Shijie Li</u>**
 
-- **[IROS 2026]** Talk2Escape: Conversational Grounding for Vision-and-Language Navigation 
+- **[IROS 2026]** Talk2Escape: Conversational Grounding for Vision-and-Language Navigation [[PDF]](https://arxiv.org/pdf/2609.28296)
 
   Zerui Li, Sihao Lin, Yanyan Shao, Jiwen Zhang, Xiangyu Shi, **<u>Shijie Li</u>**, Qi Wu
 
-- **[RA-L 2026]** Efficient Online Robotic Reinforcement Learning with Explicit Manifold Alignment 
+- **[RA-L 2026]** Efficient Online Robotic Reinforcement Learning with Explicit Manifold Alignment [[paper]](https://doi.org/10.1109/LRA.2026.3728323)
 
   Wenkai Guo, Peizhi Tang, Yukun Bai, Ziming Yan, Haoyuan Deng, Guanxing Lu, **<u>Shijie Li</u>**, Ziwei Wang
 
-- **[BMVC 2026]** Prioritizing Faithfulness: Efficient Zero-Shot Novel View Synthesis via Homography-Guided SA-RePaint [[PDF]](https://alex-xun-xu.github.io/Doc/Publication/2026/QiaoEtAl_ICASSP26.pdf)
+- **[BMVC 2026]** Prioritizing Faithfulness: Efficient Zero-Shot Novel View Synthesis via Homography-Guided SA-RePaint [[conference]](https://bmvc2026.bmva.org/programme/monday/)
 
     Ryotaro Kakuda, Chen Li, **<u>Shijie Li</u>**, Xiaofeng Yang, Guosheng Lin, Fayao Liu
   
@@ -125,7 +125,7 @@
 
   **<u>Shijie Li</u>**, Farhad G. Zanjani, Haitam Ben Yahia, Yuki M. Asano, Juergen Gall, Amirhossein Habibian
 
-- **[Neurocomputing]** SiFH: Siamese Frequency Harmonization Self-Supervised Learning for Motion Forecasting [[PDF]](https://arxiv.org/pdf/2312.08892)    
+- **[Neurocomputing]** SiFH: Siamese Frequency Harmonization Self-Supervised Learning for Motion Forecasting [[paper]](https://doi.org/10.1016/j.neucom.2025.131563)
 
   Chunyu Liu, Zeyu Liu, Tiechui Yao, **<u>Shijie Li</u>**
 
@@ -196,6 +196,6 @@
   
   **<u>Shijie Li</u>**, Bo Ren, Yun Liu, Ming-Ming Cheng, Duncan Frost, Victor Adrian Prisacariu
 
-- **[IROS 2018]** Structured skip list: A compact data structure for 3D reconstruction [[PDF]](https://ora.ox.ac.uk/objects/uuid:75d46621-7ccd-486b-808a-1b772a39b164/files/m6e5ebcdc74b5c966cf2d4c94bcc179f0)  
+- **[IROS 2018]** Structured skip list: A compact data structure for 3D reconstruction [[paper]](https://doi.org/10.1109/IROS.2018.8594075)
   
   **<u>Shijie Li</u>**, Ming-Ming Cheng, Yun Liu, Shao-Ping Lu, YaHui Wang, Victor Adrian Prisacariu

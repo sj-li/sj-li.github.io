@@ -53,6 +53,11 @@
 
 </details>
 
+## 2027
+- **[WACV 2027]** Motion Subspace Canonicalization for Design-Intent Evaluation in CAD Sketches
+
+  Ryotaro Kakuda, Chen Li, **<u>Shijie Li</u>**, Xiaofeng Yang, Guosheng Lin, Fayao Liu
+
 ## 2026
 - **[CVPR 2026]** PanDA: Panoptic Domain Adaptation for Multimodal Perception in Autonomous Driving [[PDF]](https://arxiv.org/pdf/2604.19379)
 

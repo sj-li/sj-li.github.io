@@ -13,7 +13,7 @@ section{scroll-margin-top:82px}
 .site-content .section-heading h2.h1{font-size:21.318px;font-weight:600;line-height:1.2;margin:0;letter-spacing:-.01em}
 .site-profile #profile{padding:18px 10px}
 .site-profile .portrait-frame{width:180px;height:180px;overflow:hidden;border-radius:50%;margin:0 auto 18px}
-.site-profile .portrait{display:block;width:180px;height:180px;object-fit:cover;object-position:center 37%;transform:scale(1.65);transform-origin:50% 25%}
+.site-profile .portrait{display:block;width:180px;height:180px;object-fit:cover}
 #profile h1.h2{font-size:21.318px;font-weight:600;line-height:1.2;letter-spacing:-.01em;margin:0 0 8px}
 #profile .profile-role{font-size:13.566px;font-weight:400;line-height:1.5;margin-bottom:6px}
 #profile .profile-summary{font-size:13px;margin-top:10px;line-height:1.6}
@@ -84,7 +84,7 @@ section{scroll-margin-top:82px}
 #honors .award-list li{display:block;margin-bottom:7px;position:relative;padding-left:21px;line-height:1.65}
 #honors .award-list li::before{content:'\f091';font-family:Solid;position:absolute;left:0;top:2px;color:#6a5cd2;font-size:11px}
 #honors .award-list strong{font-weight:400}
-#service .section-body,#honors .section-body,#grants .section-body,#talks .section-body{font-size:15.3px;line-height:1.6}
+#service .section-body,#honors .section-body,#grants .section-body,#talks .section-body,#misc .section-body{font-size:15.3px;line-height:1.6}
 #service .service-list{padding-left:1.3rem;margin:0}
 #service .service-list>li{margin-bottom:7px}
 #service .service-list>li:last-child{margin-bottom:0}
@@ -101,6 +101,13 @@ section{scroll-margin-top:82px}
 #talks .talks-list li{margin-bottom:7px}
 #talks .talks-list li:last-child{margin-bottom:0}
 .talk-date{color:#77717e;font-variant-numeric:tabular-nums}
+#misc .misc-intro{margin:0 0 8px}
+#misc .misc-list{padding:0 0 0 1.3rem;margin:0;line-height:1.65}
+#misc .misc-list li{margin-bottom:5px}
+#misc .misc-list li:last-child{margin-bottom:0}
+#misc .misc-list strong{font-weight:600}
+.statcounter-wrap{display:flex;justify-content:center;align-items:center;margin-top:14px;text-align:center}
+.statcounter-wrap .statcounter,.statcounter-wrap a,.statcounter-wrap img{display:inline-block!important;margin:0 auto!important}
 .site-footer{margin-top:24px;border:0;background:transparent;padding:12px 0 22px;text-align:center;font-size:.82rem;color:#77717e}
 .menu-toggle{display:none}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #714abb;outline-offset:3px}
@@ -120,7 +127,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #71
  .site-layout{padding-top:0}
  .site-profile{margin-bottom:4px}
  .site-profile #profile{display:grid;grid-template-columns:112px minmax(0,1fr);column-gap:20px;max-width:480px;margin:0 auto;padding:22px 0 18px;text-align:left}
- .site-profile .portrait-frame{grid-column:1;grid-row:1 / span 5;align-self:center;width:112px;height:112px;margin:0}
+ .site-profile .portrait-frame{grid-column:1;grid-row:1 / span 4;align-self:center;width:112px;height:112px;margin:0}
  .site-profile .portrait{width:112px;height:112px}
  #profile h1.h2{grid-column:2;font-size:21.318px;margin:0 0 5px}
  #profile .profile-role{grid-column:2;margin:0;font-size:.93rem;line-height:1.45}

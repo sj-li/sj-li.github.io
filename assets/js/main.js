@@ -56,13 +56,15 @@ filters.forEach(button => button.addEventListener('click', () => {
 if (search) search.addEventListener('input', filterPapers);
 filterPapers();
 const navLinks = [...navigation.querySelectorAll('a')];
+const navSectionIds = new Set(navLinks.map(link => link.hash.slice(1)));
+const navSections = [...document.querySelectorAll('main > section')].filter(section => navSectionIds.has(section.id));
 function updateNavigation() {
   let active = 'about';
-  document.querySelectorAll('main > section').forEach(section => {
+  navSections.forEach(section => {
     if (section.getBoundingClientRect().top <= 145) active = section.id;
   });
-  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4) {
-    active = document.querySelector('main > section:last-of-type').id;
+  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4 && navSections.length) {
+    active = navSections[navSections.length - 1].id;
   }
   navLinks.forEach(link => {
     const current = link.hash === `#${active}`;

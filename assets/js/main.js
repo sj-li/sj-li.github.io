@@ -58,20 +58,53 @@ filterPapers();
 const navLinks = [...navigation.querySelectorAll('a')];
 const navSectionIds = new Set(navLinks.map(link => link.hash.slice(1)));
 const navSections = [...document.querySelectorAll('main > section')].filter(section => navSectionIds.has(section.id));
-function updateNavigation() {
-  let active = 'about';
-  navSections.forEach(section => {
-    if (section.getBoundingClientRect().top <= 145) active = section.id;
-  });
-  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4 && navSections.length) {
-    active = navSections[navSections.length - 1].id;
-  }
+let clickedNavId = location.hash && navSectionIds.has(location.hash.slice(1)) ? location.hash.slice(1) : null;
+
+function setActiveNav(active) {
   navLinks.forEach(link => {
     const current = link.hash === `#${active}`;
     link.classList.toggle('active', current);
     if (current) link.setAttribute('aria-current', 'location');
     else link.removeAttribute('aria-current');
   });
+}
+
+document.addEventListener('click', event => {
+  const link = event.target.closest('a[href^="#"]');
+  if (!link) return;
+  const id = link.getAttribute('href').slice(1);
+  if (navSectionIds.has(id)) {
+    clickedNavId = id;
+    setActiveNav(id);
+  }
+});
+
+const clearClickedNav = () => {
+  clickedNavId = null;
+};
+window.addEventListener('wheel', clearClickedNav, { passive: true });
+window.addEventListener('touchmove', clearClickedNav, { passive: true });
+window.addEventListener('keydown', event => {
+  if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(event.key)) {
+    clearClickedNav();
+  }
+});
+
+function updateNavigation() {
+  if (clickedNavId) {
+    setActiveNav(clickedNavId);
+    return;
+  }
+  let active = 'about';
+  if (window.scrollY > 10) {
+    navSections.forEach(section => {
+      if (section.getBoundingClientRect().top <= 110) active = section.id;
+    });
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4 && navSections.length) {
+      active = navSections[navSections.length - 1].id;
+    }
+  }
+  setActiveNav(active);
 }
 window.addEventListener('scroll', updateNavigation, { passive: true });
 preprints.addEventListener('toggle', updateNavigation);

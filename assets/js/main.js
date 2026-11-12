@@ -1,5 +1,20 @@
 const toggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#navigation');
+const themeToggle = document.querySelector('#theme-toggle');
+const themeIcon = document.querySelector('#theme-icon');
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀' : '☾';
+}
+const savedTheme = localStorage.getItem('site-theme');
+applyTheme(savedTheme === 'light' ? 'light' : 'dark');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('site-theme', next);
+    applyTheme(next);
+  });
+}
 toggle.addEventListener('click', () => {
   const open = navigation.classList.toggle('open');
   toggle.setAttribute('aria-expanded', String(open));

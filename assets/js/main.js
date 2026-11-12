@@ -49,7 +49,7 @@ filters.forEach(button => button.addEventListener('click', () => {
     item.setAttribute('aria-pressed', String(item === button));
   });
   const subtitle = document.querySelector('.publication-subtitle');
-  if (subtitle) subtitle.textContent = {selected: 'Selected Publications', all: 'All Publications', embodied: 'Embodied AI', spatial: '3D & Spatial', driving: 'Autonomous Driving', others: 'Others'}[selected];
+  if (subtitle) subtitle.textContent = {selected: 'Selected Publications', all: 'All Publications', embodied: 'Embodied AI, Navigation & Robot Learning', spatial: '3D Perception & Spatial Reconstruction', multimodal: 'Multimodal Foundation Models & Spatial Reasoning', driving: 'Autonomous Driving & Temporal Perception', others: 'General Computer Vision & Other Research'}[selected];
   filterPapers();
   requestAnimationFrame(updateNavigation);
 }));

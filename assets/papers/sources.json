@@ -1,0 +1,2271 @@
+[
+  {
+    "id": 0,
+    "title": "Motion Subspace Canonicalization for Design-Intent Evaluation in CAD Sketches",
+    "file": "assets/papers/paper-00.webp",
+    "source": "https://github.com/kakukakujirori/SketchIntent/releases/tag/v.1.0.0",
+    "kind": "official-dataset-preview",
+    "page": null,
+    "figure": null,
+    "crop": null,
+    "caption": "Official SketchIntent-292 dataset: two human-annotated CAD sketches.",
+    "description": "Two saved CAD previews from the official SketchIntent-292 benchmark, showing geometric constraints.",
+    "core_contribution": "Motion-subspace canonicalization evaluates CAD constraint sets by the infinitesimal redesign motions they permit, reducing sensitivity to syntactic annotation differences. The authors release 292 sketches with three independent expert constraint annotations per sketch.",
+    "selection_rationale": "用官方数据集中真实保存的 CAD 预览替代 GitHub 标题卡。比较全部保存预览后，选择轮廓清楚且约束标记没有被画面边界截断的两例；保留原约束与背景。它们是数据示例，并非模型预测或论文结果图。",
+    "reading_scope": "Author abstract, official implementation README, evaluation/data-release documentation and original saved dataset previews. A public paper PDF was not located.",
+    "limitations": "No public paper PDF located. Thumbnail shows original author-released dataset previews, not a paper screenshot.",
+    "panels": [
+      {
+        "archive_member": "SketchIntent-292/6/31647_ab9ad9dc_0000_sketch10_J.FCStd",
+        "embedded_file": "thumbnails/Thumbnail.png"
+      },
+      {
+        "archive_member": "SketchIntent-292/11/148051_ad8f6d60_0000_sketch01_J.FCStd",
+        "embedded_file": "thumbnails/Thumbnail.png"
+      }
+    ],
+    "candidates_considered": [
+      {
+        "source": "https://github.com/kakukakujirori/SketchIntent",
+        "reason": "GitHub 预览卡只有文字，无法展示研究内容。"
+      },
+      {
+        "source": "Official SketchIntent-292 saved CAD previews",
+        "reason": "实际草图与约束可直接说明 CAD 设计意图主题。"
+      }
+    ],
+    "selected": false,
+    "width": 520,
+    "height": 256,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 1,
+    "figure": 1,
+    "crop": [
+      313,
+      244,
+      558,
+      446
+    ],
+    "description": "PanDA concept illustration: asymmetric modality corruption and 2D/3D expert refinement.",
+    "core_contribution": "PanDA adapts multimodal 3D panoptic segmentation without target annotations. It combines mean-teacher learning, asymmetric multimodal dropping to address modality imbalance, and 2D semantic plus 3D geometric pseudo-label refinement. Experiments cover time, weather, location and sensor shifts.",
+    "selection_rationale": "The introductory two-block concept illustration is much simpler and more colourful than the complete training architecture. RGB/LiDAR corruption and the broken-to-complete instance remain recognisable as a thumbnail.",
+    "candidates_considered": [
+      {
+        "page": 3,
+        "figure": 2,
+        "reason": "Complete architecture contains small text and many training-flow arrows; current thumbnail was too dense."
+      },
+      {
+        "page": 8,
+        "figure": 3,
+        "reason": "Error maps have sparse pale points and many comparison columns, so the visual subject is weak at small size."
+      }
+    ],
+    "kind": "paper-figure-crop",
+    "id": 1,
+    "title": "PanDA: Panoptic Domain Adaptation for Multimodal Perception in Autonomous Driving",
+    "file": "assets/papers/paper-01.webp",
+    "source": "https://arxiv.org/pdf/2604.19379",
+    "caption": "Figure 1. Core concepts of our proposed UDA model PanDA. (a)\nTo address modality imbalance arising from challenging condi-\ntions in the target domain, we propose Asymmetric Multimodal\nDrop, which simulates modality corruption to force cross-modal\ncompletion, thereby enhancing overall robustness. (b) To rectify\nincomplete pseudo-labels, we leverage 2D semantic and 3D geo-\nmetric priors as a Dual-Expert to generate dense and reliable su-\npervision, ensuring high-quality panoptic segmentation under do-\nmain shifts.",
+    "reviewed_sections": [
+      "abstract/introduction",
+      "method or dataset construction",
+      "experiments/results",
+      "candidate figure captions and rendered pages"
+    ],
+    "reading_limitations": "Selection-oriented reading; not a replication or independent validation of the paper results.",
+    "selected": false,
+    "width": 998,
+    "height": 776,
+    "reading_scope": "Abstract, methods and results sections, figure captions, and visual review of candidate pages.",
+    "file_version": "curated-1"
+  },
+  {
+    "page": 23,
+    "figure": 10,
+    "panels": [
+      {
+        "page": 23,
+        "crop": [
+          123,
+          163,
+          209,
+          227
+        ]
+      },
+      {
+        "page": 23,
+        "crop": [
+          209,
+          163,
+          295,
+          227
+        ]
+      },
+      {
+        "page": 23,
+        "crop": [
+          316.4,
+          163,
+          402.3,
+          227
+        ]
+      },
+      {
+        "page": 23,
+        "crop": [
+          402.3,
+          163,
+          488.2,
+          227
+        ]
+      }
+    ],
+    "description": "PaDT qualitative outputs: bounding-box and segmentation results for a couch and a pizza.",
+    "core_contribution": "PaDT introduces patch-derived Visual Reference Tokens into the language model output vocabulary and decodes their hidden states into boxes and masks. A random foreground-token training strategy supports detection, referring comprehension, segmentation and region captioning, with evaluations at 3B and 7B scales.",
+    "selection_rationale": "A coherent 2×2 selection of actual box/mask outputs makes direct visual prediction obvious without requiring readers to decipher a token architecture. The couch and food scenes provide clear objects and strong red-mask contrast. These are selected output panels from the same figure, not a new experiment.",
+    "candidates_considered": [
+      {
+        "page": 2,
+        "figure": 1,
+        "reason": "Overview mixes three textual task descriptions and very small photographs."
+      },
+      {
+        "page": 22,
+        "figure": 9,
+        "reason": "Full baseline comparison has many methods, repeated images and tiny error labels."
+      },
+      {
+        "page": 24,
+        "figure": 12,
+        "reason": "Region-captioning examples are dominated by long generated paragraphs."
+      }
+    ],
+    "crop": null,
+    "kind": "paper-panel-montage",
+    "id": 2,
+    "title": "Patch-as-Decodable-Token: Towards Unified Multi-Modal Vision Tasks in MLLMs",
+    "file": "assets/papers/paper-02.webp",
+    "source": "https://arxiv.org/pdf/2510.01954",
+    "caption": "Figure 10: Qualitative visualization of PaDT generated examples on referring expression compre-\nhension/segmentation tasks.",
+    "reviewed_sections": [
+      "abstract/introduction",
+      "method or dataset construction",
+      "experiments/results",
+      "candidate figure captions and rendered pages"
+    ],
+    "reading_limitations": "Selection-oriented reading; not a replication or independent validation of the paper results.",
+    "selected": false,
+    "width": 742,
+    "height": 558,
+    "reading_scope": "Abstract, methods and results sections, figure captions, and visual review of candidate pages.",
+    "file_version": "curated-1"
+  },
+  {
+    "page": 7,
+    "figure": 2,
+    "panels": [
+      {
+        "page": 7,
+        "crop": [
+          252.6,
+          147,
+          297,
+          178.5
+        ]
+      },
+      {
+        "page": 7,
+        "crop": [
+          338,
+          147,
+          382.5,
+          178.5
+        ]
+      },
+      {
+        "page": 7,
+        "crop": [
+          424.2,
+          147,
+          468.5,
+          178.5
+        ]
+      },
+      {
+        "page": 7,
+        "crop": [
+          252.6,
+          268.3,
+          297,
+          299.6
+        ]
+      },
+      {
+        "page": 7,
+        "crop": [
+          338,
+          268.3,
+          382.5,
+          299.6
+        ]
+      },
+      {
+        "page": 7,
+        "crop": [
+          424.2,
+          268.3,
+          468.5,
+          299.6
+        ]
+      }
+    ],
+    "description": "FSU-Bench driving examples: selected historical and future frames for relative-distance and counterfactual tasks.",
+    "core_contribution": "FSU-QA evaluates semantic future understanding from historical driving video and ego trajectories, including agent relations, vulnerable-road-user risks and counterfactual outcomes. Its benchmark tests VLM foresight and semantic consistency of generated world-model futures; the paper reports persistent gaps and improvements from dataset fine-tuning.",
+    "selection_rationale": "Selected frames retain the original yellow historical and green future framing, plus object boxes and counterfactual paths. Two chronological sequences are easier to recognise than the overview card with benchmark statistics. Frames are nonconsecutive samples from the same two illustrated cases, with the original order preserved.",
+    "candidates_considered": [
+      {
+        "page": 3,
+        "figure": 1,
+        "reason": "Three infographic columns are text-heavy at homepage size."
+      },
+      {
+        "page": 35,
+        "figure": 27,
+        "reason": "Full film strips are extremely wide and would shrink to a thin line."
+      }
+    ],
+    "crop": null,
+    "kind": "paper-panel-montage",
+    "id": 3,
+    "title": "Thinking Ahead: Foresight Intelligence in MLLMs and World Models",
+    "file": "assets/papers/paper-03.webp",
+    "source": "https://arxiv.org/pdf/2511.18735",
+    "caption": "Fig. 2: Visualization of FSU-Bench. Yellow boxes represent historical frames, and\ngreen boxes represent future frames. The bounding boxes are illustrative only and do\nnot appear in the actual dataset. Content in {} is filled into a sentence template. Note:\nthe questions above are simplified slightly for clarity and brevity.",
+    "reviewed_sections": [
+      "abstract/introduction",
+      "method or dataset construction",
+      "experiments/results",
+      "candidate figure captions and rendered pages"
+    ],
+    "reading_limitations": "Selection-oriented reading; not a replication or independent validation of the paper results.",
+    "selected": true,
+    "width": 1108,
+    "height": 532,
+    "reading_scope": "Abstract, methods and results sections, figure captions, and visual review of candidate pages.",
+    "file_version": "curated-1"
+  },
+  {
+    "page": 11,
+    "figure": 5,
+    "panels": [
+      {
+        "page": 11,
+        "crop": [
+          136.8,
+          345.6,
+          189.8,
+          398.3
+        ]
+      },
+      {
+        "page": 11,
+        "crop": [
+          251.3,
+          345.6,
+          304.3,
+          398.3
+        ]
+      },
+      {
+        "page": 11,
+        "crop": [
+          365.9,
+          345.6,
+          418.9,
+          398.3
+        ]
+      },
+      {
+        "page": 11,
+        "crop": [
+          194.1,
+          345.6,
+          247.0,
+          398.3
+        ]
+      },
+      {
+        "page": 11,
+        "crop": [
+          308.6,
+          345.6,
+          361.6,
+          398.3
+        ]
+      },
+      {
+        "page": 11,
+        "crop": [
+          423.2,
+          345.6,
+          476.2,
+          398.3
+        ]
+      }
+    ],
+    "description": "MonoSR dataset examples across indoor, outdoor and object-centric spatial reasoning.",
+    "core_contribution": "MonoSR curates over one million spatial QA pairs from monocular RGB images with observability filtering, spanning indoor, outdoor and object-centric domains. It organises tasks into perception, imagination and situational reasoning; auxiliary geometric-information studies expose large metric-estimation gaps.",
+    "selection_rationale": "Six source photographs are arranged as three domain columns instead of a long six-example strip. The existing scene markers remain intact. Photographs occupy the thumbnail rather than fine-print QA text; these are illustrations of dataset coverage, not model predictions.",
+    "candidates_considered": [
+      {
+        "page": 2,
+        "figure": 1,
+        "reason": "Pastel overview is attractive but too much tiny text surrounds small scenes."
+      },
+      {
+        "page": 3,
+        "figure": 2,
+        "reason": "Curation pipeline communicates dataset processing rather than the concrete spatial tasks."
+      }
+    ],
+    "crop": null,
+    "kind": "paper-panel-montage",
+    "id": 4,
+    "title": "MonoSR: Open-Vocabulary Spatial Reasoning from Monocular Images",
+    "file": "assets/papers/paper-04.webp",
+    "source": "https://arxiv.org/pdf/2511.19119",
+    "caption": "Fig. 5: Dataset visualization. Examples from indoor, outdoor, and object-centric\nscenarios covering multiple spatial reasoning tasks with paired questions and ground-\ntruth answers.",
+    "reviewed_sections": [
+      "abstract/introduction",
+      "method or dataset construction",
+      "experiments/results",
+      "candidate figure captions and rendered pages"
+    ],
+    "reading_limitations": "Selection-oriented reading; not a replication or independent validation of the paper results.",
+    "selected": true,
+    "width": 1108,
+    "height": 738,
+    "reading_scope": "Abstract, methods and results sections, figure captions, and visual review of candidate pages.",
+    "file_version": "curated-1"
+  },
+  {
+    "page": 18,
+    "figure": 5,
+    "crop": [
+      300,
+      414,
+      502.4,
+      504
+    ],
+    "description": "GTA deployed on a quadruped robot navigating toward a target in a real laboratory.",
+    "core_contribution": "GTA decouples metric world reconstruction from frozen-MLLM semantic planning, serialising TSDF geometry, topological history and egocentric views into a navigation interface. Counterfactual branch reasoning checks expected observations. R2R-CE/RxR-CE evaluation and demonstrations on wheeled, quadrupedal and aerial platforms support the design.",
+    "selection_rationale": "A crop of the real quadruped deployment gives a single clear robot and environment, replacing the dense three-module pipeline. It is explicitly a real-world demonstration panel, not an aggregate quantitative result. Only the later section of the quadruped sequence is shown.",
+    "candidates_considered": [
+      {
+        "page": 3,
+        "figure": 2,
+        "reason": "Architecture is wide and text-dense, with most space devoted to small labels."
+      },
+      {
+        "page": 5,
+        "figure": 3,
+        "reason": "Eight navigation steps have tiny egocentric frames below very small maps."
+      },
+      {
+        "page": 18,
+        "figure": 5,
+        "reason": "The full multi-platform figure is very tall; selected physical deployment panel works better in a landscape thumbnail."
+      }
+    ],
+    "kind": "paper-figure-crop",
+    "id": 5,
+    "title": "One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation",
+    "file": "assets/papers/paper-05.webp",
+    "source": "https://arxiv.org/pdf/2602.15400",
+    "caption": "Figure 5: Zero-shot sim-to-real transfer across diverse robot embodiments. We demonstrate the\ngeneralization of GTA by deploying it on distinct physical platforms in unseen real-world environ-\nments.",
+    "reviewed_sections": [
+      "abstract/introduction",
+      "method or dataset construction",
+      "experiments/results",
+      "candidate figure captions and rendered pages"
+    ],
+    "reading_limitations": "Selection-oriented reading; not a replication or independent validation of the paper results.",
+    "selected": true,
+    "width": 1117,
+    "height": 506,
+    "reading_scope": "Abstract, methods and results sections, figure captions, and visual review of candidate pages.",
+    "file_version": "curated-1"
+  },
+  {
+    "page": 6,
+    "figure": 2,
+    "crop": [
+      66.5,
+      50,
+      392,
+      229
+    ],
+    "description": "Perception-aware spatial reasoning examples: object orientation, pixel location and inter-object relations.",
+    "core_contribution": "The model grounds referred objects using all associated Visual Reference Tokens and deterministic token ordering, then trains with a visual/textual chain-of-thought dataset. Standard supervised fine-tuning improves six SURDS monocular driving tasks, with an overall reported score of 68.07; the paper discusses RL as future work.",
+    "selection_rationale": "Four intact example cards make the actual geometric questions concrete, while retaining task titles, predictions and ground-truth indicators. Cropping from six to four cards avoids compressing the already small scene images into a wide strip.",
+    "candidates_considered": [
+      {
+        "page": 1,
+        "figure": 1,
+        "reason": "Compact architecture still consists mostly of token and language-model boxes."
+      },
+      {
+        "page": 6,
+        "figure": 2,
+        "reason": "The complete 3×2 gallery is too wide; four coherent adjacent cards retain both single- and multi-object tasks."
+      }
+    ],
+    "kind": "paper-figure-crop",
+    "id": 6,
+    "title": "Perception-Aware Multimodal Spatial Reasoning from Monocular Images",
+    "file": "assets/papers/paper-06.webp",
+    "source": "https://arxiv.org/pdf/2603.06985",
+    "caption": "Fig. 2.\nIllustrative examples of the benchmark QA pairs on both single-object and multiobject",
+    "reviewed_sections": [
+      "abstract/introduction",
+      "method or dataset construction",
+      "experiments/results",
+      "candidate figure captions and rendered pages"
+    ],
+    "reading_limitations": "Selection-oriented reading; not a replication or independent validation of the paper results.",
+    "selected": true,
+    "width": 1088,
+    "height": 591,
+    "reading_scope": "Abstract, methods and results sections, figure captions, and visual review of candidate pages.",
+    "file_version": "curated-1"
+  },
+  {
+    "page": 7,
+    "figure": 4,
+    "crop": [
+      313,
+      50,
+      558,
+      252
+    ],
+    "description": "Talk2Escape real-world Go2 recovery: a grounded human correction turns a wrong-door attempt into successful navigation.",
+    "core_contribution": "Talk2Escape monitors repeated or divergent robot motion, forms grounded help-seeking questions, and injects corrective feedback into an existing VLN agent. Simulated evaluations compare multiple base agents and sparse trigger choices; physical Go2 trials show recovery and expose limits of fragmented human observations.",
+    "selection_rationale": "The real robot, red failure mark, green recovery mark and short dialogue convey the paper’s purpose immediately. This is a more distinctive visual story than a full control-and-language pipeline and keeps both the failure and correction context intact.",
+    "candidates_considered": [
+      {
+        "page": 1,
+        "figure": 1,
+        "reason": "Paradigm diagram explains feedback loops but its small abstractions are less concrete."
+      },
+      {
+        "page": 3,
+        "figure": 2,
+        "reason": "Current framework image contains many miniature observation, detector and dialogue components."
+      },
+      {
+        "page": 6,
+        "figure": 3,
+        "reason": "Intervention-frequency curves cannot communicate the task without reading axes."
+      }
+    ],
+    "kind": "paper-figure-crop",
+    "id": 7,
+    "title": "Talk2Escape: Conversational Grounding for Vision-and-Language Navigation",
+    "file": "assets/papers/paper-07.webp",
+    "source": "https://arxiv.org/pdf/2609.28296",
+    "caption": "Fig.\n4:\nReal-World\nExecution\nof\nthe\nTalk2Escape\nParadigm. (Top) The agent misinterprets the instruction and\nnavigates toward an incorrect door (red cross), prompting\na human guide to provide a grounded corrective hint via\ndialogue. (Bottom) Empowered by this feedback, the agent\nsuccessfully corrects its route, reaches the intended target\n(green checkmark), and receives final confirmation.",
+    "reviewed_sections": [
+      "abstract/introduction",
+      "method or dataset construction",
+      "experiments/results",
+      "candidate figure captions and rendered pages"
+    ],
+    "reading_limitations": "Selection-oriented reading; not a replication or independent validation of the paper results.",
+    "selected": false,
+    "width": 1077,
+    "height": 890,
+    "reading_scope": "Abstract, methods and results sections, figure captions, and visual review of candidate pages.",
+    "file_version": "curated-1"
+  },
+  {
+    "id": 8,
+    "title": "Efficient Online Robotic Reinforcement Learning with Explicit Manifold Alignment",
+    "file": "assets/papers/paper-08.webp",
+    "source": "https://wkguo.github.io/REMA/assets/images/teaser.png",
+    "kind": "project-teaser-crop",
+    "page": null,
+    "figure": null,
+    "crop": [
+      20,
+      650,
+      1254,
+      1408
+    ],
+    "crop_units": "source image pixels",
+    "caption": "On-manifold and off-manifold failed manipulation trajectories, from the official REMA teaser.",
+    "description": "REMA teaser detail comparing on-manifold and off-manifold failure trajectories during real robot manipulation.",
+    "core_contribution": "REMA calibrates binary RL rewards using the spectral distance of failed trajectories from successful demonstrations. It penalizes off-manifold failures while leaving informative near-success failures unchanged. The project evaluates simulation and human-in-the-loop robot manipulation.",
+    "selection_rationale": "保留原 teaser 中最直观的真实机器人与两类失败轨迹，去掉右侧密集性能柱状图。原有 On-/Off-manifold 标记完整保留，未改变轨迹或比较含义。",
+    "reading_scope": "Official project abstract, complete method explanation, simulation/real-world results, ablations and failure discussion; public journal abstract. Full journal PDF was unavailable.",
+    "limitations": "Selected from the official project teaser; not claimed to be a full-paper review.",
+    "candidates_considered": [
+      {
+        "source": "https://wkguo.github.io/REMA/assets/images/pipeline.png",
+        "reason": "完整方法图比机器人画面更密集。"
+      },
+      {
+        "source": "https://wkguo.github.io/REMA/assets/images/realworld_result.png",
+        "reason": "多项曲线更适合正文阅读。"
+      }
+    ],
+    "selected": false,
+    "width": 1200,
+    "height": 737,
+    "file_version": "curated-1"
+  },
+  {
+    "id": 9,
+    "title": "Prioritizing Faithfulness: Efficient Zero-Shot Novel View Synthesis via Homography-Guided SA-RePaint",
+    "file": "assets/papers/paper-09.webp",
+    "source": "https://raw.githubusercontent.com/kakukakujirori/SA-RePaint-NVS/main/assets/elephant_00025_zoomout_1.0.gif",
+    "kind": "official-demo-frame",
+    "page": null,
+    "figure": null,
+    "crop": [
+      512,
+      24,
+      1024,
+      320
+    ],
+    "crop_units": "source animation pixels",
+    "frame": 18,
+    "caption": "SA-RePaint: generated elephant zoom-out view from the Ours panel of the official comparison animation.",
+    "description": "A generated novel view of an elephant from the official SA-RePaint zoom-out demonstration.",
+    "core_contribution": "The official implementation uses homography-guided latent deformation and spatially adaptive RePaint for zero-shot camera-controlled novel-view synthesis, aiming to balance source-scene faithfulness and generative quality. The repository documents image/video inputs and evaluations on DAVIS, Tanks and Temples, MannequinChallenge and DL3DV.",
+    "selection_rationale": "从原六方法拼图中只取 Ours 的一个完整输出视图，主体清晰，适合小尺寸展示。选用镜头已经明显拉远的第 18 帧；它是单个结果示例，不用于宣称优于基线。",
+    "reading_scope": "Official implementation README, inference/evaluation documentation and all 25 frames of the official qualitative comparison. The public OpenReview PDF request returned 403.",
+    "limitations": "No accessible full paper PDF; chosen image is the official demonstration output.",
+    "candidates_considered": [
+      {
+        "frame": 0,
+        "reason": "初始视角尚不能体现新视图生成。"
+      },
+      {
+        "frame": 12,
+        "reason": "完整六方法拼图使每个主体过小。"
+      },
+      {
+        "frame": 24,
+        "reason": "运动末帧场景裁切更多，主体较小。"
+      }
+    ],
+    "selected": false,
+    "width": 512,
+    "height": 296,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 4,
+    "figure": 4,
+    "panels": [
+      {
+        "page": 4,
+        "crop": [
+          69,
+          269.4,
+          121,
+          298.5
+        ]
+      },
+      {
+        "page": 4,
+        "crop": [
+          384.5,
+          269.4,
+          437,
+          298.5
+        ]
+      },
+      {
+        "page": 4,
+        "crop": [
+          489.6,
+          269.4,
+          542.2,
+          298.5
+        ]
+      },
+      {
+        "page": 4,
+        "crop": [
+          69,
+          301.4,
+          121,
+          330.5
+        ]
+      },
+      {
+        "page": 4,
+        "crop": [
+          384.5,
+          301.4,
+          437,
+          330.5
+        ]
+      },
+      {
+        "page": 4,
+        "crop": [
+          489.6,
+          301.4,
+          542.2,
+          330.5
+        ]
+      },
+      {
+        "page": 4,
+        "crop": [
+          69,
+          333.0,
+          121,
+          362.0
+        ]
+      },
+      {
+        "page": 4,
+        "crop": [
+          384.5,
+          333.0,
+          437,
+          362.0
+        ]
+      },
+      {
+        "page": 4,
+        "crop": [
+          489.6,
+          333.0,
+          542.2,
+          362.0
+        ]
+      }
+    ],
+    "description": "SAM-guided 3D segmentation: RGB, the one-point-supervised method output and ground truth for three S3DIS scenes.",
+    "core_contribution": "The method renders point clouds into multiple views, obtains SAM masks, and transfers them to a 3D hypergraph whose mask hyperedges propagate sparse labels. Geometric hyperedges and confidence filtering improve pseudo-label consistency; S3DIS and ScanNet evaluations study extremely sparse annotations and view-count ablations.",
+    "selection_rationale": "The original nine-column ablation grid becomes a faithful three-column RGB / ours (1 point) / GT selection, covering three scenes. Warm-coloured room geometry and coherent masks remain visible; unrelated baseline columns are omitted and the retained column meanings are recorded.",
+    "candidates_considered": [
+      {
+        "page": 2,
+        "figure": 1,
+        "reason": "Full pipeline has many small masks, arrows and equations."
+      },
+      {
+        "page": 2,
+        "figure": 2,
+        "reason": "Hypergraph explanation is conceptual and text-heavy."
+      },
+      {
+        "page": 4,
+        "figure": 4,
+        "reason": "Original nine-column comparison shrinks each scene too much; retained meaningful columns only."
+      }
+    ],
+    "crop": null,
+    "kind": "paper-panel-montage",
+    "id": 10,
+    "title": "Sam-Guided Multi-View Fusion for Weakly Supervised 3D Point Cloud Segmentation",
+    "file": "assets/papers/paper-10.webp",
+    "source": "https://alex-xun-xu.github.io/Doc/Publication/2026/QiaoEtAl_ICASSP26.pdf",
+    "caption": "Fig. 4: Qualitative results of our method vs. DGCNN baseline (1pt) on the S3DIS dataset.",
+    "reviewed_sections": [
+      "abstract/introduction",
+      "method or dataset construction",
+      "experiments/results",
+      "candidate figure captions and rendered pages"
+    ],
+    "reading_limitations": "Selection-oriented reading; not a replication or independent validation of the paper results.",
+    "selected": false,
+    "width": 1108,
+    "height": 628,
+    "reading_scope": "Abstract, methods and results sections, figure captions, and visual review of candidate pages.",
+    "file_version": "curated-1"
+  },
+  {
+    "page": 8,
+    "figure": 5,
+    "panels": [
+      {
+        "page": 8,
+        "crop": [
+          58.5,
+          72,
+          154,
+          146
+        ]
+      },
+      {
+        "page": 8,
+        "crop": [
+          154,
+          72,
+          251,
+          146
+        ]
+      },
+      {
+        "page": 8,
+        "crop": [
+          452,
+          72,
+          553.5,
+          146
+        ]
+      },
+      {
+        "page": 8,
+        "crop": [
+          58.5,
+          148,
+          154,
+          220
+        ]
+      },
+      {
+        "page": 8,
+        "crop": [
+          154,
+          148,
+          251,
+          220
+        ]
+      },
+      {
+        "page": 8,
+        "crop": [
+          452,
+          148,
+          553.5,
+          220
+        ]
+      }
+    ],
+    "description": "GA-MonoSSC qualitative examples: an RGB image, ground-truth completed scene and the method’s semantic 3D completion.",
+    "core_contribution": "GA-MonoSSC learns separate 2D geometric and semantic features with a transformer encoder, then uses a frustum-reordered Mamba decoder for long-range 3D scene completion. Indoor evaluations on NYUv2 and Occ-ScanNet support the benefit of global context; NYUv2 comparisons also show class-dependent strengths rather than uniform gains.",
+    "selection_rationale": "Input, ground truth and the proposed coloured voxel reconstruction for two rooms show the input-to-3D task in a glance. The selected columns replace a five-column method comparison and remove a dense encoder architecture. Column order and source row identities are preserved in the record.",
+    "candidates_considered": [
+      {
+        "page": 1,
+        "figure": 1,
+        "reason": "Perspective-projection sketch explains a limitation, not the scene-completion result."
+      },
+      {
+        "page": 4,
+        "figure": 3,
+        "reason": "Current encoder architecture is mostly tiny boxes and labels."
+      },
+      {
+        "page": 5,
+        "figure": 4,
+        "reason": "Mamba/frustum architecture remains too technical for a small thumbnail."
+      }
+    ],
+    "crop": null,
+    "kind": "paper-panel-montage",
+    "id": 11,
+    "title": "Global-Aware Monocular Semantic Scene Completion with State Space Models",
+    "file": "assets/papers/paper-11.webp",
+    "source": "https://arxiv.org/pdf/2503.06569",
+    "caption": "Figure 5. Qualitative results on NYU dataset. The red rectangle indicates incorrect semantic predictions. Compared to previous methods,\nthe proposed MambaSSC produces significantly fewer incorrect predictions.",
+    "reviewed_sections": [
+      "abstract/introduction",
+      "method or dataset construction",
+      "experiments/results",
+      "candidate figure captions and rendered pages"
+    ],
+    "reading_limitations": "Selection-oriented reading; not a replication or independent validation of the paper results.",
+    "selected": true,
+    "width": 1108,
+    "height": 558,
+    "reading_scope": "Abstract, methods and results sections, figure captions, and visual review of candidate pages.",
+    "file_version": "curated-1"
+  },
+  {
+    "page": 1,
+    "figure": 1,
+    "crop": [
+      317.5,
+      209.5,
+      553.5,
+      338
+    ],
+    "description": "FINet scene illustration comparing query-based and future-aware trajectory predictions at an intersection.",
+    "core_contribution": "FINet introduces potential future trajectories during scene encoding, uses an adaptive ordering strategy for spatial Mamba interactions, and refines trajectories temporally with Mamba. Argoverse 1 and 2 comparisons and ablations assess accuracy, latency and memory; results favour future-aware encoding over separate history/future optimisation.",
+    "selection_rationale": "The paired intersections and vivid blue/purple trajectories make motion forecasting recognisable at small size. Both comparison panels and original labels are retained, while the network’s many tiny module diagrams are removed.",
+    "candidates_considered": [
+      {
+        "page": 4,
+        "figure": 3,
+        "reason": "Current method diagram is crowded with interaction tokens and internal modules."
+      },
+      {
+        "page": 8,
+        "figure": 5,
+        "reason": "Multiple detailed qualitative scenarios have thinner lane lines and weaker thumbnail contrast than the introductory illustration."
+      }
+    ],
+    "kind": "paper-figure-crop",
+    "id": 12,
+    "title": "Future-Aware Interaction Network For Motion Forecasting",
+    "file": "assets/papers/paper-12.webp",
+    "source": "https://arxiv.org/pdf/2503.06565",
+    "caption": "Figure 1.\nQuery-based method (QCNet[58]) usually struggles\nto avoid unrealistic predictions (e.g., incorrectly predicting a left\nturn) due to the separate optimization of historical and future\nstates. The proposed interaction-based method captures a more\ncomprehensive representation of traffic scenarios by jointly opti-\nmizing the current state and future potential trajectories, leading\nto a deeper understanding and effectively reducing such errors.",
+    "reviewed_sections": [
+      "abstract/introduction",
+      "method or dataset construction",
+      "experiments/results",
+      "candidate figure captions and rendered pages"
+    ],
+    "reading_limitations": "Selection-oriented reading; not a replication or independent validation of the paper results.",
+    "selected": true,
+    "width": 1111,
+    "height": 611,
+    "reading_scope": "Abstract, methods and results sections, figure captions, and visual review of candidate pages.",
+    "file_version": "curated-1"
+  },
+  {
+    "page": 7,
+    "figure": 5,
+    "crop": [
+      57,
+      72,
+      296,
+      175.5
+    ],
+    "description": "SeeGround qualitative examples using colour and viewpoint to identify a keyboard and a couch in 3D rooms.",
+    "core_contribution": "SeeGround renders query-aligned 3D views, adds object lookup and spatial descriptions, and uses a 2D VLM for zero-shot 3D grounding. Perspective adaptation and fusion alignment improve ScanRefer/Nr3D grounding; experiments and ablations identify the value of appearance and viewpoint cues.",
+    "selection_rationale": "Two large room renderings with visible correct/incorrect object outlines provide a cleaner grounding example than six thin columns. The original queries remain with their matching images and no method comparison is fabricated.",
+    "candidates_considered": [
+      {
+        "page": 1,
+        "figure": 1,
+        "reason": "Six comparison columns make each room and cue hard to recognise at thumbnail size."
+      },
+      {
+        "page": 4,
+        "figure": 2,
+        "reason": "Pipeline is diagram-heavy with many explanatory boxes."
+      },
+      {
+        "page": 17,
+        "figure": 10,
+        "reason": "Supplement is an extensive gallery; individual examples are clearer than the full grid."
+      }
+    ],
+    "kind": "paper-figure-crop",
+    "id": 13,
+    "title": "Seeground: See and ground for zero-shot open-vocabulary 3d visual grounding",
+    "file": "assets/papers/paper-13.webp",
+    "source": "https://arxiv.org/pdf/2412.04383",
+    "caption": "Figure 5. Qualitative Results. Rendered images are presented,\nincluding the incorrectly identified objects (Orange) and correctly\nidentified objects (Green). Key visual cues are underlined.",
+    "reviewed_sections": [
+      "abstract/introduction",
+      "method or dataset construction",
+      "experiments/results",
+      "candidate figure captions and rendered pages"
+    ],
+    "reading_limitations": "Selection-oriented reading; not a replication or independent validation of the paper results.",
+    "selected": true,
+    "width": 1096,
+    "height": 465,
+    "reading_scope": "Abstract, methods and results sections, figure captions, and visual review of candidate pages.",
+    "file_version": "curated-1"
+  },
+  {
+    "page": 7,
+    "figure": 7,
+    "panels": [
+      {
+        "page": 7,
+        "crop": [
+          94.02157592773438,
+          191.38702392578125,
+          117.72964477539062,
+          220.94601440429688
+        ]
+      },
+      {
+        "page": 7,
+        "crop": [
+          141.37010192871094,
+          191.25173950195312,
+          165.0781707763672,
+          220.81072998046875
+        ]
+      },
+      {
+        "page": 7,
+        "crop": [
+          189.0906219482422,
+          191.38702392578125,
+          212.83251953125,
+          220.94601440429688
+        ]
+      },
+      {
+        "page": 7,
+        "crop": [
+          235.6439208984375,
+          182.13966369628906,
+          275.2948303222656,
+          229.49725341796875
+        ]
+      },
+      {
+        "page": 7,
+        "crop": [
+          284.79791259765625,
+          184.26437377929688,
+          324.47003173828125,
+          231.61993408203125
+        ]
+      },
+      {
+        "page": 7,
+        "crop": [
+          335.4793701171875,
+          183.8697967529297,
+          375.12811279296875,
+          231.22164916992188
+        ]
+      }
+    ],
+    "description": "VaLID novel-view outputs: three target views each of a chair and a blue wheeled toy, generated with four source views.",
+    "core_contribution": "VaLID jointly represents source appearance and pose, fuses a variable number of views through a fixed-size Multi-view Cross Former, and trains in two stages. GSO/RTMV evaluations study image quality, variable input counts and uncertainty, showing gains from additional views while retaining single-view operation.",
+    "selection_rationale": "Six selected outputs from the VaLID four-input-view row show recognisable objects from different angles, rather than shrinking a full 72-image comparison. The 3×2 arrangement is explicitly a selected-output gallery, not a new comparison or claimed animation.",
+    "candidates_considered": [
+      {
+        "page": 3,
+        "figure": 2,
+        "reason": "Current architecture is a long string of tokens, arrows and modules."
+      },
+      {
+        "page": 7,
+        "figure": 7,
+        "reason": "The complete four-row multi-object comparison is too dense; selected only two object sequences from the proposed method."
+      },
+      {
+        "page": 13,
+        "figure": 11,
+        "reason": "Supplement contains many rows and seven method/input columns; individual objects are too small if the full figure is retained."
+      }
+    ],
+    "image_xrefs": [
+      543,
+      545,
+      547,
+      591,
+      593,
+      595
+    ],
+    "crop": null,
+    "kind": "paper-panel-montage",
+    "id": 14,
+    "title": "VaLID: Variable-Length Input Diffusion for Novel View Synthesis",
+    "file": "assets/papers/paper-14.webp",
+    "source": "https://arxiv.org/pdf/2312.08892",
+    "caption": "Figure 7. Qualitative results on GSO dataset. We can observe our method can produce high-quality outcomes at the target view compared\nto the previous state-of-the-art methods. Furthermore, the generated images from our method also maintain consistency across different\nviews. This is demonstrated by generated images along a predefined camera trajectory. Especially when multiple source-view images are\navailable, the quality of generated images improves a lot. More examples can be found in the supplemental materials.",
+    "reviewed_sections": [
+      "abstract/introduction",
+      "method or dataset construction",
+      "experiments/results",
+      "candidate figure captions and rendered pages"
+    ],
+    "reading_limitations": "Selection-oriented reading; not a replication or independent validation of the paper results.",
+    "selected": true,
+    "width": 1108,
+    "height": 744,
+    "reading_scope": "Abstract, methods and results sections, figure captions, and visual review of candidate pages.",
+    "file_version": "curated-1"
+  },
+  {
+    "id": 15,
+    "title": "SiFH: Siamese Frequency Harmonization Self-Supervised Learning for Motion Forecasting",
+    "file": "assets/papers/paper-15.webp",
+    "source": "https://ars.els-cdn.com/content/image/1-s2.0-S0925231225022350-gr6_lrg.jpg",
+    "kind": "publisher-figure-crop",
+    "page": null,
+    "figure": 6,
+    "crop": [
+      0,
+      0,
+      1210,
+      913
+    ],
+    "crop_units": "publisher image pixels",
+    "caption": "Publisher Figure 6: Forecast-MAE and SiFH qualitative motion forecasts for turn-left and turn-right traffic scenarios.",
+    "description": "SiFH qualitative trajectory forecasts for left and right turns, retaining the Forecast-MAE and Ours row labels.",
+    "core_contribution": "SiFH uses self-supervised frequency information harmonization and implicit scene alignment to learn motion-forecasting representations before supervised trajectory decoding. The public publisher abstract and diagrams describe complementary time/frequency features and trajectory/lane scene tokens.",
+    "selection_rationale": "用实际转弯场景中的彩色轨迹替代复杂预训练框图；裁出左转、右转两列并保留方法行标，避免缩略图塞入四种场景。",
+    "reading_scope": "Public publisher abstract, accessible introductory/method text excerpts, and all seven publisher figures. Full closed-access paper text was unavailable.",
+    "limitations": "Full journal PDF unavailable; reading limited to publicly accessible text and publisher figures.",
+    "candidates_considered": [
+      {
+        "figure": 1,
+        "reason": "交通图和频率曲线组合太分散。"
+      },
+      {
+        "figure": 2,
+        "reason": "预训练框图文字密集，是旧缩略图。"
+      },
+      {
+        "figure": 7,
+        "reason": "消融曲线不适合作为视觉入口。"
+      }
+    ],
+    "selected": false,
+    "width": 1200,
+    "height": 905,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 8,
+    "figure": 5,
+    "crop": [
+      297,
+      72,
+      545,
+      218
+    ],
+    "description": "TFNet temporal post-processing results (left) compared with ground truth (right), showing two LiDAR scenes.",
+    "core_contribution": "TFNet fuses previous LiDAR features with temporal cross-attention and uses max-voting temporal post-processing to address range-image many-to-one ambiguities; evaluations on SemanticKITTI and nuScenes study accuracy and runtime.",
+    "selection_rationale": "从完整框图换成 Fig. 5 的 Ours / GT 两列。彩色点云、树干及原文红色圈注在缩略图中比网络模块更直观；保留两列标签，避免把真值当成输出。",
+    "candidates_considered": [
+      {
+        "page": 4,
+        "figure": 2,
+        "reason": "完整网络结构标签密集，缩小后不易读。"
+      },
+      {
+        "page": 1,
+        "figure": 1,
+        "reason": "说明投影歧义，但四个小视图和竖排标签不如定性结果集中。"
+      }
+    ],
+    "id": 16,
+    "title": "Tfnet: Exploiting temporal cues for fast and accurate lidar semantic segmentation",
+    "source": "https://arxiv.org/pdf/2309.07849",
+    "file": "assets/papers/paper-16.webp",
+    "caption": "Figure 5. Qualitative analysis of the post-processing scheme. (a) The “many-to-one” issue is evident without post-processing, e.g., the\ntrunk is partially segmented as traffic sign and vegetation as they project onto the same range pixel (row 2). (b) k-NN [32] smooths the\nsemantic labels locally, but it cannot resolve ambiguities by objects that are close or prediction errors. (c) Our method exploits temporal\ninformation to resolve false predictions (row 1) or ambiguities due to occlusions (row 2). Best viewed in color.",
+    "reading_scope": "Abstract, introduction/method, experimental discussion, conclusion, figure captions, and visual comparison of candidate pages.",
+    "kind": "paper-figure",
+    "selected": false,
+    "width": 1048,
+    "height": 622,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 10,
+    "figure": 10,
+    "crop": [
+      53,
+      61,
+      296,
+      151
+    ],
+    "description": "A 50Salads video example with ground-truth, MS-TCN, and MS-TCN++ temporal action segmentation bars.",
+    "core_contribution": "MS-TCN++ refines temporal action predictions through multiple stages, introduces dual dilated layers for local and long-range context, and evaluates over-segmentation and recognition performance on 50Salads, GTEA and Breakfast.",
+    "selection_rationale": "使用 Fig. 10(a) 的完整视频帧与三行动作条带。它直接表达“长视频分段”，兼有真实图像和彩色时间轴，优于旧的纵向卷积结构图。保留 GT 与模型行标。",
+    "candidates_considered": [
+      {
+        "page": 1,
+        "figure": 1,
+        "reason": "原缩略图的纵向堆叠结构过高，文字太小。"
+      },
+      {
+        "page": 5,
+        "figure": 4,
+        "reason": "虽更准确对应 MS-TCN++，但模块符号密集、缺少任务画面。"
+      }
+    ],
+    "id": 17,
+    "title": "MS-TCN++: Multi-Stage Temporal Convolutional Network for Action Segmentation",
+    "source": "https://arxiv.org/pdf/2006.09220",
+    "file": "assets/papers/paper-17.webp",
+    "caption": "Fig. 10: Qualitative results for the temporal action segmentation task on (a)(b) 50Salads, (c)(d) GTEA, and (e)(f) Breakfast\ndataset.",
+    "reading_scope": "Abstract, introduction/method, experimental discussion, conclusion, figure captions, and visual comparison of candidate pages.",
+    "kind": "paper-figure",
+    "selected": true,
+    "width": 1041,
+    "height": 384,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 2,
+    "figure": 2,
+    "crop": [
+      86,
+      50,
+      264,
+      228
+    ],
+    "description": "FSRL concept illustration: the robot anticipates potential collisions and takes an earlier avoidance path around people.",
+    "core_contribution": "FSRL rewards foresight of future collisions and socially comfortable clearance, combined with an efficiency constraint; simulated crowded environments test navigation success, time and disturbance with standing and moving people.",
+    "selection_rationale": "改用原文 Fig. 2 的机器人、行人和分岔路径，突出“提前避障”的核心。图像主体明确，无密集框图；保留原始路径和时间标记。",
+    "candidates_considered": [
+      {
+        "page": 3,
+        "figure": 3,
+        "reason": "三幅受力/半径定义图在小尺寸下显得抽象。"
+      },
+      {
+        "page": 7,
+        "figure": 8,
+        "reason": "四个仿真轨迹坐标图需要阅读小图例，适合正文而不是主页。"
+      }
+    ],
+    "id": 18,
+    "title": "Foresight Social-aware Reinforcement Learning for Robot Navigation",
+    "source": "https://arxiv.org/pdf/2105.13409",
+    "file": "assets/papers/paper-18.webp",
+    "caption": "Fig. 2: Previous methods (brown) only detect the collision\nat time t2 hence turn around sharply to avoid a collision,\nwhich is shortsighted. In contrast, our method (green) can\nforecast potential collision at time t1 within ∆t (red) hence\ncan take action in advance to avoid collision smoothly, which\nis foresighted. This is more important for nonholonomic robots\nas they cannot get out of traps easily.",
+    "reading_scope": "Abstract, introduction/method, experimental discussion, conclusion, figure captions, and visual comparison of candidate pages.",
+    "kind": "paper-figure",
+    "selected": false,
+    "width": 1016,
+    "height": 1171,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 2,
+    "figure": 1,
+    "crop": null,
+    "description": "Two semantic-layout inputs (left) and the corresponding DP-GAN generated street scenes (right), from Figure 1.",
+    "core_contribution": "DP-GAN uses a dual-pyramid generator with bidirectional scale conditioning and multi-scale discriminator supervision to improve semantic image synthesis across object sizes, evaluated on Cityscapes and ADE20K.",
+    "selection_rationale": "从 Fig. 1 中选择输入语义图和 DP-GAN 输出两列、前两个场景，连同原始列标拼排。能在小图中直接看懂从布局生成街景；不包含基线输出，不暗示所选图就是全面性能比较。",
+    "candidates_considered": [
+      {
+        "page": 3,
+        "figure": 2,
+        "reason": "原完整双金字塔框图主要由小模块和符号构成。"
+      },
+      {
+        "page": 10,
+        "figure": 6,
+        "reason": "更大的定性比较含五列方法，缩小时每张图太小。"
+      }
+    ],
+    "panels": [
+      {
+        "column": 0,
+        "crop": [
+          68.8,
+          43,
+          160.4,
+          139
+        ]
+      },
+      {
+        "column": 0,
+        "crop": [
+          65.6,
+          187.7,
+          161.5,
+          201
+        ]
+      },
+      {
+        "column": 1,
+        "crop": [
+          440.7,
+          43,
+          532.3,
+          139
+        ]
+      },
+      {
+        "column": 1,
+        "crop": [
+          439.4,
+          187.7,
+          535.5,
+          201
+        ]
+      }
+    ],
+    "layout": "Selected original columns/panels composed without fabricated visual content.",
+    "id": 19,
+    "title": "Dual Pyramid Generative Adversarial Networks for Semantic Image Synthesis",
+    "source": "https://arxiv.org/pdf/2210.04085",
+    "file": "assets/papers/paper-19.webp",
+    "caption": "Figure 1: Given a label map (a) as input, current approaches like SPADE (c) or OASIS\n(d) struggle to generate realistic looking objects. In particular large objects like trucks look\nhighly unrealistic. Instead of generating a consistent appearance of an object, the methods\ngenerate a collage of patches. For instance, when zooming in on the truck in the top row of\n(d), it can be seen that the truck is a combination of patches from the side and back view of\na car or van and four wheels are visible. They also struggle to generate other objects like\ntrafﬁc signs (row 2) or bollards (row 3). This is due to the handling of scale in the generator\nand discriminator, which is addressed by our approach (e).",
+    "reading_scope": "Abstract, introduction/method, experimental discussion, conclusion, figure captions, and visual comparison of candidate pages.",
+    "kind": "paper-figure",
+    "selected": false,
+    "width": 967,
+    "height": 551,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 8,
+    "figure": 7,
+    "crop": [
+      317.6,
+      61,
+      550.8,
+      190
+    ],
+    "description": "Accumulated LiDAR map after the method removes moving-object segments, Figure 7(b).",
+    "core_contribution": "The method combines sequential LiDAR range projections and residual images with segmentation networks to separate truly moving from static objects at sensor rate, and demonstrates benefits for odometry and map cleaning.",
+    "selection_rationale": "选择 Fig. 7(b) 的完整清洁地图面板。蓝色道路与建筑构成清楚的大主体，展示动态物体剔除的实际地图结果；没有把它标为语义分割图。",
+    "candidates_considered": [
+      {
+        "page": 3,
+        "figure": 2,
+        "reason": "原方法框图混有多条全景图和网络符号，细节过密。"
+      },
+      {
+        "page": 7,
+        "figure": 6,
+        "reason": "红黑 MOS 点云结果虽准确，但四图拼接和传感器中央空洞占比很大。"
+      }
+    ],
+    "id": 20,
+    "title": "Moving object segmentation in 3D LiDAR data: A learning-based approach exploiting sequential data",
+    "source": "https://arxiv.org/pdf/2105.08971",
+    "file": "assets/papers/paper-20.webp",
+    "caption": "Fig. 7: Mapping Results on Sequence 08, Frame 3960-4070, where we show the accumulated point cloud (a) without removing segments\nand (b) when we remove the segments predicted as moving.",
+    "reading_scope": "Abstract, introduction/method, experimental discussion, conclusion, figure captions, and visual comparison of candidate pages.",
+    "kind": "paper-figure",
+    "selected": false,
+    "width": 1059,
+    "height": 590,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 5,
+    "figure": 4,
+    "crop": [
+      435.8,
+      65,
+      561.2,
+      135.4
+    ],
+    "description": "MINet semantic LiDAR segmentation result from Figure 4(d), with the paper’s original error highlights.",
+    "core_contribution": "MINet balances compute across multiple projection scales and shares dense interactions to avoid redundant work, achieving efficient LiDAR segmentation and demonstrating more than 24 scans per second on embedded hardware.",
+    "selection_rationale": "选 Fig. 4(d) 的模型结果面板，直接展示黑底彩色城市点云和车辆。保留原文圈注，不移除失败处，因此没有粉饰结果。",
+    "candidates_considered": [
+      {
+        "page": 2,
+        "figure": 1,
+        "reason": "旧图是多尺度网络结构，细小箭头和模块难以辨认。"
+      },
+      {
+        "page": 5,
+        "figure": 5,
+        "reason": "准确率–运行时间散点图需要读坐标，不如场景结果直观。"
+      }
+    ],
+    "id": 21,
+    "title": "Multi-scale interaction for real-time lidar data segmentation on an embedded platform",
+    "source": "https://arxiv.org/pdf/2008.09162",
+    "file": "assets/papers/paper-21.webp",
+    "caption": "Fig. 4. Qualitative results. RangeNet segments most points of the truck as a car, while MINet segments the truck correctly (red circle). In some cases, both\napproaches fail (yellow circle). Although MINet segments the object correctly, it misclassiﬁes it.",
+    "reading_scope": "Abstract, introduction/method, experimental discussion, conclusion, figure captions, and visual comparison of candidate pages.",
+    "kind": "paper-figure",
+    "selected": false,
+    "width": 1016,
+    "height": 569,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 10,
+    "figure": 14,
+    "crop": [
+      311,
+      313,
+      563,
+      420
+    ],
+    "description": "UnPNet semantic prediction on a nuScenes LiDAR scene, the upper-right output panel of Figure 14.",
+    "core_contribution": "The paper reformulates point-based 3D operations in LiDAR projection space, demonstrates faster reformulations of several methods, and introduces UnPNet to combine 3D structure with multi-scale 2D processing across four datasets.",
+    "selection_rationale": "选 Fig. 14 中 nuScenes 预测的单个完整场景。大幅彩色点云比 Fig. 9 整体网络图更适合作为主页封面；只展示模型结果，不拼接真值冒充输出。",
+    "candidates_considered": [
+      {
+        "page": 6,
+        "figure": 9,
+        "reason": "原 UnPNet 全局框图高度压缩后没有可读焦点。"
+      },
+      {
+        "page": 2,
+        "figure": 1,
+        "reason": "三维投影关系解释图有两个视角和一条全景，较分散。"
+      }
+    ],
+    "id": 22,
+    "title": "Rethinking 3-D LiDAR point cloud segmentation",
+    "source": "https://arxiv.org/pdf/2008.03928",
+    "file": "assets/papers/paper-22.webp",
+    "caption": "Fig. 14. Qualitative results of UnPNet for the nuScenes dataset.",
+    "reading_scope": "Abstract, introduction/method, experimental discussion, conclusion, figure captions, and visual comparison of candidate pages.",
+    "kind": "paper-figure",
+    "selected": false,
+    "width": 1065,
+    "height": 462,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 8,
+    "figure": 5,
+    "crop": [
+      377,
+      81,
+      534,
+      155
+    ],
+    "description": "STC-Net predicted trajectories overlaid on an aerial pedestrian scene, from the right column of Figure 5.",
+    "core_contribution": "STC-Net combines graph convolutions for interaction, dilated temporal convolutions for motion history, one-pass feature-wise prediction and joint refinement of past/future trajectories; evaluation reports compact size, low latency and robustness to sampling/scene changes.",
+    "selection_rationale": "选 Fig. 5 右列 STC-Net 的一个完整场景。真实航拍背景与红/蓝/黄轨迹比整张网络图更容易传达轨迹预测任务；颜色沿用原文定义。",
+    "candidates_considered": [
+      {
+        "page": 2,
+        "figure": 2,
+        "reason": "原空间–时间框架图横向过长，缩小后只剩块状符号。"
+      },
+      {
+        "page": 1,
+        "figure": 1,
+        "reason": "首图的并排对照也是好选项，但单个结果场景的主体更大。"
+      }
+    ],
+    "id": 23,
+    "title": "Spatial-temporal consistency network for low-latency trajectory forecasting",
+    "source": "https://pages.iai.uni-bonn.de/gall_juergen/download/jgall_stcn_iccv21.pdf",
+    "file": "assets/papers/paper-23.webp",
+    "caption": "Figure 5: Qualitative results. The red line is the observed trajectory, the blue line is the ground-truth of the future trajectory\nand the yellow dashed line is the prediction.",
+    "reading_scope": "Abstract, introduction/method, experimental discussion, conclusion, figure captions, and visual comparison of candidate pages.",
+    "kind": "paper-figure",
+    "selected": false,
+    "width": 937,
+    "height": 442,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 7,
+    "figure": 4,
+    "crop": null,
+    "description": "Chest CT slice (left) and MiniSeg infection segmentation (right), the first example from Figure 4; original CT Slice and MiniSeg labels retained.",
+    "core_contribution": "MiniSeg is an 83K-parameter model using attentive hierarchical spatial-pyramid learning for efficient infection-area segmentation; the paper builds a multi-dataset CT benchmark and examines infected-area and lesion-count robustness.",
+    "selection_rationale": "从 Fig. 4 中选首个病例的 CT 输入和 MiniSeg 输出，并保留原列名。两张大图即可看懂任务，避免将十列结果压成细小条带；保留全部原始红绿蓝误差编码。",
+    "candidates_considered": [
+      {
+        "page": 3,
+        "figure": 1,
+        "reason": "旧 AHSP 模块图只表达网络算子，缺少医学图像。"
+      },
+      {
+        "page": 7,
+        "figure": 4,
+        "reason": "完整十列比较适合论文，主页每列太窄，故选输入与本文输出。"
+      }
+    ],
+    "panels": [
+      {
+        "column": 0,
+        "crop": [
+          54,
+          346,
+          104,
+          397
+        ]
+      },
+      {
+        "column": 0,
+        "crop": [
+          54,
+          448.5,
+          104,
+          458
+        ]
+      },
+      {
+        "column": 1,
+        "crop": [
+          515,
+          346,
+          558,
+          397
+        ]
+      },
+      {
+        "column": 1,
+        "crop": [
+          515,
+          448.5,
+          558,
+          458
+        ]
+      }
+    ],
+    "layout": "Selected original columns/panels composed without fabricated visual content.",
+    "id": 24,
+    "title": "MiniSeg: An Extremely Minimum Network for Efficient COVID-19 Segmentation",
+    "source": "https://arxiv.org/pdf/2004.09750",
+    "file": "assets/papers/paper-24.webp",
+    "caption": "Figure 4: Visual comparison between MiniSeg and other methods. Red: true positive; Green: false negative; Blue: false positive.",
+    "reading_scope": "Abstract, introduction/method, experimental discussion, conclusion, figure captions, and visual comparison of candidate pages.",
+    "kind": "paper-figure",
+    "selected": false,
+    "width": 1016,
+    "height": 649,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 6,
+    "figure": 8,
+    "crop": [
+      54,
+      55,
+      312,
+      157
+    ],
+    "description": "Original and refined skeleton poses for two examples of pose-error correction, from the upper row of Figure 8(a–b).",
+    "core_contribution": "Pose Refinement GCN explicitly corrects noisy skeletons and gradually fuses parallel spatial and motion streams while reducing temporal resolution early, obtaining comparable action-recognition accuracy with substantially fewer parameters and operations.",
+    "selection_rationale": "选择 Fig. 8 上排前两个完整 Original/Refined 骨架对，清楚展示姿态修正。蓝色人体骨架留白干净，任务一眼可辨，优于长条网络架构。",
+    "candidates_considered": [
+      {
+        "page": 2,
+        "figure": 1,
+        "reason": "旧网络总览过长，动作识别任务主体很小。"
+      },
+      {
+        "page": 4,
+        "figure": 5,
+        "reason": "渐进融合算子示意没有可直观看懂的人体。"
+      }
+    ],
+    "id": 25,
+    "title": "Pose Refinement Graph Convolutional Network for Skeleton-based Action Recognition",
+    "source": "https://arxiv.org/pdf/2010.07367",
+    "file": "assets/papers/paper-25.webp",
+    "caption": "Fig. 8.\nVisualization of the pose reﬁnement on the Kinetics dataset. Although we show only a single frame, the pose reﬁnement takes the entire pose\nsequence into account. The examples show from left to right cases where (a) small pose errors are corrected, (b) wrong poses are reﬁned, (c) missing\njoints are recovered, or (d) a missing pose is recovered.",
+    "reading_scope": "Abstract, introduction/method, experimental discussion, conclusion, figure captions, and visual comparison of candidate pages.",
+    "kind": "paper-figure",
+    "selected": false,
+    "width": 994,
+    "height": 371,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 1,
+    "figure": 1,
+    "crop": [
+      306.8,
+      367,
+      557.6,
+      457
+    ],
+    "description": "RefinedBox proposal-refinement example: horse image before and after box re-ranking and regression, Figure 1.",
+    "core_contribution": "RefinedBox refines candidate object boxes using lightweight re-ranking and box regression that can share convolutional features with downstream detection; evaluations on VOC and COCO examine recall with very few proposals.",
+    "selection_rationale": "选首图的马匹与框精修前后示例，原始 Refine 箭头、排名和回归说明保留。主体鲜明，比网络分支结构图更适合缩略图。",
+    "candidates_considered": [
+      {
+        "page": 4,
+        "figure": 2,
+        "reason": "原网络结构图含多分支和小字，图像本身很小。"
+      },
+      {
+        "page": 8,
+        "figure": 5,
+        "reason": "六行五列检测比较内容过满，且不宜去掉方法列标后展示。"
+      }
+    ],
+    "id": 26,
+    "title": "Refinedbox: Refining for fewer and high-quality object proposals",
+    "source": "https://mftp.mmcheng.net/Papers/20NeucomRefinedBoxes.pdf",
+    "file": "assets/papers/paper-26.webp",
+    "caption": "Figure 1: Overview of object proposal reﬁnement. The left image shows the\noriginal proposals, and the right image shows the results after reﬁnement. We\nﬁrst re-rank the proposals by computing new objectness scores, after which a\nbox regression procedure is applied to each proposal box for accurate location.",
+    "reading_scope": "Abstract, introduction/method, experimental discussion, conclusion, figure captions, and visual comparison of candidate pages.",
+    "kind": "paper-figure",
+    "selected": false,
+    "width": 1059,
+    "height": 388,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 9,
+    "figure": 5,
+    "crop": null,
+    "description": "Input images (left) and SSVM saliency predictions (right): a salient flower and a background-only scene, selected from Figure 5.",
+    "core_contribution": "The structural-SVM method jointly predicts whether a salient object exists and assigns regional saliency, coupling image-level existence and region-level labels to reduce false positives on background-only images.",
+    "selection_rationale": "从 Fig. 5 选有花朵与纯背景两个完整例子，拼排输入与 SSVM 两列，并保留原列名。既有鲜明黄色花朵，也表达“无显著物体时不误报”的区别，不只挑漂亮正例掩盖论文主题。",
+    "candidates_considered": [
+      {
+        "page": 1,
+        "figure": 1,
+        "reason": "旧图仅有基线方法在背景图上的失败，甚至没有本文结果。"
+      },
+      {
+        "page": 8,
+        "figure": 4,
+        "reason": "失败案例有价值但不足以作为整篇工作的唯一封面。"
+      }
+    ],
+    "panels": [
+      {
+        "column": 0,
+        "crop": [
+          55.6,
+          203.4,
+          109.9,
+          241
+        ]
+      },
+      {
+        "column": 0,
+        "crop": [
+          55.6,
+          354.2,
+          109.9,
+          390.7
+        ]
+      },
+      {
+        "column": 0,
+        "crop": [
+          55,
+          433,
+          110.5,
+          446
+        ]
+      },
+      {
+        "column": 1,
+        "crop": [
+          499.6,
+          203.4,
+          554,
+          241
+        ]
+      },
+      {
+        "column": 1,
+        "crop": [
+          499.6,
+          354.2,
+          554,
+          390.7
+        ]
+      },
+      {
+        "column": 1,
+        "crop": [
+          499,
+          433,
+          554.5,
+          446
+        ]
+      }
+    ],
+    "layout": "Selected original columns/panels composed without fabricated visual content.",
+    "id": 27,
+    "title": "Joint salient object detection and existence prediction",
+    "source": "https://mftp.mmcheng.net/Papers/JointSalExist.pdf",
+    "file": "assets/papers/paper-27.webp",
+    "caption": "Fig. 5: Qualitative comparisons of saliency maps produced by diﬀerent approaches. From left to right: input images, saliency\nmaps of state-of-the-art approaches, and saliency maps of our proposed approach SSVM.",
+    "reading_scope": "Abstract, introduction/method, experimental discussion, conclusion, figure captions, and visual comparison of candidate pages.",
+    "kind": "paper-figure",
+    "selected": false,
+    "width": 1016,
+    "height": 785,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 6,
+    "figure": 6,
+    "crop": null,
+    "description": "Two BSDS500 inputs (left) and corresponding DEL region segmentations (right), selected from Figure 6.",
+    "core_contribution": "DEL learns deep superpixel embeddings that define adjacent-region similarity, then efficiently merges SLIC superpixels into perceptual segments; experiments study segmentation quality, runtime and downstream object proposals.",
+    "selection_rationale": "选 Fig. 6 的前两行输入与 DEL 分割两列。人物与彩色区域有清楚的对应关系，比旧的管线图更生动；没有将基线结果拼入本文列。",
+    "candidates_considered": [
+      {
+        "page": 3,
+        "figure": 1,
+        "reason": "旧的全管线图横向过宽，特征空间细节缩小后不可读。"
+      },
+      {
+        "page": 6,
+        "figure": 6,
+        "reason": "完整五列对照每个场景过小，因此保留输入与 DEL 两列。"
+      }
+    ],
+    "panels": [
+      {
+        "column": 0,
+        "crop": [
+          316.1,
+          237.8,
+          362.3,
+          300.4
+        ]
+      },
+      {
+        "column": 1,
+        "crop": [
+          510.7,
+          237.8,
+          556.9,
+          300.4
+        ]
+      }
+    ],
+    "layout": "Selected original columns/panels composed without fabricated visual content.",
+    "id": 28,
+    "title": "Del: Deep embedding learning for efficient image segmentation",
+    "source": "https://www.ijcai.org/proceedings/2018/0120.pdf",
+    "file": "assets/papers/paper-28.webp",
+    "caption": "Figure 6: Some qualitative comparisons. The ﬁrst column displays\noriginal images from BSDS500 dataset. The last four columns show\nthe results generated by EGB, HFS, MCG, and our DEL method,\nrespectively.",
+    "reading_scope": "Abstract, introduction/method, experimental discussion, conclusion, figure captions, and visual comparison of candidate pages.",
+    "kind": "paper-figure",
+    "selected": false,
+    "width": 1016,
+    "height": 674,
+    "file_version": "curated-1"
+  },
+  {
+    "page": 1,
+    "figure": 1,
+    "crop": [
+      313.2,
+      145.7,
+      558,
+      329.9
+    ],
+    "description": "DLGO corridor keyframe with the original selected points and line guidance overlays, Figure 1.",
+    "core_contribution": "DLGO extends direct monocular odometry by using line structure to guide stronger point selection and jointly exploit intensity and geometry without treating every line as an expensive separate feature; tests study drift and reconstructed maps.",
+    "selection_rationale": "保留首图这个本来就合适的任务画面，重新精确裁去周边页边与空白。走廊透视和绿色线特征有鲜明视觉主体，且直接对应 line-guided odometry。",
+    "candidates_considered": [
+      {
+        "page": 2,
+        "figure": 2,
+        "reason": "系统线程框图不如真实关键帧直观。"
+      },
+      {
+        "page": 5,
+        "figure": 8,
+        "reason": "地图重建结果较暗，结构不如走廊关键帧清晰。"
+      }
+    ],
+    "id": 29,
+    "title": "Direct line guidance odometry",
+    "source": "https://www.robots.ox.ac.uk/~lav/Papers/li_etal_icra2018/li_etal_icra2018.pdf",
+    "file": "assets/papers/paper-29.webp",
+    "caption": "Fig. 1.\nA keyframe in DLGO. We extract points and lines on the keyframe.\nThe positions of the extracted points and lines are updated using the\nincoming frame. The red points represent the Immature Point (IP) and the\ngreen lines denote the Immature Line (IL). On each line, the dark blue\npoints represent the Immature Line End Point (ILEP) and the light blue\npoints represent the ILCP (Immature Line Common Point).",
+    "reading_scope": "Abstract, introduction/method, experimental discussion, conclusion, figure captions, and visual comparison of candidate pages.",
+    "kind": "paper-figure",
+    "selected": false,
+    "width": 1067,
+    "height": 807,
+    "file_version": "curated-1"
+  },
+  {
+    "id": 30,
+    "title": "Structured skip list: A compact data structure for 3D reconstruction",
+    "file": "assets/papers/paper-30.webp",
+    "source": "https://www.shaopinglu.net/publications_files/IROS2018.pdf",
+    "page": 1,
+    "figure": 1,
+    "crop": [
+      337,
+      145,
+      534,
+      292
+    ],
+    "caption": "Fig. 1: A 3D model produced by our algorithm.",
+    "description": "A furnished-room 3D reconstruction produced by Structured Skip List.",
+    "core_contribution": "SSL stores only nonempty voxels while using ordered structure to reduce indexing memory; its HAL avoids redundant voxel allocation. TUM/ScanNet experiments report better storage efficiency with modest runtime overhead.",
+    "selection_rationale": "A single furnished-room reconstruction gives an immediate readable demonstration of the 3D output. The other diagrams explain data structures, while page 6 spreads several smaller meshes across a wide strip.",
+    "candidates_considered": [
+      {
+        "page": 6,
+        "figure": 7,
+        "reason": "Several reconstructed TUM scenes; too wide when retained as a complete strip."
+      },
+      {
+        "page": 6,
+        "figure": 8,
+        "reason": "ScanNet scene meshes; lower contrast and more fragmented than the furnished-room teaser."
+      }
+    ],
+    "reading_scope": "Read abstract, method/benchmark definition, main results/conclusions and candidate captions; visually compared main and supplementary figures. This is a figure-selection review, not replication of experiments.",
+    "selected": false,
+    "width": 1107,
+    "height": 827,
+    "kind": "paper-figure-crop",
+    "file_version": "curated-1"
+  },
+  {
+    "id": 31,
+    "title": "GeoReader: Learning Latent Geometry for Spatial Reasoning in Vision-Language Models",
+    "file": "assets/papers/paper-31.webp",
+    "source": "https://arxiv.org/pdf/2610.18694",
+    "page": 2,
+    "figure": 1,
+    "crop": [
+      107,
+      117,
+      261,
+      232
+    ],
+    "caption": "Figure 1\nGeoReader learns geometry in a form the receiving VLM can read. (a) QA-only fusion\nlearns to use geometry through answer supervision. (b) Feature alignment matches VLM-generated\nrepresentations to external geometry features. (c) GeoReader first trains Geometric Readers through\ndescription prediction by a frozen VLM, then freezes the Readers and trains the VLM for QA. All\nthree routes estimate geometry from RGB, which also directly conditions each VLM. Flames and\nice cubes mark trainable and frozen modules. The pictured I1, I2, I3 are input views; the scene and\nanswer are illustrative. Fig. 2 details the architecture.",
+    "description": "Illustrative annotated 3D room showing viewpoint-aware spatial reasoning in GeoReader.",
+    "core_contribution": "GeoReader trains lightweight Geometric Readers using geometry descriptions decoded by a frozen VLM, freezes the interface, and then trains question-conditioned spatial QA. Geometry interventions and benchmark results test whether geometric tokens are actually used.",
+    "selection_rationale": "The room example is explicitly illustrative in the Figure 1 caption; it is the visual premise of Figure 1: a viewpoint, objects, and an egocentric spatial relation are visible without requiring tiny architecture labels. Selected only the self-contained annotated room panel, not unrelated schematic comparisons.",
+    "candidates_considered": [
+      {
+        "page": 9,
+        "figure": 4,
+        "reason": "Successful RGB/multi-view/point-cloud examples; informative but contains many small panels."
+      },
+      {
+        "page": 32,
+        "figure": 10,
+        "reason": "Three correct spatial QA cases; excellent for a project page, too tall and text-heavy for a homepage row."
+      },
+      {
+        "page": 4,
+        "figure": 2,
+        "reason": "Two-stage architecture is technically representative but dense at thumbnail scale."
+      }
+    ],
+    "reading_scope": "Read abstract, method/benchmark definition, main results/conclusions and candidate captions; visually compared main and supplementary figures. This is a figure-selection review, not replication of experiments.",
+    "selected": true,
+    "width": 890,
+    "height": 664,
+    "kind": "paper-figure-crop",
+    "file_version": "curated-1"
+  },
+  {
+    "id": 32,
+    "title": "Aligning Thoughts with Answers: Probability Rewards to Tame Thinking Drift",
+    "file": "assets/papers/paper-32.webp",
+    "source": "https://arxiv.org/pdf/2609.39183",
+    "page": 1,
+    "figure": 1,
+    "crop": [
+      305,
+      460,
+      505,
+      567
+    ],
+    "caption": "Figure 1: Base RFT with IoU reward alone fails\nto enforce semantic consistency.\nIn the Base\nRFT (red), which relies solely on the IoU reward,\nthe model predicts a reasonable bounding box but\nprovides irrelevant reasoning, leading to a label\nerror. In contrast, in our Rita (green), the inte-\ngration of thinking and consistency rewards en-\ncourages consistency between the reasoning pro-\ncess and the final prediction, correcting the label\nwhile maintaining spatial accuracy.",
+    "description": "Rita corrects thought–answer inconsistency in a visual intention grounding example.",
+    "core_contribution": "Rita addresses thinking drift in visual intention grounding: a correct box can coexist with an incorrect object explanation. Reference-answer probability rewards and difficulty/variance-aware RL filtering improve localization and thought-answer consistency; extra reward passes add training cost.",
+    "selection_rationale": "Figure 1 makes the failure and correction concrete in one kitchen scene, with existing red/green reasoning cards. This is clearer than the abstract token/reward training diagram; no comparison labels are removed.",
+    "candidates_considered": [
+      {
+        "page": 4,
+        "figure": 2,
+        "reason": "Full reward/policy pipeline; many nested token boxes and equations."
+      },
+      {
+        "page": 9,
+        "figure": 4,
+        "reason": "Four qualitative examples; each paired response becomes extremely small when the full figure is shrunk."
+      }
+    ],
+    "reading_scope": "Read abstract, method/benchmark definition, main results/conclusions and candidate captions; visually compared main and supplementary figures. This is a figure-selection review, not replication of experiments.",
+    "selected": false,
+    "width": 1094,
+    "height": 560,
+    "kind": "paper-figure-crop",
+    "file_version": "curated-1"
+  },
+  {
+    "id": 33,
+    "title": "Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning",
+    "file": "assets/papers/paper-33.webp",
+    "source": "https://arxiv.org/pdf/2610.02715",
+    "page": 2,
+    "figure": 1,
+    "crop": [
+      108,
+      81.9,
+      504,
+      258.8
+    ],
+    "caption": "Figure 1: From activity evidence to interactive evaluation. The upper panel illustrates construction: its hidden\ngraph Gh is denoted Gw in the text, and skills correspond to action groups. The lower schematic shows how\nagents use the compiled environment. Source links, action records, and task checks make decisions inspectable;\nTable 1 follows a real task through these stages.",
+    "description": "Ego2World turns egocentric cooking evidence into executable world models.",
+    "core_contribution": "Ego2World compiles annotated egocentric cooking activities into symbolic executable environments with separate world and belief states and explicit task checks. The evaluation distinguishes completion, condition attainment, action validity and resource use; memory improves validity/query use without a detected completion gain.",
+    "selection_rationale": "The original overview remains the most effective visual: real cooking frames lead into executable rules and state. Its native image is tightly cropped to remove surrounding body text and caption. The appendix compiler is denser, and result plots do not communicate the video-to-world task as directly.",
+    "candidates_considered": [
+      {
+        "page": 14,
+        "figure": 4,
+        "reason": "Detailed annotation-to-environment pipeline; many smaller operation/rule cells."
+      },
+      {
+        "page": 8,
+        "figure": 2,
+        "reason": "Attainment/endpoint plots are quantitative evidence, not as immediate a visual explanation of the task."
+      }
+    ],
+    "reading_scope": "Read abstract, method/benchmark definition, main results/conclusions and candidate captions; visually compared main and supplementary figures. This is a figure-selection review, not replication of experiments.",
+    "selected": true,
+    "width": 1100,
+    "height": 501,
+    "kind": "paper-figure-crop",
+    "file_version": "curated-1"
+  },
+  {
+    "id": 34,
+    "title": "PRISM: Planning and Reasoning with Intent in Simulated embodied environments",
+    "file": "assets/papers/paper-34.webp",
+    "source": "https://arxiv.org/pdf/2605.11534",
+    "page": 4,
+    "figure": 1,
+    "crop": [
+      112,
+      118,
+      280,
+      214.7
+    ],
+    "caption": "Figure 1: Overview of PRISM. The benchmark layer provides apartment-level environments, human-\nverified tasks, executable actions, deterministic state evaluation, and diagnostic task labels. Optional\nprobes, including oracle perception, memory summaries, target-room prediction, and affordance-\ngrounded action validation, can be enabled for component-level diagnosis but are not required by\nevaluated agents.",
+    "description": "Apartment layouts used by the PRISM embodied planning benchmark.",
+    "core_contribution": "PRISM diagnoses embodied planning across basic, implicit-intent and long-horizon tasks in five photorealistic apartments using executable actions and optional component probes. Results expose intent-resolution and long-horizon coordination bottlenecks, with oracle-perception limitations.",
+    "selection_rationale": "The apartment-level floor-plan panel cleanly shows the benchmark scale and varied environments. At a homepage size, it communicates more than the full overview text cards or the small, dark execution-trace frames.",
+    "candidates_considered": [
+      {
+        "page": 4,
+        "figure": 1,
+        "reason": "Full overview contains the same floor plans but also dense task definitions; selected only its complete environment panel."
+      },
+      {
+        "page": 12,
+        "figure": 3,
+        "reason": "Execution traces carry useful evidence, but many tiny frames and memory descriptions are illegible at row scale."
+      }
+    ],
+    "reading_scope": "Read abstract, method/benchmark definition, main results/conclusions and candidate captions; visually compared main and supplementary figures. This is a figure-selection review, not replication of experiments.",
+    "selected": false,
+    "width": 1005,
+    "height": 593,
+    "kind": "paper-figure-crop",
+    "file_version": "curated-1"
+  },
+  {
+    "id": 35,
+    "title": "Grounding by Remembering: Cross-Scene and In-Scene Memory for 3D Functional Affordances",
+    "file": "assets/papers/paper-35.webp",
+    "source": "https://arxiv.org/pdf/2605.11616",
+    "page": 2,
+    "figure": 1,
+    "crop": [
+      108,
+      153,
+      301,
+      298
+    ],
+    "caption": "Figure 1: Two memory failures in training-free 3D affordance grounding. Left: local visual\ngrounding suffers from granularity ambiguity, often selecting a coarse object region instead of the\nfine-grained operable part. Cross-Scene Affordance Memory mitigates this by recalling cross-scene\naffordance exemplars as visual memory. Right: spatially qualified queries require resolving both\ninstance ambiguity and long-range dependency. In-Scene Spatial Memory builds a global in-scene\nspatial memory over candidate parts and reference objects, allowing the correct affordance instance\nto be selected beyond the current local view.",
+    "description": "Cross-scene visual memory helps ground the operable handle rather than the whole door.",
+    "core_contribution": "AffordMem combines cross-scene visual examples for fine-grained operable parts with an in-scene 3D scene graph for ordinal/spatial reference resolution. It is training-free and improves SceneFun3D grounding; unseen memory categories and dynamic scenes remain limitations.",
+    "selection_rationale": "The complete left task panel shows cross-scene memory directing grounding from a broad door region to its operable handle. Choosing this one visual highlight gives the door/handle images enough space to remain visible at homepage size; original panel labels and failure/solution cues remain intact.",
+    "candidates_considered": [
+      {
+        "page": 4,
+        "figure": 2,
+        "reason": "Full architecture; too much token/memory/LLM text for a small teaser."
+      },
+      {
+        "page": 9,
+        "figure": 3,
+        "reason": "Qualitative scene masks across four examples; target masks are tiny in the full matrix and rows are not internally labeled."
+      }
+    ],
+    "reading_scope": "Read abstract, method/benchmark definition, main results/conclusions and candidate captions; visually compared main and supplementary figures. This is a figure-selection review, not replication of experiments.",
+    "selected": false,
+    "width": 1063,
+    "height": 784,
+    "kind": "paper-figure-crop",
+    "file_version": "curated-1"
+  },
+  {
+    "id": 36,
+    "title": "IntentionNav: A Benchmark for Intent-Driven Object Navigation from Implicit Human Instruction",
+    "file": "assets/papers/paper-36.webp",
+    "source": "https://arxiv.org/pdf/2605.23187",
+    "page": 14,
+    "figure": 5,
+    "crop": [
+      108,
+      426.7,
+      504,
+      591.7
+    ],
+    "caption": "Figure 5: Expanded conceptual illustration of IntentionNav. An implicit human request induces\nmultiple plausible target hypotheses; active exploration gathers visual and spatial evidence; the agent\nsucceeds only if it grounds the intent to the correct physical instance and terminates near that object.\nThe diagram is explanatory rather than an additional quantitative result.",
+    "description": "An implicit human request is grounded through active search in IntentionNav.",
+    "core_contribution": "IntentionNav studies navigation from implicit requests without a target category, with matched language styles/modes and fixed physical targets. Across evaluated VLMs, inferring or reaching a neighborhood is much easier than grounded termination; it is a simulation diagnostic benchmark.",
+    "selection_rationale": "The expanded conceptual illustration connects an indirect request to plausible object hypotheses, a scene map and grounded visual evidence. It uses larger environment imagery than the narrow pipeline and remains faithful to its caption: an explanatory task illustration, not a new experimental result.",
+    "candidates_considered": [
+      {
+        "page": 4,
+        "figure": 1,
+        "reason": "Task flow with a candidate list, depth, BEV and target image; too many small subpanels."
+      },
+      {
+        "page": 5,
+        "figure": 2,
+        "reason": "Rendered apartment and target crops; attractive but primarily describes candidate collection rather than intent resolution."
+      },
+      {
+        "page": 14,
+        "figure": 4,
+        "reason": "Reference-agent pipeline is mostly text boxes."
+      }
+    ],
+    "reading_scope": "Read abstract, method/benchmark definition, main results/conclusions and candidate captions; visually compared main and supplementary figures. This is a figure-selection review, not replication of experiments.",
+    "selected": false,
+    "width": 1051,
+    "height": 438,
+    "kind": "paper-figure-crop",
+    "file_version": "curated-1"
+  },
+  {
+    "id": 37,
+    "title": "Ask When It Pays: Cost-Aware Open-Ended Interaction for Instance Goal Navigation",
+    "file": "assets/papers/paper-37.webp",
+    "source": "https://arxiv.org/pdf/2606.03175",
+    "page": 9,
+    "figure": 4,
+    "crop": [
+      147.6,
+      392.4,
+      464.4,
+      556.9
+    ],
+    "caption": "Figure 4: Effect of spatial interaction. A spatial QA cue helps the agent resolve ambiguity and\nreach the target more directly, instead of following uncertain exploratory paths.",
+    "description": "Paired navigation trajectories with and without a spatial clarification question.",
+    "core_contribution": "TANDEM treats instance-goal interaction as cost-sensitive uncertainty reduction, with question-type penalties and Weighted Success Rate. It selectively asks when expected information gain justifies cost; paired trajectories show a route hint resolving layout ambiguity.",
+    "selection_rationale": "The matched floor-plan trajectories communicate a question’s benefit in one glance: uncertain search versus a corrected route. The original No QA / Spatial QA labels and the question/answer cue remain visible, preserving comparison context.",
+    "candidates_considered": [
+      {
+        "page": 6,
+        "figure": 2,
+        "reason": "TANDEM utility/agent architecture; many nested text panels."
+      },
+      {
+        "page": 8,
+        "figure": 3,
+        "reason": "Temporal/spatial interaction plots explain aggregate patterns but are less concrete than the paired episode."
+      }
+    ],
+    "reading_scope": "Read abstract, method/benchmark definition, main results/conclusions and candidate captions; visually compared main and supplementary figures. This is a figure-selection review, not replication of experiments.",
+    "selected": false,
+    "width": 1096,
+    "height": 573,
+    "kind": "paper-figure-crop",
+    "file_version": "curated-1"
+  },
+  {
+    "id": 38,
+    "title": "AI for Auto-Research: Roadmap & User Guide",
+    "file": "assets/papers/paper-38.webp",
+    "source": "https://arxiv.org/pdf/2605.18661",
+    "page": 1,
+    "figure": 1,
+    "crop": [
+      70.9,
+      498.1,
+      541.2,
+      663
+    ],
+    "caption": "Figure 1 AI auto-research across the complete lifecycle. We organize AI assistance into four phases and eight stages:\n1Creation spans idea generation, literature review, coding & experiments, and tables & figures; 2Writing centers on\npaper writing; 3Validation includes peer review and rebuttal & revision; and 4Dissemination transforms papers into\nposters, slides, videos, social media, project pages, and interactive paper agents.",
+    "description": "The four phases of AI-assisted research: creation, writing, validation and dissemination.",
+    "core_contribution": "This roadmap surveys AI assistance across creation, writing, validation and dissemination. Its synthesis separates reliable grounded/tool-mediated assistance from brittle scientific autonomy and emphasizes human verification of novelty, evidence and research correctness.",
+    "selection_rationale": "The four illustrated stages are already the strongest small-format figure: distinct characters, colors and a simple lifecycle. Retained this figure after comparison, using its actual illustration bounds without extra whitespace or caption.",
+    "candidates_considered": [
+      {
+        "page": 5,
+        "figure": null,
+        "reason": "Lifecycle stage cards contain much more text and only small icons."
+      },
+      {
+        "page": 1,
+        "figure": 1,
+        "reason": "Chosen complete four-phase illustration; each stage is an essential part of the paper taxonomy."
+      }
+    ],
+    "reading_scope": "Read abstract, method/benchmark definition, main results/conclusions and candidate captions; visually compared main and supplementary figures. This is a figure-selection review, not replication of experiments.",
+    "selected": false,
+    "width": 1094,
+    "height": 395,
+    "kind": "paper-figure-crop",
+    "file_version": "curated-1"
+  },
+  {
+    "id": 39,
+    "title": "Think, Then Look: Active Spatial Reasoning for House-Scale 3D Scene Understanding",
+    "file": "assets/papers/paper-39.webp",
+    "source": "https://arxiv.org/pdf/2512.03284",
+    "page": 2,
+    "figure": 1,
+    "crop": [
+      98,
+      64,
+      517,
+      272
+    ],
+    "caption": "Figure 1: Overview of SpatialReasoner inference. Given a spatial question and a pre-built house-scale 3D map, the model\nprogressively localizes the query-relevant region, invokes zooming and viewpoint-rendering tools, recovers from an uninforma-\ntive observation, and produces an answer grounded in the final visual evidence.",
+    "description": "A house-scale spatial question guides map inspection and viewpoint selection.",
+    "core_contribution": "SpatialReasoner answers house-scale spatial questions by localizing relevant map regions and using zoom/view-rendering tools, trained with self-correcting SFT and adaptive exploration RL. Results compare accuracy and observation cost against passive/tool-use baselines.",
+    "selection_rationale": "The introductory task example is unusually good already: a large house cutaway, selected views, and a visible question-guided inspection path. Kept the complete task narrative and corrected cropping to avoid surrounding paper text; the alternative tool diagram is less visually distinctive.",
+    "candidates_considered": [
+      {
+        "page": 12,
+        "figure": 5,
+        "reason": "Global/regional map-to-render examples; cleaner but less expressive of the full question-to-evidence loop."
+      },
+      {
+        "page": 14,
+        "figure": 7,
+        "reason": "Benchmark construction example; a long reasoning transcript occupies half the figure."
+      }
+    ],
+    "reading_scope": "Read abstract, method/benchmark definition, main results/conclusions and candidate captions; visually compared main and supplementary figures. This is a figure-selection review, not replication of experiments.",
+    "selected": false,
+    "width": 1087,
+    "height": 550,
+    "kind": "paper-figure-crop",
+    "file_version": "curated-1"
+  },
+  {
+    "id": 40,
+    "title": "Improving the Generalization of Segmentation Foundation Models via Weakly-Supervised and Unsupervised Adaptation",
+    "file": "assets/papers/paper-40.webp",
+    "source": "https://zhang-haojie.github.io/images/wesampp.webp",
+    "kind": "author-figure-crop",
+    "page": null,
+    "figure": 2,
+    "crop": [
+      3325,
+      0,
+      4442,
+      444
+    ],
+    "caption": "WeSAM++ Figure 2 detail: weak-label and automatically generated prompt examples.",
+    "description": "Weak-label and no-label prompt examples from the author-hosted WeSAM++ framework figure.",
+    "core_contribution": "The journal extension combines source-free teacher/student/anchor self-training with patch-level contrastive regularization, teacher-feature masked modeling and LoRA. It studies weakly supervised and automatic prompt generation across natural, corrupted, medical, camouflaged and robotic image domains with SAM/SAM2.",
+    "selection_rationale": "裁出扩展版 WeSAM++ 方法图右上角两个完整提示示例，直接展示弱标签与无标签设置，去掉密集 teacher/student 框架。两幅图保留 Weak Labels / No Labels 原始标记；它们是方法示例，不是性能对比结果。",
+    "reading_scope": "Full public journal HTML: abstract, methodology, experiments, qualitative discussion and ablations; current author-hosted WeSAM++ framework figure.",
+    "limitations": "Journal PDF and standalone journal result-image download returned 403. The selected image is a verified crop of the current WeSAM++ author-hosted framework figure.",
+    "paper_source": "https://www.preprints.org/manuscript/202510.1640",
+    "panels": null,
+    "candidates_considered": [
+      {
+        "source": "https://zhang-haojie.github.io/images/wesampp.webp",
+        "reason": "新扩展版的完整架构图在小尺寸下过密。"
+      },
+      {
+        "figure": 5,
+        "source": "https://www.preprints.org/manuscript/202510.1640",
+        "reason": "HTML 可读且解释相同定性示例，但该站原图片下载返回 403；采用作者公开仓库的同类示例，并明确标注版本。"
+      }
+    ],
+    "crop_units": "author image pixels",
+    "selected": false,
+    "width": 1117,
+    "height": 444,
+    "file_version": "curated-1"
+  },
+  {
+    "id": 41,
+    "title": "DiffPCN: Latent Diffusion Model Based on Multi-view Depth Images for Point Cloud Completion",
+    "file": "assets/papers/paper-41.webp",
+    "source": "https://arxiv.org/pdf/2509.23723",
+    "page": 6,
+    "figure": 4,
+    "crop": [
+      75,
+      45,
+      536,
+      253
+    ],
+    "caption": "Figure 4: Visualization on the PCN’s dataset. Our DiffPCN presents a better performance compared with previous methods.",
+    "description": "Two partial inputs, DiffPCN completions and ground-truth point clouds.",
+    "core_contribution": "DiffPCN projects incomplete point clouds to multi-view depth, uses a depth latent diffusion model for coarse completion, then denoises and upsamples with association-aware features. PCN/MVP/KITTI evaluations inspect geometry and completeness, including sparse real scans.",
+    "selection_rationale": "Selected two qualitative object examples for Input, Our and GT. These original figure columns show incomplete versus completed shape directly; two rows fit a teaser far better than the full multi-method matrix. Native PDF images are arranged as a faithful two-row, three-column excerpt; original column labels are retained from the same figure, with no new labels or changed colors.",
+    "candidates_considered": [
+      {
+        "page": 2,
+        "figure": 2,
+        "reason": "Full DepthLDM/denoising/upsampling pipeline; dense method boxes."
+      },
+      {
+        "page": 6,
+        "figure": 4,
+        "reason": "Full seven-column, three-row qualitative matrix; too many tiny shapes. Selected two rows and three labeled columns."
+      },
+      {
+        "page": 6,
+        "figure": 5,
+        "reason": "KITTI vehicle completions; realistic but flatter silhouettes and smaller visible differences."
+      }
+    ],
+    "reading_scope": "Read abstract, method/benchmark definition, main results/conclusions and candidate captions; visually compared main and supplementary figures. This is a figure-selection review, not replication of experiments.",
+    "panels": [
+      {
+        "label": "Input",
+        "row": 0,
+        "pdf_image_index": 0,
+        "xref": 334,
+        "image_bbox": [
+          59.623390197753906,
+          41.552207946777344,
+          163.56674194335938,
+          130.95892333984375
+        ],
+        "operation": "Native PDF raster image extracted and uniformly resized; no shape/color edits."
+      },
+      {
+        "label": "Input",
+        "row": 1,
+        "pdf_image_index": 15,
+        "xref": 341,
+        "image_bbox": [
+          42.58701705932617,
+          82.60891723632812,
+          183.7888946533203,
+          204.06350708007812
+        ],
+        "operation": "Native PDF raster image extracted and uniformly resized; no shape/color edits."
+      },
+      {
+        "label": "Input",
+        "original_label_crop": [
+          96,
+          238.4,
+          123,
+          252
+        ]
+      },
+      {
+        "label": "Our",
+        "row": 0,
+        "pdf_image_index": 23,
+        "xref": 350,
+        "image_bbox": [
+          367.3746643066406,
+          37.18834686279297,
+          484.34869384765625,
+          137.80340576171875
+        ],
+        "operation": "Native PDF raster image extracted and uniformly resized; no shape/color edits."
+      },
+      {
+        "label": "Our",
+        "row": 1,
+        "pdf_image_index": 21,
+        "xref": 348,
+        "image_bbox": [
+          366.6920471191406,
+          86.86295318603516,
+          504.9698486328125,
+          205.80239868164062
+        ],
+        "operation": "Native PDF raster image extracted and uniformly resized; no shape/color edits."
+      },
+      {
+        "label": "Our",
+        "original_label_crop": [
+          425,
+          238.4,
+          449,
+          252
+        ]
+      },
+      {
+        "label": "GT",
+        "row": 0,
+        "pdf_image_index": 5,
+        "xref": 353,
+        "image_bbox": [
+          437.84039306640625,
+          41.045738220214844,
+          541.7837524414062,
+          130.45245361328125
+        ],
+        "operation": "Native PDF raster image extracted and uniformly resized; no shape/color edits."
+      },
+      {
+        "label": "GT",
+        "row": 1,
+        "pdf_image_index": 14,
+        "xref": 340,
+        "image_bbox": [
+          428.43035888671875,
+          88.63536834716797,
+          564.118896484375,
+          205.34765625
+        ],
+        "operation": "Native PDF raster image extracted and uniformly resized; no shape/color edits."
+      },
+      {
+        "label": "GT",
+        "original_label_crop": [
+          491,
+          238.4,
+          511,
+          252
+        ]
+      }
+    ],
+    "selected": false,
+    "width": 894,
+    "height": 594,
+    "kind": "paper-figure-crop",
+    "file_version": "curated-1"
+  },
+  {
+    "id": 42,
+    "title": "Multi-View Industrial Anomaly Detection with Epipolar Constrained Cross-View Fusion",
+    "file": "assets/papers/paper-42.webp",
+    "source": "https://arxiv.org/pdf/2503.11088",
+    "page": 6,
+    "figure": 4,
+    "crop": [
+      306,
+      72,
+      553.5,
+      244.6
+    ],
+    "caption": "Figure 4. Anomaly segmentation results for two samples from the Real-IAD dataset: the audiojack class (left) and the USB class (right).",
+    "description": "Multi-view USB defect localization with ground truth and competing anomaly heatmaps.",
+    "core_contribution": "The method constrains cross-view attention to epipolar-compatible patches and uses multi-center pretraining with synthesized negatives. Real-IAD tests report improved anomaly detection/localization and compare viewpoint heatmaps against prior methods.",
+    "selection_rationale": "The USB example shows recognizable object views and colored anomaly maps. Selected the first three views from the complete USB half, preserving its Image/UniAD/PatchCore/Ours column labels and ground-truth masks so the comparison remains interpretable.",
+    "candidates_considered": [
+      {
+        "page": 1,
+        "figure": 1,
+        "reason": "Geometry-guided attention sketch explains the method but lacks clear anomaly results."
+      },
+      {
+        "page": 3,
+        "figure": 2,
+        "reason": "Pretraining architecture has many feature-bank/module boxes."
+      },
+      {
+        "page": 6,
+        "figure": 4,
+        "reason": "Full audiojack plus USB matrix is too wide; selected a coherent USB subset with labels."
+      }
+    ],
+    "reading_scope": "Read abstract, method/benchmark definition, main results/conclusions and candidate captions; visually compared main and supplementary figures. This is a figure-selection review, not replication of experiments.",
+    "selected": false,
+    "width": 1102,
+    "height": 752,
+    "kind": "paper-figure-crop",
+    "file_version": "curated-1"
+  }
+]

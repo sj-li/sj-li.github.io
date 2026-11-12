@@ -37,7 +37,7 @@ section{scroll-margin-top:82px}
 #about .ul-interests details p{border-left:1px solid #ded7e8;margin:8px 0 10px 3px;padding-left:12px;line-height:1.65}
 #about .about-main>.collaborate{margin:12px 0 0;font-size:14px}
 #about .collaborate .icon{font-size:.95rem}
-.news-list{max-height:180px;overflow-y:auto;padding:0 12px 0 0;border:0;border-radius:0;background:transparent;scrollbar-width:thin;scrollbar-color:#b9afcb transparent}
+.news-list{max-height:190px;overflow-y:auto;padding:12px 16px;border:1px solid #ded7e8;border-radius:6px;background:#fcfbfe;scrollbar-width:thin;scrollbar-color:#b9afcb transparent}
 .news-list:focus-visible{outline:2px solid #714abb;outline-offset:3px}
 .news-list ul{padding:0;margin:0;list-style:none}
 .news-list li{display:grid;grid-template-columns:66px minmax(0,1fr);gap:8px;margin:0 0 7px;font-size:15.3px;line-height:1.6}

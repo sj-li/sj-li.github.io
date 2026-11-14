@@ -108,7 +108,7 @@ section{scroll-margin-top:82px}
 #misc .misc-list strong{font-weight:600}
 .statcounter-wrap{display:flex;justify-content:center;align-items:center;margin-top:14px;text-align:center}
 .statcounter-wrap .statcounter,.statcounter-wrap a,.statcounter-wrap img{display:inline-block!important;margin:0 auto!important}
-.site-footer{margin-top:24px;border:0;background:transparent;padding:12px 0 22px;text-align:center;font-size:.82rem;color:#77717e}
+.site-footer{margin-top:8px;border:0;background:transparent;padding:0 0 18px;text-align:center;font-size:.82rem;color:#77717e}
 .menu-toggle{display:none}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #714abb;outline-offset:3px}
 .skip-link{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}

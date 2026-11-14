@@ -65,6 +65,7 @@ filters.forEach(button => button.addEventListener('click', () => {
   });
   const subtitle = document.querySelector('.publication-subtitle');
   if (subtitle) subtitle.textContent = {selected: 'Selected Publications', all: 'All Publications', embodied: 'Embodied AI, Navigation & Robot Learning', multimodal: 'Multimodal Foundation Models & Spatial Reasoning', driving: 'Autonomous Driving', others: 'General Computer Vision & Other Research'}[selected];
+  preprints.open = selected === 'selected';
   filterPapers();
   requestAnimationFrame(updateNavigation);
 }));

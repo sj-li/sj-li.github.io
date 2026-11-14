@@ -76,9 +76,9 @@ section{scroll-margin-top:82px}
 .paper-links{display:flex;flex-wrap:wrap;gap:10px;font-size:13px}
 .paper-links a{white-space:nowrap}
 .pub-teaser{flex-shrink:0;width:180px}
-.pub-teaser>a{display:flex;width:180px;height:112px;align-items:center;justify-content:center;overflow:hidden;background:#fff;border:1px solid #ecebee;border-radius:3px;transition:border-color .15s}
+.pub-teaser>a{display:block;width:180px;height:auto;overflow:hidden;background:transparent;border:1px solid #ecebee;border-radius:6px;transition:border-color .15s}
 .pub-teaser>a:hover{border-color:#b7a3d3}
-.pub-teaser img{display:block;width:100%;height:100%;object-fit:contain;border:0;border-radius:0;margin:0}
+.pub-teaser img{display:block;width:100%;height:auto;border:0;border-radius:0;margin:0}
 #empty-state{margin-top:1rem}
 #honors .award-list{padding:0!important;list-style:none!important;margin:0}
 #honors .award-list li{display:block;margin-bottom:7px;position:relative;padding-left:21px;line-height:1.65}
@@ -146,7 +146,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #71
 @media(max-width:768px){
  .pub-row{flex-direction:column;gap:9px;margin-bottom:22px;min-height:0}
  .pub-teaser{width:100%}
- .pub-teaser>a{width:100%;height:132px}
+ .pub-teaser>a{width:100%;max-width:320px;height:auto}
  .pub-text .paper-title{font-size:17px;line-height:22px}
  .pub-text .paper-authors{font-size:15.3px;line-height:24px}
  .publication-toolbar{margin-bottom:14px}
@@ -190,7 +190,7 @@ html[data-theme="dark"] .pub-text .paper-title{color:#F3F5F8}
 html[data-theme="dark"] .pub-text .paper-authors{color:#C7CDD8}
 html[data-theme="dark"] .pub-text .paper-authors strong{color:#F3F5F8}
 html[data-theme="dark"] .paper-meta .paper-venue{color:#E2E6EE}
-html[data-theme="dark"] .pub-teaser>a{background:#fff;border-color:#2A3140;box-shadow:0 10px 26px rgba(0,0,0,.28)}
+html[data-theme="dark"] .pub-teaser>a{background:#171B22;border-color:#2A3140;box-shadow:0 10px 26px rgba(0,0,0,.28)}
 html[data-theme="dark"] .pub-teaser>a:hover{border-color:#8F7AE5}
 html[data-theme="dark"] #honors .award-list li::before{color:#8F7AE5}
 html[data-theme="dark"] .grant-date,html[data-theme="dark"] .grant-meta,html[data-theme="dark"] .talk-date,html[data-theme="dark"] .site-footer{color:#98A2B3}

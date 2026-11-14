@@ -258,67 +258,29 @@
     "file_version": "curated-1"
   },
   {
-    "page": 11,
-    "figure": 5,
+    "page": 3,
+    "figure": 2,
     "panels": [
       {
-        "page": 11,
-        "crop": [
-          136.8,
-          345.6,
-          189.8,
-          398.3
-        ]
-      },
-      {
-        "page": 11,
-        "crop": [
-          251.3,
-          345.6,
-          304.3,
-          398.3
-        ]
-      },
-      {
-        "page": 11,
-        "crop": [
-          365.9,
-          345.6,
-          418.9,
-          398.3
-        ]
-      },
-      {
-        "page": 11,
-        "crop": [
-          194.1,
-          345.6,
-          247.0,
-          398.3
-        ]
-      },
-      {
-        "page": 11,
-        "crop": [
-          308.6,
-          345.6,
-          361.6,
-          398.3
-        ]
-      },
-      {
-        "page": 11,
-        "crop": [
-          423.2,
-          345.6,
-          476.2,
-          398.3
-        ]
+        "page": 3,
+        "figure": 2,
+        "embedded_image_size": [
+          559,
+          434
+        ],
+        "embedded_image_xref": 603,
+        "source_pixel_crop": [
+          5,
+          18,
+          554,
+          428
+        ],
+        "annotation_origin": "Original Omni3D ground-truth boxes shown in MonoSR Figure 2"
       }
     ],
-    "description": "MonoSR dataset examples across indoor, outdoor and object-centric spatial reasoning.",
+    "description": "MonoSR Figure 2 indoor scene with the original Omni3D ground-truth 3D bounding boxes and object labels. Enlarged to show geometric annotations clearly.",
     "core_contribution": "MonoSR curates over one million spatial QA pairs from monocular RGB images with observability filtering, spanning indoor, outdoor and object-centric domains. It organises tasks into perception, imagination and situational reasoning; auxiliary geometric-information studies expose large metric-estimation gaps.",
-    "selection_rationale": "Six source photographs are arranged as three domain columns instead of a long six-example strip. The existing scene markers remain intact. Photographs occupy the thumbnail rather than fine-print QA text; these are illustrations of dataset coverage, not model predictions.",
+    "selection_rationale": "Use the real boxed living-room panel from the dataset curation figure so 3D cuboids remain visible at homepage thumbnail size. Preserve every source box and label; remove only the filename header and thin white margins. The added footer identifies these as ground-truth annotations.",
     "candidates_considered": [
       {
         "page": 2,
@@ -332,12 +294,12 @@
       }
     ],
     "crop": null,
-    "kind": "paper-panel-montage",
+    "kind": "paper-3d-annotation-panel",
     "id": 4,
     "title": "MonoSR: Open-Vocabulary Spatial Reasoning from Monocular Images",
     "file": "assets/papers/paper-04.webp",
     "source": "https://arxiv.org/pdf/2511.19119",
-    "caption": "Fig. 5: Dataset visualization. Examples from indoor, outdoor, and object-centric\nscenarios covering multiple spatial reasoning tasks with paired questions and ground-\ntruth answers.",
+    "caption": "Fig. 2: Demonstration of MonoSR curation pipeline",
     "reviewed_sections": [
       "abstract/introduction",
       "method or dataset construction",
@@ -346,10 +308,11 @@
     ],
     "reading_limitations": "Selection-oriented reading; not a replication or independent validation of the paper results.",
     "selected": true,
-    "width": 1108,
-    "height": 738,
+    "width": 1098,
+    "height": 944,
     "reading_scope": "Abstract, methods and results sections, figure captions, and visual review of candidate pages.",
-    "file_version": "curated-1"
+    "file_version": "monosr-3dbbox-1",
+    "rebuild": "python3 gif_todo/tools/build_monosr_thumbnail.py --pdf /path/to/2511.19119.pdf"
   },
   {
     "page": 18,

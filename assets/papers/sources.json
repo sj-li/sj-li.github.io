@@ -280,7 +280,7 @@
     ],
     "description": "MonoSR Figure 2 indoor scene with the original Omni3D ground-truth 3D bounding boxes and object labels. Enlarged to show geometric annotations clearly.",
     "core_contribution": "MonoSR curates over one million spatial QA pairs from monocular RGB images with observability filtering, spanning indoor, outdoor and object-centric domains. It organises tasks into perception, imagination and situational reasoning; auxiliary geometric-information studies expose large metric-estimation gaps.",
-    "selection_rationale": "Use the real boxed living-room panel from the dataset curation figure so 3D cuboids remain visible at homepage thumbnail size. Preserve every source box and label; remove only the filename header and thin white margins. The added footer identifies these as ground-truth annotations.",
+    "selection_rationale": "Use the real boxed living-room panel from the dataset curation figure so 3D cuboids remain visible at homepage thumbnail size. Preserve source boxes and object labels; remove only the filename header and thin white margins. Show only the annotated scene, with no added title or footer.",
     "candidates_considered": [
       {
         "page": 2,
@@ -309,9 +309,9 @@
     "reading_limitations": "Selection-oriented reading; not a replication or independent validation of the paper results.",
     "selected": true,
     "width": 1098,
-    "height": 944,
+    "height": 820,
     "reading_scope": "Abstract, methods and results sections, figure captions, and visual review of candidate pages.",
-    "file_version": "monosr-3dbbox-1",
+    "file_version": "monosr-3dbbox-2",
     "rebuild": "python3 gif_todo/tools/build_monosr_thumbnail.py --pdf /path/to/2511.19119.pdf"
   },
   {

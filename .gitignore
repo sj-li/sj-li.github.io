@@ -6,3 +6,6 @@ _site/
 .bundle/
 **/vendor/bundle/
 node_modules/
+
+# Local GIF authoring workspace; published animations live in gif/.
+/gif_todo/

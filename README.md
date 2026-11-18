@@ -10,7 +10,9 @@ assets/css/               Helvetica typography, theme, layout and personal style
 assets/js/main.js         Navigation, publication filters and preprint disclosure
 assets/images/            Portrait
 assets/fonts/             Local icon fonts
-assets/papers/            43 curated thumbnails and source/selection metadata
+assets/papers/            Curated thumbnails and source/selection metadata
+gif/                      Published paper animations
+gif_todo/                 Local GIF authoring workspace (ignored by Git)
 cv/                       Existing public CV URLs
 backup/                   Previous Jekyll website, sources and browsable snapshot
 backup/review/figures/    Per-paper before/after image review and reading notes

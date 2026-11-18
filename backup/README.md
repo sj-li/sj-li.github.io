@@ -4,7 +4,7 @@ This folder preserves the previous website’s source, including all local edits
 
 `index.html` and compiled assets are a browsable snapshot rendered with `/backup` as its base URL. They are marked `noindex` and are excluded from the live sitemap. `README.original.md` is the previous repository README. `CNAME` and `.gitignore` are archived copies; the active versions are in the repository root.
 
-The original `_pages/`, `_includes/`, `_layouts/`, `_sass/`, `_data/`, `Gemfile` and `_config.yml` remain here. Local Jekyll dependencies and caches were moved here too, and remain ignored by Git. The current production site does not depend on them.
+The original `_pages/`, `_includes/`, `_layouts/`, `_sass/`, `_data/`, `Gemfile` and `_config.yml` remain here. Local Jekyll dependencies, caches and the duplicate `_site/` build output have been removed. Reinstall dependencies before rebuilding this archive. The current production site does not depend on them.
 
 `review/figures/` contains the current per-paper thumbnail comparison, reading scope and selection rationale. `review/layout/` contains historical layout screenshots; these are not the live homepage.
 

@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#145e4c">
+  <meta name="description" content="An explicit world representation lets multimodal models follow language instructions across wheeled, legged, and aerial robots.">
+  <title>One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation</title>
+  <link rel="canonical" href="https://sj-li.com/projects/gta/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sj-li.com/projects/gta/">
+  <meta property="og:title" content="One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation">
+  <meta property="og:description" content="An explicit world representation lets multimodal models follow language instructions across wheeled, legged, and aerial robots.">
+  <meta property="og:image" content="https://sj-li.com/projects/gta/static/images/teaser.png">
+  <link rel="stylesheet" href="../shared/style.css">
+  <script src="../shared/main.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="GTA, back to top"><span>G</span><span>TA</span><i aria-hidden="true"></i></a>
+    <nav class="topnav" aria-label="Main navigation">
+      <a href="#method">Method</a>
+      <a href="#examples">Examples</a>
+      <a href="#results">Results</a>
+      <a href="#BibTeX">Citation</a>
+    </nav>
+    <div class="top-resources">
+      <a class="top-paper" href="https://arxiv.org/abs/2602.15400" target="_blank" rel="noopener noreferrer">arXiv</a>
+      <a class="top-paper" href="../../index.html#publications">Home</a>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <div class="hero-kicker"><span class="kicker-line" aria-hidden="true"></span>CoRL 2026</div>
+      <h1 id="hero-title" class="hero-paper-heading"><em>One Agent to Guide Them All</em>: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation</h1>
+      <div class="hero-authors">
+        <p class="author-names"><span><a href="https://zeruili22.github.io/" rel="noopener noreferrer" target="_blank"><strong>Zerui Li</strong></a><sup>1†</sup></span> <span><strong>Hongpei Zheng</strong><sup>2†</sup></span> <span><strong>Fangguo Zhao</strong><sup>3</sup></span> <span><strong>Yanyan Shao</strong><sup>4</sup></span> <span><strong>Jian Zhou</strong><sup>1</sup></span> <span><strong>Sihao Lin</strong><sup>1,6</sup></span> <span><a href="https://sj-li.com/" rel="noopener noreferrer" target="_blank"><strong>Shijie Li</strong></a><sup>5</sup></span> <span><a href="http://www.qi-wu.me/" rel="noopener noreferrer" target="_blank"><strong>Qi Wu</strong></a><sup>1,6✉</sup></span></p>
+        <p class="author-affils"><span><sup>1</sup>AIML, Adelaide University</span> <span><sup>2</sup>The University of Manchester</span> <span><sup>3</sup>Zhejiang University</span> <span><sup>4</sup>Zhejiang Wanli University</span> <span><sup>5</sup>A*STAR</span> <span><sup>6</sup>Responsible AI Research Centre, AIML, Adelaide University</span></p>
+        <p class="author-notes"><span><sup>†</sup>Joint first authors     <sup>✉</sup>Corresponding author</span></p>
+      </div>
+      <p class="hero-summary">An explicit world representation lets multimodal models follow language instructions across wheeled, legged, and aerial robots.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#abstract">Read the overview</a>
+        <a class="button button-outline" href="https://arxiv.org/pdf/2602.15400" target="_blank" rel="noopener noreferrer">Paper</a>
+      </div>
+    </section>
+    <div class="story page-width">
+      <nav class="contents" aria-label="On this page">
+        <span class="contents-label">CONTENTS</span>
+        <a href="#abstract" class="active" aria-current="location">Abstract</a>
+        <a href="#method">Method</a>
+        <a href="#representation">World representation</a>
+        <a href="#branching">Counterfactual reasoning</a>
+        <a href="#embodiments">Embodiments</a>
+        <a href="#examples">Interactive examples</a>
+        <a href="#results">Results</a>
+        <a href="#rollouts">Real-world rollouts</a>
+        <a href="#BibTeX">Authors &amp; citation</a>
+        <a href="#related">Related work</a>
+      </nav>
+      <div class="story-main">
+<section id="abstract" class="section section-first" aria-labelledby="abstract-title">
+<h2 id="abstract-title">Abstract</h2>
+<p>
+              A navigation agent must understand high-level semantic instructions and reason about precise spatial structure.
+              <b>Multimodal Large Language Models (MLLMs)</b>, with their strong generalization, are a promising foundation for such agents, yet existing zero-shot approaches force the MLLM to infer global 3D structure implicitly from egocentric RGB streams, often hallucinating room connections and propagating spatial errors into planning.
+              We propose <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> (<b>Guide Them All</b>), a decoupled zero-shot Vision-and-Language Navigation (VLN) framework that separates low-level spatial state estimation from high-level semantic planning.
+              We introduce an <b>explicit metric world representation</b> <i>W<sub>t</sub></i> = ⟨<i>M</i><sub>vol</sub>, <i>G</i><sub>topo</sub>⟩ that combines accumulated TSDF geometry with topological navigation history and exposes this information to the MLLM through a queryable multimodal interface.
+              We further introduce <b>counterfactual branch reasoning</b> that records branch-specific expectations at decision junctions, checks anticipated outcomes against subsequent observations, and physically backtracks when they disagree.
+              <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> achieves state-of-the-art zero-shot performance with <b>48.8% Success Rate (SR) / 41.8% SPL</b> on the full R2R-CE Val-Unseen split (1,839 episodes) and <b>46.2% SR</b> on RxR-CE, while our distilled 8B variant <span class="wordmark-geo"><b>GTA</b></span><span class="wordmark-reader"><b>-Light</b></span> retains <b>45.1% SR</b> locally.
+              Finally, we demonstrate zero-shot sim-to-real transfer across <b>wheeled, quadrupedal, and aerial robots</b> in unseen physical environments.
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/teaser.png" rel="noopener" target="_blank"><img alt="GTA Teaser" decoding="async" loading="lazy" src="./static/images/teaser.png"/></a></figure>
+</section>
+
+<section id="method" class="section" aria-labelledby="method-title">
+<h2 id="method-title">The <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> Framework</h2>
+<p>
+<b>Figure.</b> Overview of the <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> framework.
+              <b>1. Environment &amp; Perception (High-Frequency):</b> The Mapping Module asynchronously fuses incoming RGB-D streams into a Truncated Signed Distance Function (TSDF) volumetric map <i>M</i><sub>vol</sub> (0.05 m voxels) and a topological trajectory graph <i>G</i><sub>topo</sub> = (<i>V</i>, <i>E</i><sub>topo</sub>) with node merge radius δ<sub>merge</sub> = 0.8 m and visit counts <i>c<sub>i</sub></i> for loop detection.
+              <b>2. Interactive Interface (Low-Frequency):</b> On demand, the world representation <i>W<sub>t</sub></i> is serialized into a multimodal prompt <i>P<sub>t</sub></i> = {<i>V</i><sub>prompt</sub>, <i>T</i><sub>prompt</sub>} combining a rendered bird's-eye view <i>I</i><sub>bev</sub> and four cardinal egocentric views {0°, 90°, 180°, 270°} overlaid with a [0, 1000]<sup>2</sup> coordinate grid, alongside a <i>Procedural Reasoning Blueprint</i> (dynamic instruction checklist <i>C<sub>t</sub></i>, topological/vertical state &amp; safety alerts <i>S</i><sub>alert</sub>, and 20-step history <i>H<sub>t</sub></i>).
+              <b>3. Counterfactual Reasoning Brain &amp; Spatial Action Decoding:</b> A frozen MLLM (or distilled 8B <span class="wordmark-geo"><b>GTA</b></span><span class="wordmark-reader"><b>-Light</b></span> interpreter) forms branch expectations <i>e<sub>t</sub></i><sup>(<i>k</i>)</sup> at junctions, pushes checkpoints <i>κ<sub>t</sub></i> onto stack <i>K</i>, backtracks when observations contradict expectations, and emits view-pixel actions <i>a<sub>t</sub></i> = (<i>m<sub>t</sub></i>, <i>u<sub>t</sub></i>, <i>v<sub>t</sub></i>) ray-cast against <i>M</i><sub>vol</sub> into precise 3D metric waypoints <b>w</b><sub><i>t</i></sub>.
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/arch_1.png" rel="noopener" target="_blank"><img alt="GTA Framework Architecture" decoding="async" loading="lazy" src="./static/images/arch_1.png"/></a></figure>
+</section>
+
+<section id="representation" class="section" aria-labelledby="representation-title">
+<h2 id="representation-title">Plug-and-Play World Representation</h2>
+<p>
+              To test whether explicit metric-topological memory benefits MLLM planners in general, we equip existing discrete and continuous agents (<b>NavGPT</b>, <b>Open-Nav</b>, and <b>SmartWay</b>) with our Explicit World Representation (EWR) across four benchmarks: discrete <b>R2R</b> &amp; <b>REVERIE</b> and continuous <b>R2R-CE</b> &amp; <b>REVERIE-CE</b>.
+              <br/><br/>
+              Adding EWR consistently boosts OSR, SR, and SPL across every baseline and environment. The gains are especially pronounced on <b>REVERIE and REVERIE-CE</b>, where high-level object goals (e.g., <i>“find the pillow in the bedroom”</i>) lack step-by-step directional cues and require persistent global layout memory to track unexplored frontiers.
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/ewr_effect.png" rel="noopener" target="_blank"><img alt="Effect of World Representation" decoding="async" loading="lazy" src="./static/images/ewr_effect.png"/></a></figure>
+</section>
+
+<section id="branching" class="section" aria-labelledby="branching-title">
+<h2 id="branching-title">Counterfactual Branching &amp; <span class="wordmark-geo">GTA</span><span class="wordmark-reader">-Light</span></h2>
+<p>
+<b>Imagine, Checkpoint, Verify, Backtrack.</b> Greedy step-by-step planners cannot recover once they commit to a wrong hallway. At any junction with |<i>B<sub>t</sub></i>| &gt; 1 viable branches, <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> logs a natural-language expectation <i>e<sub>t</sub></i><sup>(<i>k</i>)</sup> for each branch on checkpoint stack <i>K</i>. If subsequent observations disagree with <i>e<sub>t</sub></i><sup>(<i>k</i>*)</sup>, the agent physically retraces <i>G</i><sub>topo</sub> back to <i>p<sub>t'</sub></i>, blocks <i>k</i>* ∈ <i>B<sub>t'</sub></i><sup>blk</sup>, and selects the best remaining branch—boosting SR from <b>31.0% (greedy) to 47.0% (+16.0 pp)</b>.
+              <br/><br/>
+<b>Distilling into an 8B Local Interpreter.</b> To remove dependency on frontier cloud APIs, we distill GPT-5.1 trajectories on R2R training scenes into a 4-bit QLoRA <b>InternVL3-8B</b> model (<span class="wordmark-geo"><b>GTA</b></span><span class="wordmark-reader"><b>-Light</b></span>) with input-state and prompt robustness augmentations, achieving <b>45.1% SR / 39.6% SPL</b> locally at 3.96 s per reasoning step.
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/episode_r2r.png" rel="noopener" target="_blank"><img alt="R2R-CE 8-Step Episode Visualization" decoding="async" loading="lazy" src="./static/images/episode_r2r.png"/></a></figure>
+</section>
+
+<section id="embodiments" class="section" aria-labelledby="embodiments-title">
+<h2 id="embodiments-title">One Representation Across Three Robot Bodies</h2>
+<p>
+              End-to-end policies trained in simulation suffer catastrophic degradation under real-world camera, lighting, and locomotion shifts (VLN-BERT: 16.0% SR; RDP: 20.0% SR).
+              <br/><br/>
+              Because <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> anchors semantic decisions in an accumulated TSDF metric map and topological graph (<i>“a wall is a wall in both simulation and reality”</i>) and overlaps high-frequency perception (0.097 s TSDF/BEV update) with asynchronous MLLM reasoning, the exact same pipeline transfers zero-shot across a <b>TurtleBot 4 Wheeled Robot (40.0% SR)</b>, a <b>Unitree Go2 Quadruped (40.0% SR)</b>, and a <b>6-DoF Aerial Quadrotor Drone (42.0% SR)</b> without platform-specific tuning.
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/teaser_anim.gif" rel="noopener" target="_blank"><img alt="GTA Real-World Quadruped Deployment" decoding="async" loading="lazy" src="./static/images/teaser_anim.gif"/></a></figure>
+</section>
+
+<section id="examples" class="section" aria-labelledby="examples-title">
+<h2 id="examples-title">Interactive Embodiment &amp; World-Representation Explorer</h2>
+<p>
+                Select a simulated or real-world deployment scenario below to inspect <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span>'s world representation, procedural checklist progress, and physical trajectory execution across distinct robot embodiments:
+              </p>
+<div class="demo-tags">
+<span class="tag"><b>Map</b>: TSDF (0.05m voxel) + Topo Graph (δ<sub>merge</sub> = 0.8 m)</span>
+<span class="tag"><b>Grid</b>: [0, 1000]<sup>2</sup> BEV + 4 Cardinal Views</span>
+<span class="tag"><b>Perception Latency</b>: 0.097s / frame</span>
+</div>
+<div class="query-container">
+<button aria-pressed="true" class="query-item active" onclick="updateGtaQuery(0, this)" type="button">
+<span aria-hidden="true" class="query-dot"></span>
+<span><b>[R2R-CE Continuous Trajectory · Steps 1–8]</b> “Walk through the room, past everything and towards the further window, stopping once you're near the steps and making a right turn, stop once you're near the chairs.”</span>
+</button>
+<button aria-pressed="false" class="query-item" onclick="updateGtaQuery(1, this)" type="button">
+<span aria-hidden="true" class="query-dot"></span>
+<span><b>[Real-World Wheeled Robot · TurtleBot 4 + RealSense D455]</b> “Leave the corner and turn left, then stop in front of the hydrant.” &amp; “Go straight and walk through the bins on your both sides, turn left and stop in front of the Cardboard Mannequin.”</span>
+</button>
+<button aria-pressed="false" class="query-item" onclick="updateGtaQuery(2, this)" type="button">
+<span aria-hidden="true" class="query-dot"></span>
+<span><b>[Real-World Legged Quadruped · Unitree Go2 + Servo RGB-D]</b> “Go straight into the room, and then turn left, stop at the red ladder.”</span>
+</button>
+<button aria-pressed="false" class="query-item" onclick="updateGtaQuery(3, this)" type="button">
+<span aria-hidden="true" class="query-dot"></span>
+<span><b>[Real-World Aerial Robot · Custom 6-DoF Quadrotor Drone + D435]</b> “Move to the front of the small colorful Chinese feather shuttlecock and stop.”</span>
+</button>
+</div>
+<div class="demo-panels">
+<div class="demo-panel">
+<p class="demo-panel-title"><b>World Representation / Early Trajectory Stage</b></p>
+<div class="demo-panel-box">
+<div class="demo-img-wrap">
+<img alt="GTA Left Panel" decoding="async" id="gtaLeftImg" loading="lazy" src="./static/images/episode_steps1_4.png"/>
+</div>
+<div aria-live="polite" class="demo-meta-box" id="gtaLeftMeta">
+<b>Steps 1–4 (Room Traversal):</b> TSDF map incrementally reconstructs room obstacles while dynamic checklist marks <code>[x] Walk through the room</code> and <code>[x] towards the further window</code>.
+                    </div>
+</div>
+</div>
+<div class="demo-panel">
+<p class="demo-panel-title"><b>Grounded Waypoint Execution / Terminal Goal</b></p>
+<div class="demo-panel-box">
+<div class="demo-img-wrap">
+<img alt="GTA Right Panel" decoding="async" id="gtaRightImg" loading="lazy" src="./static/images/episode_steps5_8.png"/>
+</div>
+<div aria-live="polite" class="demo-meta-box" id="gtaRightMeta">
+<b>Steps 5–8 (Turn &amp; Termination):</b> Ray-casting (<i>m<sub>t</sub></i>, <i>u<sub>t</sub></i>, <i>v<sub>t</sub></i>) against <i>M</i><sub>vol</sub> guides the agent past the steps, executing a right turn and stopping within 3.0 m of the chairs <span class="wordmark-reader">✔</span>.
+                    </div>
+</div>
+</div>
+</div>
+<script>
+const gtaQueries = [
+  {
+    leftImg: './static/images/episode_steps1_4.png',
+    rightImg: './static/images/episode_steps5_8.png',
+    leftMeta: '<b>Steps 1&ndash;4 (Room Traversal):</b> TSDF map incrementally reconstructs room geometry while the dynamic checklist updates <code>[x] Walk through the room</code> and <code>[x] towards the further window</code>.',
+    rightMeta: '<b>Steps 5&ndash;8 (Right Turn &amp; Goal Stop):</b> Ray-casting (<i>m<sub>t</sub></i>, <i>u<sub>t</sub></i>, <i>v<sub>t</sub></i>) against <i>M</i><sub>vol</sub> guides the agent near the steps, turns right, and stops at the chairs <span style="color: #01B1A0; font-weight: 700;">&#10004;</span>.'
+  },
+  {
+    leftImg: './static/images/wheeled_case1.png',
+    rightImg: './static/images/wheeled_case2.png',
+    leftMeta: '<b>Wheeled Trial 1 (Corridor Hydrant):</b> TurtleBot 4 sweeps 4 orthogonal views via servo-mounted D455, exits the corner, turns left, and stops at the fire hydrant.',
+    rightMeta: '<b>Wheeled Trial 2 (Bins &amp; Mannequin):</b> Navigates the narrow gap between bins on both sides, turns left at the junction, and grounds the Cardboard Mannequin (<b>40.0% Real-World SR, 3.66 m NE</b>).'
+  },
+  {
+    leftImg: './static/images/teaser_anim.gif',
+    rightImg: './static/images/realworld_quadruped.png',
+    leftMeta: '<b>Quadruped Hardware Setup:</b> Reuses the exact same ROS 2 + remote MLLM interface on a Unitree Go2 quadruped under gait-induced non-planar motion.',
+    rightMeta: '<b>Quadruped Rollout:</b> Enters the laboratory doorway, clears the central table, turns left, and terminates at the red ladder (<b>40.0% Real-World SR, 3.59 m NE</b>).'
+  },
+  {
+    leftImg: './static/images/teaser_right.png',
+    rightImg: './static/images/realworld_drone.png',
+    leftMeta: '<b>Aerial 6-DoF Embodiment:</b> Custom quadrotor with Intel RealSense D435 and CoolPi 4B onboard computer operating from an elevated viewpoint.',
+    rightMeta: '<b>Drone Rollout:</b> Grounded pixel-to-TSDF ray-casting guides 3D flight trajectory directly to the small colorful Chinese feather shuttlecock (<b>42.0% Real-World SR, 3.50 m NE</b>).'
+  }
+];
+
+function updateGtaQuery(idx, btn) {
+  document.querySelectorAll('.query-item').forEach(button => {
+    button.classList.toggle('active', button === btn);
+    button.setAttribute('aria-pressed', String(button === btn));
+  });
+  const item = gtaQueries[idx];
+  document.getElementById('gtaLeftImg').src = item.leftImg;
+  document.getElementById('gtaRightImg').src = item.rightImg;
+  document.getElementById('gtaLeftMeta').innerHTML = item.leftMeta;
+  document.getElementById('gtaRightMeta').innerHTML = item.rightMeta;
+}
+</script>
+</section>
+
+<section id="results" class="section" aria-labelledby="results-title">
+<h2 id="results-title">Experimental results</h2>
+<h3 class="sub-title" id="results-table-1">
+  Quantitative Results on R2R-CE &amp; RxR-CE
+              </h3>
+<div aria-labelledby="results-table-1" class="table-wrap" role="region" tabindex="0">
+<table class="result-table">
+<thead>
+<tr>
+<th rowspan="2">Method</th>
+<th rowspan="2">Setting</th>
+<th colspan="5">R2R-CE Val-Unseen (1,839 Episodes)</th>
+<th colspan="4">RxR-CE Val-Unseen (260 Episodes)</th>
+</tr>
+<tr>
+<th>NE (↓)</th>
+<th>OSR (↑)</th>
+<th>SR (↑)</th>
+<th>SPL (↑)</th>
+<th>nDTW (↑)</th>
+<th>NE (↓)</th>
+<th>SR (↑)</th>
+<th>SPL (↑)</th>
+<th>nDTW (↑)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>CMA</td><td>Supervised</td><td>6.30</td><td>49.0</td><td>38.0</td><td>33.0</td><td>–</td><td>10.4</td><td>24.1</td><td>19.1</td><td>37.4</td></tr>
+<tr><td>VLN-BERT</td><td>Supervised</td><td>5.74</td><td>53.0</td><td>44.0</td><td>39.0</td><td>–</td><td>8.98</td><td>27.1</td><td>22.7</td><td>46.7</td></tr>
+<tr><td>GridMM</td><td>Supervised</td><td>5.11</td><td>61.0</td><td>49.0</td><td>41.0</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><td>ETPNav</td><td>Supervised</td><td>4.71</td><td>65.0</td><td>57.0</td><td>49.0</td><td>–</td><td>5.64</td><td>54.8</td><td>44.9</td><td>61.9</td></tr>
+<tr><td>BEVBert</td><td>Supervised</td><td>4.70</td><td>67.0</td><td>59.0</td><td>50.0</td><td>–</td><td>4.80</td><td>64.4</td><td>–</td><td>65.4</td></tr>
+<tr><td>HNR</td><td>Supervised</td><td>4.42</td><td>67.0</td><td>61.0</td><td>51.0</td><td>–</td><td>5.51</td><td>56.4</td><td>46.7</td><td>63.6</td></tr>
+<tr><td>NavFoM</td><td>Supervised</td><td>4.61</td><td>72.1</td><td>61.7</td><td>55.3</td><td>–</td><td>4.74</td><td>64.4</td><td><b>56.2</b></td><td>65.8</td></tr>
+<tr><td>Efficient-VLN</td><td>Supervised</td><td><b>4.18</b></td><td><b>73.7</b></td><td><b>64.2</b></td><td><b>55.9</b></td><td>–</td><td><b>3.88</b></td><td><b>67.0</b></td><td>54.3</td><td><b>68.4</b></td></tr>
+<tr><td>Open-Nav</td><td>Zero-Shot</td><td>6.70</td><td>23.0</td><td>19.0</td><td>16.1</td><td>45.8</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><td>CA-Nav</td><td>Zero-Shot</td><td>7.58</td><td>48.0</td><td>25.3</td><td>10.8</td><td>–</td><td>10.37</td><td>19.0</td><td>6.0</td><td>–</td></tr>
+<tr><td>SmartWay</td><td>Zero-Shot</td><td>7.01</td><td>51.0</td><td>29.0</td><td>22.5</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><td>STRIDER</td><td>Zero-Shot</td><td>6.91</td><td>39.0</td><td>35.0</td><td>30.3</td><td>51.8</td><td>11.19</td><td>21.2</td><td>9.6</td><td>30.1</td></tr>
+<tr><td>VLN-Zero<sup>‡</sup></td><td>Zero-Shot</td><td>5.97</td><td>51.6</td><td>42.4</td><td>26.3</td><td>–</td><td>9.13</td><td>30.8</td><td>19.0</td><td>–</td></tr>
+<tr><td>BZS-VLN</td><td>Zero-Shot</td><td>6.12</td><td>55.0</td><td>41.0</td><td>25.4</td><td>–</td><td>7.56</td><td>35.7</td><td>21.7</td><td>42.4</td></tr>
+<tr class="ours">
+<td><span class="wordmark-geo"><b>GTA</b></span><span class="wordmark-reader"><b>-Light</b></span> <b>(Ours, 8B Distilled)</b><sup>†</sup></td>
+<td><b>Distilled 8B</b></td>
+<td>5.41</td><td>53.9</td><td>45.1</td><td>39.6</td><td>58.8</td><td>7.33</td><td>42.5</td><td>36.2</td><td>54.1</td>
+</tr>
+<tr class="ours">
+<td><span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> <b>(Ours)</b></td>
+<td><b>Zero-Shot</b></td>
+<td><u><b>4.95</b></u></td><td><u><b>56.2</b></u></td><td><u><b>48.8</b></u></td><td><u><b>41.8</b></u></td><td><u><b>60.4</b></u></td><td><u><b>6.29</b></u></td><td><u><b>46.2</b></u></td><td><u><b>39.3</b></u></td><td><u><b>57.4</b></u></td>
+</tr>
+</tbody>
+</table>
+<span>
+<b>Table 1.</b> Comparison on R2R-CE and RxR-CE Val-Unseen splits. <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> sets a new zero-shot state of the art, outperforming BZS-VLN by <b>+7.8% SR and +16.4% SPL</b> on R2R-CE and <b>+10.5% SR and +17.6% SPL</b> on RxR-CE.
+                </span>
+</div>
+<h3 class="sub-title" id="results-table-2">Counterfactual Reasoning</h3>
+<div aria-labelledby="results-table-2" class="table-wrap" role="region" tabindex="0">
+<table class="result-table">
+<thead>
+<tr>
+<th>Reasoning Variant</th>
+<th>SR (↑)</th>
+<th>SPL (↑)</th>
+<th>nDTW (↑)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>(a) Greedy, no backtrack</td><td>31.0</td><td>27.1</td><td>34.7</td></tr>
+<tr><td>(b) + Loop-alert backtrack</td><td>37.0</td><td>31.8</td><td>45.6</td></tr>
+<tr><td>(c) + Checkpoints &amp; blocking</td><td>39.0</td><td>35.3</td><td>49.3</td></tr>
+<tr class="ours">
+<td><b>(d) + Expectation checks</b></td>
+<td><b>47.0</b></td><td><b>38.8</b></td><td><b>53.6</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 class="sub-title" id="results-table-3">MLLM Backbone Scaling</h3>
+<div aria-labelledby="results-table-3" class="table-wrap" role="region" tabindex="0">
+<table class="result-table">
+<thead>
+<tr>
+<th>Backbone (180-Ep)</th>
+<th>OSR (↑)</th>
+<th>SR (↑)</th>
+<th>SPL (↑)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Qwen3-VL-235B</td><td>46.1</td><td>37.2</td><td>29.5</td></tr>
+<tr><td>Gemini-2.5 Pro</td><td>48.7</td><td>42.3</td><td>34.4</td></tr>
+<tr><td>GPT-5.1 (w/o PB)</td><td>48.3</td><td>45.0</td><td>38.1</td></tr>
+<tr class="ours">
+<td><b>GPT-5.1 (Full GTA)</b></td>
+<td><b>56.7</b></td><td><b>47.2</b></td><td><b>39.6</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 class="sub-title" id="results-table-4">Real-World Embodiments</h3>
+<div aria-labelledby="results-table-4" class="table-wrap" role="region" tabindex="0">
+<table class="result-table">
+<thead>
+<tr>
+<th>Method / Platform</th>
+<th>SR (↑)</th>
+<th>NE (↓)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>VLN-BERT (Supervised)</td><td>16.0%</td><td>5.36 m</td></tr>
+<tr><td>RDP (Supervised)</td><td>20.0%</td><td>5.45 m</td></tr>
+<tr><td>SmartWay (Zero-Shot)</td><td>32.0%</td><td>4.85 m</td></tr>
+<tr class="ours"><td><b>GTA – Wheeled</b></td><td><b>40.0%</b></td><td><b>3.66 m</b></td></tr>
+<tr class="ours"><td><b>GTA – Quadruped</b></td><td><b>40.0%</b></td><td><b>3.59 m</b></td></tr>
+<tr class="ours"><td><b>GTA – Drone</b></td><td><b>42.0%</b></td><td><b>3.50 m</b></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="rollouts" class="section" aria-labelledby="rollouts-title">
+<h2 id="rollouts-title">Multi-Embodiment Real-World Rollouts</h2>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/realworld_all.png" rel="noopener" target="_blank"><img alt="GTA Real-World Multi-Embodiment Rollouts" decoding="async" loading="lazy" src="./static/images/realworld_all.png"/></a></figure>
+</section>
+
+<section id="BibTeX" class="section authors-section" aria-labelledby="BibTeX-title">
+<h2 id="BibTeX-title">Authors &amp; citation</h2>
+<p class="author-list"><span><a href="https://zeruili22.github.io/" rel="noopener noreferrer" target="_blank"><strong>Zerui Li</strong></a><sup>1†</sup></span> <span><strong>Hongpei Zheng</strong><sup>2†</sup></span> <span><strong>Fangguo Zhao</strong><sup>3</sup></span> <span><strong>Yanyan Shao</strong><sup>4</sup></span> <span><strong>Jian Zhou</strong><sup>1</sup></span> <span><strong>Sihao Lin</strong><sup>1,6</sup></span> <span><a href="https://sj-li.com/" rel="noopener noreferrer" target="_blank"><strong>Shijie Li</strong></a><sup>5</sup></span> <span><a href="http://www.qi-wu.me/" rel="noopener noreferrer" target="_blank"><strong>Qi Wu</strong></a><sup>1,6✉</sup></span></p>
+<p class="affiliations"><span><sup>1</sup>AIML, Adelaide University</span> <span><sup>2</sup>The University of Manchester</span> <span><sup>3</sup>Zhejiang University</span> <span><sup>4</sup>Zhejiang Wanli University</span> <span><sup>5</sup>A*STAR</span> <span><sup>6</sup>Responsible AI Research Centre, AIML, Adelaide University</span></p>
+<div class="citation-head"><span>BIBTEX</span><button id="copy-citation" type="button" aria-live="polite">Copy BibTeX</button></div>
+<pre id="citation"><code>@inproceedings{li2026gta,
+  title     = {One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation},
+  author    = {Zerui Li and Hongpei Zheng and Fangguo Zhao and Yanyan Shao and Jian Zhou and Sihao Lin and Shijie Li and Qi Wu},
+  booktitle = {10th Conference on Robot Learning (CoRL)},
+  year      = {2026}
+}</code></pre>
+</section>
+
+<section id="related" class="section" aria-labelledby="related-title">
+<h2 id="related-title">Related work</h2>
+<p>Explore our related works on embodied navigation and grounded spatial intelligence:</p>
+<p>- <a href="../talk2escape/index.html">Talk2Escape: Conversational Grounding for Vision-and-Language Navigation (IROS 2026)</a></p>
+<p>- <a href="https://billzhao1030.github.io/IVLN/" rel="noopener noreferrer" target="_blank">Ask When It Pays: Cost-Aware Open-Ended Interaction for Instance Goal Navigation (arXiv 2026)</a></p>
+<p>- <a href="https://arxiv.org/abs/2512.03284" rel="noopener noreferrer" target="_blank">Think, Then Look: Active Spatial Reasoning for House-Scale 3D Scene Understanding (arXiv 2025)</a></p>
+<p>- <a href="https://iris0329.github.io/georeader-homepage/">GeoReader: Learning Latent Geometry for Spatial Reasoning in Vision-Language Models (arXiv 2026)</a></p>
+<p>- <a href="../ego2world/index.html">Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning (arXiv 2026)</a></p>
+<p>- <a href="https://seeground.github.io/" rel="noopener noreferrer" target="_blank">SeeGround: See and Ground for Zero-Shot Open-Vocabulary 3D Visual Grounding (CVPR 2025)</a></p>
+</section>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="page-width">
+      <a class="brand" href="#top" aria-label="GTA, back to top"><span>G</span><span>TA</span><i aria-hidden="true"></i></a>
+      <p>Design adapted from the <a href="https://iris0329.github.io/georeader-homepage/">GeoReader project page</a>.
+        <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>

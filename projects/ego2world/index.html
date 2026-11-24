@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#145e4c">
+  <meta name="description" content="Ego2World compiles annotated cooking videos into executable environments for evaluating planning under partial observation.">
+  <title>Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning</title>
+  <link rel="canonical" href="https://sj-li.com/projects/ego2world/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sj-li.com/projects/ego2world/">
+  <meta property="og:title" content="Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning">
+  <meta property="og:description" content="Ego2World compiles annotated cooking videos into executable environments for evaluating planning under partial observation.">
+  <meta property="og:image" content="https://sj-li.com/projects/ego2world/static/images/teaser.png">
+  <link rel="stylesheet" href="../shared/style.css">
+  <script src="../shared/main.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Ego2World, back to top"><span>Ego2</span><span>World</span><i aria-hidden="true"></i></a>
+    <nav class="topnav" aria-label="Main navigation">
+      <a href="#method">Method</a>
+      <a href="#examples">Examples</a>
+      <a href="#results">Results</a>
+      <a href="#BibTeX">Citation</a>
+    </nav>
+    <div class="top-resources">
+      <a class="top-paper" href="https://arxiv.org/abs/2610.02715" target="_blank" rel="noopener noreferrer">arXiv</a>
+      <a class="top-paper" href="../../index.html#publications">Home</a>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <div class="hero-kicker"><span class="kicker-line" aria-hidden="true"></span>arXiv 2026</div>
+      <h1 id="hero-title" class="hero-paper-heading"><span class="wordmark"><span class="wordmark-geo">Ego2</span><span class="wordmark-reader">World</span></span>: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning</h1>
+      <div class="hero-authors">
+        <p class="author-names"><span><a href="https://chengqinchuan.cn/" rel="noopener noreferrer" target="_blank"><strong>Qinchuan Cheng</strong></a><sup>1</sup></span> <span><strong>Zhantao Gong</strong><sup>2</sup></span> <span><strong>Pengzhan Sun</strong><sup>3</sup></span> <span><a href="https://www.comp.nus.edu.sg/~ayao/" rel="noopener noreferrer" target="_blank"><strong>Angela Yao</strong></a><sup>3</sup></span> <span><a href="https://sj-li.com/" rel="noopener noreferrer" target="_blank"><strong>Shijie Li</strong></a><sup>4✉</sup></span></p>
+        <p class="author-affils"><span><sup>1</sup>Xi'an Jiaotong University</span> <span><sup>2</sup>Nankai University</span> <span><sup>3</sup>National University of Singapore</span> <span><sup>4</sup>I2R, A*STAR</span></p>
+        <p class="author-notes">✉ Corresponding author</p>
+      </div>
+      <p class="hero-summary">Ego2World compiles annotated cooking videos into executable environments for evaluating planning under partial observation.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#abstract">Read the overview</a>
+        <a class="button button-outline" href="https://arxiv.org/pdf/2610.02715" target="_blank" rel="noopener noreferrer">Paper</a>
+        <a class="button button-outline" href="https://chengqinchuan.cn/projects/hd-epic-semantic-simulator/" target="_blank" rel="noopener noreferrer">Simulator Blog</a>
+      </div>
+    </section>
+    <div class="story page-width">
+      <nav class="contents" aria-label="On this page">
+        <span class="contents-label">CONTENTS</span>
+        <a href="#abstract" class="active" aria-current="location">Abstract</a>
+        <a href="#method">Method</a>
+        <a href="#world-belief">World and belief</a>
+        <a href="#metrics">Evaluation metrics</a>
+        <a href="#memory">Persistent belief</a>
+        <a href="#examples">Interactive examples</a>
+        <a href="#results">Results</a>
+        <a href="#BibTeX">Authors &amp; citation</a>
+        <a href="#related">Related work</a>
+      </nav>
+      <div class="story-main">
+<section id="abstract" class="section section-first" aria-labelledby="abstract-title">
+<h2 id="abstract-title">Abstract</h2>
+<p>
+<b>Egocentric videos</b> capture how people carry out everyday activities, yet testing an agent requires evaluating the consequences of actions it chooses itself.
+              We introduce <span class="wordmark-geo"><b>Ego2</b></span><span class="wordmark-reader"><b>World</b></span>, a benchmark that turns annotated cooking activities from HD-EPIC into <b>executable planning environments under partial observation</b>.
+              Its compiler links source steps and objects to symbolic action rules, persistent world states, and explicit task conditions, so researchers can execute an agent's proposed actions and check their outcomes.
+              <b>World state and agent belief are maintained separately</b>, enabling controlled studies of planning and information reuse across continuing tasks.
+              Across six frontier planners on 105 tasks, <b>Operational-TSR</b> provides a strict end-to-end completion baseline, while condition-level attainment (<b>Goal Completion Ratio, GCR</b>) and execution diagnostics (<b>Action Validity</b> and <b>Completed-Run Rate</b>) provide the primary discriminative comparison.
+              In a paired Qwen-Plus study on 51 terminal-state tasks, retaining persistent belief across action groups improves action validity by <b>+4.15 percentage points</b> and reduces visual-query attempts by <b>90.27%</b> (from 976 to 95), while increasing processed tokens (+3.56M) with no detected completion gain.
+              <span class="wordmark-geo"><b>Ego2</b></span><span class="wordmark-reader"><b>World</b></span> connects recorded human activity to the development and evaluation of interactive embodied agents.
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/teaser.png" rel="noopener" target="_blank"><img alt="Ego2World Teaser" decoding="async" loading="lazy" src="./static/images/teaser.png"/></a></figure>
+</section>
+
+<section id="method" class="section" aria-labelledby="method-title">
+<h2 id="method-title">The <span class="wordmark-geo"><b>Ego2</b></span><span class="wordmark-reader"><b>World</b></span> Compilation Pipeline</h2>
+<p>
+<b>Figure.</b> Overview of the <span class="wordmark-geo"><b>Ego2</b></span><span class="wordmark-reader"><b>World</b></span> annotation-to-environment compilation pipeline.
+              Starting from 41 hours of unscripted HD-EPIC cooking recordings across 9 kitchens and 69 recipes, we parse temporal narration manifests and object references into ordered source steps.
+              A manually curated ontology normalizes more than <b>300 source verb classes into 155 executable action types</b> operating on typed object instances, locations, containment relations, and symbolic attributes.
+              Temporally local steps are grouped into executable action groups with preserved source-step provenance, validated through deterministic precondition/consistency rules and localized LLM-assisted quality control, and replayed through the symbolic executor to produce persistent typed world graphs <i>G<sub>t</sub><sup>w</sup></i> = (<i>V<sub>t</sub></i>, <i>E<sub>t</sub></i>, <i>A<sub>t</sub></i>) and frozen task contracts <i>C<sub>τ</sub></i>.
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/arch_1.png" rel="noopener" target="_blank"><img alt="Ego2World Compilation Pipeline" decoding="async" loading="lazy" src="./static/images/arch_1.png"/></a></figure>
+</section>
+
+<section id="world-belief" class="section" aria-labelledby="world-belief-title">
+<h2 id="world-belief-title">World–Belief Separation &amp; Partial Observation</h2>
+<p>
+              Unlike static video QA benchmarks where an agent's answer has no effect on future frames, <span class="wordmark-geo"><b>Ego2</b></span><span class="wordmark-reader"><b>World</b></span> executes every concrete primitive proposal <i>a<sub>t</sub></i> against the hidden world <i>G<sub>t</sub><sup>w</sup></i>:
+              </p><div class="formula">(<i>G</i><sub><i>t</i>+1</sub><sup><i>w</i></sup>, <i>f<sub>t</sub></i>) = (<i>T<sub>R</sub></i>(<i>G<sub>t</sub><sup>w</sup></i>, <i>a<sub>t</sub></i>), <b>accepted</b>) if pre(<i>a<sub>t</sub></i>; <i>G<sub>t</sub><sup>w</sup></i>) = TRUE; else (<i>G<sub>t</sub><sup>w</sup></i>, <b>rejected</b>(<i>c</i>))</div><p>
+              The full world state remains hidden from the agent. The agent maintains its own partial belief store <i>G<sub>t</sub><sup>b</sup></i> (estimated object locations, known container states, and evidence sources) and can actively issue visual queries for region <i>ℓ</i>, receiving a historical anchor frame paired with a rendered symbolic diff <i>o<sub>t</sub><sup>ℓ</sup></i> = (<i>I</i><sub>anchor</sub><sup><i>ℓ</i></sup>, Render[Diff(<i>G</i><sub>0</sub><sup><i>ℓ</i></sup>, <i>G<sub>t</sub><sup>ℓ</sup></i>)]).
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/teaser_anim.gif" rel="noopener" target="_blank"><img alt="Ego2World Animated Workflow" decoding="async" loading="lazy" src="./static/images/teaser_anim.gif"/></a></figure>
+</section>
+
+<section id="metrics" class="section" aria-labelledby="metrics-title">
+<h2 id="metrics-title">From Binary Endpoints to Capability Profiles</h2>
+<p>
+              Evaluating long-horizon embodied plans solely by binary task completion collapses partially successful trajectories into the same zero score as parse failures or early blocks. Across 630 planner–task records (6 planners × 105 tasks), <b>78 completed runs satisfy some but not all required task conditions</b>.
+              <br/><br/>
+<span class="wordmark-geo"><b>Ego2</b></span><span class="wordmark-reader"><b>World</b></span> pairs the strict conjunctive baseline (<b>Operational-TSR</b> and <b>Strict-TSR</b>) with task-normalized <b>Goal Completion Ratio (GCR)</b>, <b>Action Validity</b>, and <b>Completed-Run Rate</b>. This multi-axis profile reveals distinct model strengths: <b>Gemini 3.1 Pro</b> leads GCR (12.31%) and completed runs (69/105), <b>GPT-5.5</b> leads action validity (59.34%), and <b>DeepSeek-V4-Flash</b> leads event-contract GCR (6.27%).
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/attainment.png" rel="noopener" target="_blank"><img alt="Goal Attainment and Execution Endpoints" decoding="async" loading="lazy" src="./static/images/attainment.png"/></a></figure>
+</section>
+
+<section id="memory" class="section" aria-labelledby="memory-title">
+<h2 id="memory-title">Benefits and Costs of Persistent Belief</h2>
+<p>
+              Because world evolution and belief retention are decoupled, we can isolate the exact causal impact of cross-group memory across 51 terminal-state tasks (22 episodes, 3,878 action groups per condition):
+              <br/>
+              • <b>Higher Execution Reliability:</b> Retaining belief across groups increases task-macro action validity from <b>41.79% to 45.94% (+4.15 pp</b>, 95% CI [+0.11, +7.78]).
+              <br/>
+              • <b>90.27% Reduction in Visual Queries:</b> Reusing remembered object locations slashes VLM visual-query attempts from <b>976 down to 95</b> across all four episode quarters.
+              <br/>
+              • <b>Context &amp; Stale-Belief Trade-off:</b> Persistence increases token consumption from <b>23.58M to 27.14M (+3.56M)</b> while attaining the same 6/51 terminal successes (11.76%), exposing how coarse or outdated belief entries can block later steps.
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/memory_study.png" rel="noopener" target="_blank"><img alt="Paired Memory Study" decoding="async" loading="lazy" src="./static/images/memory_study.png"/></a></figure>
+</section>
+
+<section id="examples" class="section" aria-labelledby="examples-title">
+<h2 id="examples-title">Interactive Compiled-Task &amp; Belief Trace Inspector</h2>
+<p>
+                Select a real compiled task from <span class="wordmark-geo"><b>Ego2</b></span><span class="wordmark-reader"><b>World</b></span> below to trace how source HD-EPIC video evidence is compiled into symbolic transition rules and world graphs (left panel), and inspect how agent belief and contract verification behave during execution (right panel):
+              </p>
+<div class="demo-tags">
+<span class="tag"><b>Dataset</b>: HD-EPIC (41h, 9 Kitchens)</span>
+<span class="tag"><b>Vocabulary</b>: 155 Executable Action Types</span>
+<span class="tag"><b>Suites</b>: Operational-105 &amp; Strict-51</span>
+<span class="tag"><b>Evaluator</b>: 317/317 Negative Suites Passed</span>
+</div>
+<div class="query-container">
+<button aria-pressed="true" class="query-item active" onclick="updateEgoQuery(0, this)" type="button">
+<span aria-hidden="true" class="query-dot"></span>
+<span><b>[Table 1 · Add Squash (P02-20240209-231412)]</b> Narration: “Pour a small 1/20th measure of squash into the glass.” — Persistent Belief Succeeds vs. Reset Fails</span>
+</button>
+<button aria-pressed="false" class="query-item" onclick="updateEgoQuery(1, this)" type="button">
+<span aria-hidden="true" class="query-dot"></span>
+<span><b>[Table 5 · Worked Terminal-State Contract]</b> Task: “Place a specific cup inside the cupboard and close the cupboard.” — Strict-TSR vs. Graded GCR &amp; UNKNOWN State</span>
+</button>
+<button aria-pressed="false" class="query-item" onclick="updateEgoQuery(2, this)" type="button">
+<span aria-hidden="true" class="query-dot"></span>
+<span><b>[Table 18 · Prepare Mushrooms (Discordant Memory Case)]</b> 85/122 Accepted Actions under Persistent Belief (Blocked) vs. 26/46 under Per-Group Reset (Succeeded)</span>
+</button>
+<button aria-pressed="false" class="query-item" onclick="updateEgoQuery(3, this)" type="button">
+<span aria-hidden="true" class="query-dot"></span>
+<span><b>[Table 19 · Logged Coffee Preparation (P01-20240202-161948)]</b> Groups 1–7 Continuous Belief Evolution — Visual Anchor Query &amp; Region Delta Fusion</span>
+</button>
+</div>
+<div class="demo-panels">
+<div class="demo-panel">
+<p class="demo-panel-title"><b>Source Video Evidence &amp; Compiled Rules</b></p>
+<div class="demo-panel-box">
+<div class="demo-img-wrap">
+<img alt="Source Evidence" decoding="async" id="egoLeftImg" loading="lazy" src="./static/images/ego-frame-0.png"/>
+</div>
+<div aria-live="polite" class="demo-meta-box" id="egoLeftMeta">
+<b>Source Activity (8.82–10.49 s):</b> Narration 6 records pouring squash into the drinking glass.<br/>
+<b>Compiled Operation:</b> Steps 5–7 form Group 3 (open bottle → pour squash → close bottle).<br/>
+<b>Frozen Terminal Contract:</b> <code>contents(glass) ∋ squash</code> (missing evidence → <code>UNKNOWN</code>).
+                    </div>
+</div>
+</div>
+<div class="demo-panel">
+<p class="demo-panel-title"><b>Hidden World Graph <i>G<sub>t</sub><sup>w</sup></i> &amp; Belief Execution Outcome</b></p>
+<div class="demo-panel-box">
+<div class="demo-img-wrap">
+<img alt="Compiled World Graph" decoding="async" id="egoRightImg" loading="lazy" src="./static/images/ego-graph.png"/>
+</div>
+<div aria-live="polite" class="demo-meta-box" id="egoRightMeta">
+<b>Persistent Belief:</b> Remembers squash location; <code>pour(squash, glass)</code> accepted → <span class="wordmark-reader">✔ Contract TRUE (Success)</span>.<br/>
+<b>Per-Group Reset:</b> Glass pickup accepted, but squash pickups rejected; no pour attempted → <span>✘ Contents UNKNOWN (Fail)</span>.
+                    </div>
+</div>
+</div>
+</div>
+<script>
+const egoQueries = [
+  {
+    leftImg: './static/images/ego-frame-0.png',
+    rightImg: './static/images/ego-graph.png',
+    leftMeta: '<b>Source Activity (8.82&ndash;10.49 s):</b> Narration 6 reads: &ldquo;Pour a small 1/20th measure of squash into the glass.&rdquo;<br/><b>Compiled Operation:</b> Steps 5&ndash;7 form Group 3 (open bottle &rarr; pour squash &rarr; close bottle).<br/><b>Frozen Terminal Contract:</b> <code>contents(glass) &ni; squash</code> (missing evidence evaluates to <code>UNKNOWN</code>).',
+    rightMeta: '<b>Persistent Belief:</b> Retains bottle/glass bindings; <code>pour(squash, glass)</code> accepted &rarr; <span style="color: #01B1A0; font-weight: 700;">&#10004; Contract TRUE (Success)</span>.<br/><b>Per-Group Reset:</b> Glass pickup accepted (valid preparation), but squash pickups rejected and no pour attempted &rarr; <span style="color: #d9534f; font-weight: 700;">&#10008; Contents UNKNOWN (Fail)</span>.'
+  },
+  {
+    leftImg: './static/images/ego-rules.png',
+    rightImg: './static/images/attainment.png',
+    leftMeta: '<b>Terminal Contract Definition:</b> Requires two predicates at endpoint <i>T</i>: (1) <code>location(cup_1) == cupboard</code> and (2) <code>state(cupboard) == closed</code>.<br/><b>Three-Valued Logic:</b> Predicates evaluate to <code>{TRUE, FALSE, UNKNOWN}</code>; planner self-declarations do not count as evidence.',
+    rightMeta: '<b>Outcome Cases (Strict-TSR, GCR):</b><br/>&bull; Cup placed; cupboard left open &rarr; <code>(0, 0.50)</code><br/>&bull; Wrong cup placed; cupboard closed &rarr; <code>(0, 0.50)</code><br/>&bull; Target cup placed; cupboard closed &rarr; <span style="color: #01B1A0; font-weight: 700;"><code>(1, 1.00)</code> &#10004;</span>'
+  },
+  {
+    leftImg: './static/images/ego-frame-1.png',
+    rightImg: './static/images/memory_study.png',
+    leftMeta: '<b>Discordant Memory Case (Table 18):</b> Why higher local action validity does not automatically guarantee terminal completion.<br/><b>Task Requirement:</b> Prepare mushrooms and leave the workspace in the required clean terminal state.',
+    rightMeta: '<b>Persistent Belief:</b> Accepts <b>85/122</b> primitive attempts (69.7% validity) but hits an execution block before task completion.<br/><b>Per-Group Reset:</b> Accepts <b>26/46</b> attempts (56.5% validity) yet completes all groups and satisfies the clean terminal state <span style="color: #01B1A0; font-weight: 700;">&#10004;</span>.'
+  },
+  {
+    leftImg: './static/images/ego-frame-2.png',
+    rightImg: './static/images/ego-annotations.png',
+    leftMeta: '<b>Continuous Episode Execution (Groups 1&ndash;7):</b> Preparing coffee in Scene 1 across 7 sequential action groups.<br/><b>Hybrid Observation Rule:</b> <i>o<sub>t</sub><sup>&ell;</sup></i> = (<i>I</i><sub>anchor</sub><sup><i>&ell;</i></sup>, Render[Diff(<i>G</i><sub>0</sub><sup><i>&ell;</i></sup>, <i>G<sub>t</sub><sup>&ell;</sup></i>)]), where symbolic deltas override outdated pixels.',
+    rightMeta: '<b>Belief Update Insight:</b> All 7 groups complete without execution blocks. Fine-grained placement targets from earlier steps are refreshed by region-level observations, reducing visual queries by <b>90.27%</b> across the episode.'
+  }
+];
+
+function updateEgoQuery(idx, btn) {
+  document.querySelectorAll('.query-item').forEach(button => {
+    button.classList.toggle('active', button === btn);
+    button.setAttribute('aria-pressed', String(button === btn));
+  });
+  const item = egoQueries[idx];
+  document.getElementById('egoLeftImg').src = item.leftImg;
+  document.getElementById('egoRightImg').src = item.rightImg;
+  document.getElementById('egoLeftMeta').innerHTML = item.leftMeta;
+  document.getElementById('egoRightMeta').innerHTML = item.rightMeta;
+}
+</script>
+</section>
+
+<section id="results" class="section" aria-labelledby="results-title">
+<h2 id="results-title">Experimental results</h2>
+<h3 class="sub-title" id="results-table-1">
+  Protocol-Aligned Evaluation of Six Planners (105 Tasks)
+              </h3>
+<div aria-labelledby="results-table-1" class="table-wrap" role="region" tabindex="0">
+<table class="result-table">
+<thead>
+<tr>
+<th>Planner</th>
+<th>Completed Runs</th>
+<th>Operational-TSR (%) [95% CI]</th>
+<th>Terminal Strict-TSR (%) (<i>n</i> = 34)</th>
+<th>Terminal GCR (%) (<i>n</i> = 34)</th>
+<th>Event GCR (%) (<i>n</i> = 71)</th>
+<th>Overall GCR (%) [95% CI]</th>
+<th>Action Validity (%) [95% CI]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>Qwen-Plus</b></td>
+<td>44 / 105 (41.9%)</td>
+<td>5.71 [2.78, 9.20]</td>
+<td><b>17.65</b></td>
+<td>23.53</td>
+<td>2.46</td>
+<td>9.29 [5.90, 13.21]</td>
+<td>57.44 [48.66, 67.86]</td>
+</tr>
+<tr>
+<td><b>GPT-5.5</b></td>
+<td>59 / 105 (56.2%)</td>
+<td>5.71 [2.50, 9.89]</td>
+<td>14.71</td>
+<td>24.25</td>
+<td>5.56</td>
+<td>11.61 [7.13, 16.22]</td>
+<td><b>59.34 [55.08, 63.21]</b></td>
+</tr>
+<tr class="ours">
+<td><b>Gemini 3.1 Pro</b></td>
+<td><b>69 / 105 (65.7%)</b></td>
+<td><b>6.67 [2.91, 11.76]</b></td>
+<td><b>17.65</b></td>
+<td><b>26.40</b></td>
+<td>5.56</td>
+<td><b>12.31 [6.30, 20.50]</b></td>
+<td>54.44 [47.10, 62.40]</td>
+</tr>
+<tr>
+<td><b>DeepSeek-V4-Flash</b></td>
+<td>65 / 105 (61.9%)</td>
+<td>3.81 [0.00, 7.29]</td>
+<td>8.82</td>
+<td>22.37</td>
+<td><b>6.27</b></td>
+<td>11.48 [6.90, 16.15]</td>
+<td>52.77 [46.52, 61.82]</td>
+</tr>
+<tr>
+<td><b>GLM-5</b></td>
+<td>56 / 105 (53.3%)</td>
+<td>3.81 [1.02, 7.50]</td>
+<td>11.76</td>
+<td>17.70</td>
+<td>2.28</td>
+<td>7.27 [3.38, 12.48]</td>
+<td>50.72 [46.90, 55.90]</td>
+</tr>
+<tr>
+<td><b>Claude Sonnet 4.6</b></td>
+<td>49 / 105 (46.7%)</td>
+<td>5.71 [1.74, 11.70]</td>
+<td>14.71</td>
+<td>21.94</td>
+<td>3.92</td>
+<td>9.75 [4.05, 18.48]</td>
+<td>56.91 [49.29, 66.79]</td>
+</tr>
+</tbody>
+</table>
+<span>
+<b>Table 1 (Paper Tables 6, 7 &amp; 8).</b> Protocol-aligned evaluation on the frozen 105-task suite (18 complete episodes, 4 scenes, 3,441 action groups per planner). Intervals are 95% scene-stratified episode-cluster bootstrap confidence intervals (10,000 replicates).
+                </span>
+</div>
+<h3 class="sub-title" id="results-table-2">Paired Belief Retention Study (Strict-51)</h3>
+<div aria-labelledby="results-table-2" class="table-wrap" role="region" tabindex="0">
+<table class="result-table">
+<thead>
+<tr>
+<th>Metric (51 Tasks, 3,878 Groups)</th>
+<th>Persistent Belief</th>
+<th>Per-Group Reset</th>
+<th>Difference</th>
+<th>95% Paired CI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>Strict-TSR (%)</b></td>
+<td>11.76% (6/51)</td>
+<td>11.76% (6/51)</td>
+<td>+0.00 pp</td>
+<td>[-6.38, +6.25] pp</td>
+</tr>
+<tr class="ours">
+<td><b>Action Validity (%)</b></td>
+<td><b>45.94%</b></td>
+<td>41.79%</td>
+<td><b>+4.15 pp</b></td>
+<td><b>[+0.11, +7.78] pp</b></td>
+</tr>
+<tr class="ours">
+<td><b>VLM Visual Queries</b></td>
+<td><b>95</b></td>
+<td>976</td>
+<td><b>-881 (-90.27%)</b></td>
+<td><b>[-1,106, -651]</b></td>
+</tr>
+<tr>
+<td><b>Group-Accounted Tokens</b></td>
+<td>27.14 M</td>
+<td>23.58 M</td>
+<td>+3.56 M</td>
+<td>[+1.82, +5.45] M</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 class="sub-title" id="results-table-3">Frozen-Contract &amp; Evaluator Audits</h3>
+<div aria-labelledby="results-table-3" class="table-wrap" role="region" tabindex="0">
+<table class="result-table">
+<thead>
+<tr>
+<th>Verification Check</th>
+<th>Scope</th>
+<th>Passed</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Reference record satisfies contract</td><td>105 tasks</td><td><b>105 / 105</b></td></tr>
+<tr><td>Task-initial state correctly fails</td><td>105 tasks</td><td><b>105 / 105</b></td></tr>
+<tr><td>Predicate-level negative suites</td><td>317 suites</td><td><b>317 / 317</b></td></tr>
+<tr><td>Partial &amp; wrong-binding negatives</td><td>12 tasks each</td><td><b>12/12; 12/12</b></td></tr>
+<tr><td>Invalid action immutability</td><td>12 tasks</td><td><b>12 / 12</b></td></tr>
+<tr><td>Legal independent order swap</td><td>10 eligible</td><td><b>10 / 10</b></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="BibTeX" class="section authors-section" aria-labelledby="BibTeX-title">
+<h2 id="BibTeX-title">Authors &amp; citation</h2>
+<p class="author-list"><span><a href="https://chengqinchuan.cn/" rel="noopener noreferrer" target="_blank"><strong>Qinchuan Cheng</strong></a><sup>1</sup></span> <span><strong>Zhantao Gong</strong><sup>2</sup></span> <span><strong>Pengzhan Sun</strong><sup>3</sup></span> <span><a href="https://www.comp.nus.edu.sg/~ayao/" rel="noopener noreferrer" target="_blank"><strong>Angela Yao</strong></a><sup>3</sup></span> <span><a href="https://sj-li.com/" rel="noopener noreferrer" target="_blank"><strong>Shijie Li</strong></a><sup>4✉</sup></span></p>
+<p class="affiliations"><span><sup>1</sup>Xi'an Jiaotong University</span> <span><sup>2</sup>Nankai University</span> <span><sup>3</sup>National University of Singapore</span> <span><sup>4</sup>I2R, A*STAR</span></p>
+<div class="citation-head"><span>BIBTEX</span><button id="copy-citation" type="button" aria-live="polite">Copy BibTeX</button></div>
+<pre id="citation"><code>@article{cheng2026ego2world,
+  title   = {Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning},
+  author  = {Qinchuan Cheng and Zhantao Gong and Pengzhan Sun and Angela Yao and Shijie Li},
+  journal = {arXiv preprint arXiv:2610.02715},
+  year    = {2026}
+}</code></pre>
+</section>
+
+<section id="related" class="section" aria-labelledby="related-title">
+<h2 id="related-title">Related work</h2>
+<p>Explore our related works on world modeling, embodied planning, and spatial intelligence:</p>
+<p>- <a href="https://arxiv.org/abs/2605.11534" rel="noopener noreferrer" target="_blank">PRISM: Planning and Reasoning with Intent in Simulated Embodied Environments (arXiv 2026)</a></p>
+<p>- <a href="https://arxiv.org/abs/2511.18735" rel="noopener noreferrer" target="_blank">Thinking Ahead: Foresight Intelligence in MLLMs and World Models (ECCV 2026)</a></p>
+<p>- <a href="https://arxiv.org/abs/2605.11616" rel="noopener noreferrer" target="_blank">Grounding by Remembering: Cross-Scene and In-Scene Memory for 3D Functional Affordances (arXiv 2026)</a></p>
+<p>- <a href="https://iris0329.github.io/georeader-homepage/">GeoReader: Learning Latent Geometry for Spatial Reasoning in Vision-Language Models (arXiv 2026)</a></p>
+<p>- <a href="../gta/index.html">One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation (CoRL 2026)</a></p>
+<p>- <a href="../talk2escape/index.html">Talk2Escape: Conversational Grounding for Vision-and-Language Navigation (IROS 2026)</a></p>
+</section>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="page-width">
+      <a class="brand" href="#top" aria-label="Ego2World, back to top"><span>Ego2</span><span>World</span><i aria-hidden="true"></i></a>
+      <p>Design adapted from the <a href="https://iris0329.github.io/georeader-homepage/">GeoReader project page</a>.
+        <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -2230,5 +2230,26 @@
     "height": 752,
     "kind": "paper-figure-crop",
     "file_version": "curated-1"
+  },
+  {
+    "id": 44,
+    "title": "EgoVine: Post-Training with Branching Experience Compiled from Real-World Videos",
+    "file": "assets/papers/paper-44.webp",
+    "source": "https://arxiv.org/pdf/2610.23907",
+    "page": 3,
+    "figure": 1,
+    "crop": [
+      108.0,
+      406.7,
+      504.0,
+      604.7
+    ],
+    "description": "EgoVine’s learning loop from real-world video annotations to branching experience and compact planners.",
+    "selection_rationale": "Figure 1 connects real video annotations, supervised learning, branching, and planning in one diagram. Figure 2 focuses on the branching update.",
+    "reading_scope": "ArXiv metadata, abstract, EgoVine method overview, and Figures 1 and 2.",
+    "selected": true,
+    "width": 792,
+    "height": 397,
+    "kind": "paper-figure-crop"
   }
 ]

@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#145e4c">
+  <meta name="description" content="Talk2Escape lets navigation agents ask for help when they are stuck and use spatially grounded dialogue to recover.">
+  <title>Talk2Escape: Conversational Grounding for Vision-and-Language Navigation</title>
+  <link rel="canonical" href="https://sj-li.com/projects/talk2escape/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sj-li.com/projects/talk2escape/">
+  <meta property="og:title" content="Talk2Escape: Conversational Grounding for Vision-and-Language Navigation">
+  <meta property="og:description" content="Talk2Escape lets navigation agents ask for help when they are stuck and use spatially grounded dialogue to recover.">
+  <meta property="og:image" content="https://sj-li.com/projects/talk2escape/static/images/teaser.png">
+  <link rel="stylesheet" href="../shared/style.css">
+  <script src="../shared/main.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Talk2Escape, back to top"><span>Talk2</span><span>Escape</span><i aria-hidden="true"></i></a>
+    <nav class="topnav" aria-label="Main navigation">
+      <a href="#method">Method</a>
+      <a href="#examples">Examples</a>
+      <a href="#results">Results</a>
+      <a href="#BibTeX">Citation</a>
+    </nav>
+    <div class="top-resources">
+      <a class="top-paper" href="https://arxiv.org/abs/2609.28296" target="_blank" rel="noopener noreferrer">arXiv</a>
+      <a class="top-paper" href="../../index.html#publications">Home</a>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <div class="hero-kicker"><span class="kicker-line" aria-hidden="true"></span>IROS 2026</div>
+      <h1 id="hero-title" class="hero-paper-heading"><span class="wordmark"><span class="wordmark-geo">Talk2</span><span class="wordmark-reader">Escape</span></span>: Conversational Grounding for Vision-and-Language Navigation</h1>
+      <div class="hero-authors">
+        <p class="author-names"><span><a href="https://zeruili22.github.io/" rel="noopener noreferrer" target="_blank"><strong>Zerui Li</strong></a><sup>1†</sup></span> <span><strong>Sihao Lin</strong><sup>1†‡</sup></span> <span><strong>Yanyan Shao</strong><sup>2</sup></span> <span><strong>Jiwen Zhang</strong><sup>3</sup></span> <span><strong>Xiangyu Shi</strong><sup>1</sup></span> <span><a href="https://sj-li.com/" rel="noopener noreferrer" target="_blank"><strong>Shijie Li</strong></a><sup>4</sup></span> <span><a href="http://www.qi-wu.me/" rel="noopener noreferrer" target="_blank"><strong>Qi Wu</strong></a><sup>1‡✉</sup></span></p>
+        <p class="author-affils"><span><sup>1</sup>AIML, Adelaide University</span> <span><sup>2</sup>Zhejiang Wanli University</span> <span><sup>3</sup>Fudan University</span> <span><sup>4</sup>A*STAR</span></p>
+        <p class="author-notes"><span><sup>†</sup>Joint first authors     <sup>✉</sup>Corresponding author     <sup>‡</sup>Also with the Responsible AI Research Centre, AIML</span></p>
+      </div>
+      <p class="hero-summary">Talk2Escape lets navigation agents ask for help when they are stuck and use spatially grounded dialogue to recover.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#abstract">Read the overview</a>
+        <a class="button button-outline" href="https://arxiv.org/pdf/2609.28296" target="_blank" rel="noopener noreferrer">Paper</a>
+        <a class="button button-outline" href="https://zeruili22.github.io/talk2escape/" target="_blank" rel="noopener noreferrer">Mirror Page</a>
+      </div>
+    </section>
+    <div class="story page-width">
+      <nav class="contents" aria-label="On this page">
+        <span class="contents-label">CONTENTS</span>
+        <a href="#abstract" class="active" aria-current="location">Abstract</a>
+        <a href="#method">Method</a>
+        <a href="#when-to-speak">When to speak</a>
+        <a href="#grounding">Dialogue grounding</a>
+        <a href="#real-world">Real-world recovery</a>
+        <a href="#examples">Interactive examples</a>
+        <a href="#results">Results</a>
+        <a href="#BibTeX">Authors &amp; citation</a>
+        <a href="#related">Related work</a>
+      </nav>
+      <div class="story-main">
+<section id="abstract" class="section section-first" aria-labelledby="abstract-title">
+<h2 id="abstract-title">Abstract</h2>
+<p>
+              While <b>Vision-and-Language Navigation (VLN)</b> has demonstrated remarkable progress, the prevailing single-turn paradigm exposes a fundamental vulnerability: agents operate in a strictly <b>open-loop manner</b>.
+              In practice, factors such as perceptual aliasing, sensor noise, and odometry drift cause minor deviations to accumulate over time, leading to catastrophic mission failures with no built-in mechanism for error recovery.
+              To address this, we introduce <span class="wordmark-geo"><b>Talk2</b></span><span class="wordmark-reader"><b>Escape</b></span> (<b>T2E</b>), a proactive and model-agnostic dialogue intervention framework that reframes navigation as a <b>closed-loop interactive process</b>.
+              At its core, a lightweight kinematic monitor continuously tracks agent motion. Upon detecting localized looping or severe trajectory divergence, a vision-language translator grounds raw egocentric observations into concise natural-language queries to solicit targeted corrective feedback from either an algorithmic oracle or a human-in-the-loop.
+              Extensive evaluations across <b>R2R-CE, RxR-CE, and VLNVerse</b> demonstrate consistent improvements across diverse base agents: <span class="wordmark-geo"><b>Talk2</b></span><span class="wordmark-reader"><b>Escape</b></span> achieves <b>72.0% SR (66.0% OSR / 49.4% SPL)</b> on R2R-CE with GTA and <b>84.60% SR</b> on VLNVerse with NavGPT (up from 19.30%), outperforming both zero-shot and supervised state-of-the-art methods.
+              We further validate sim-to-real transfer on a <b>Unitree Go2 quadruped</b>, lifting real-world navigation success from <b>40.0% to 62.0%</b>.
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/teaser.png" rel="noopener" target="_blank"><img alt="Talk2Escape Teaser" decoding="async" loading="lazy" src="./static/images/teaser.png"/></a></figure>
+</section>
+
+<section id="method" class="section" aria-labelledby="method-title">
+<h2 id="method-title">The <span class="wordmark-geo"><b>Talk2</b></span><span class="wordmark-reader"><b>Escape</b></span> Framework</h2>
+<p>
+<b>Figure.</b> Overview of the <span class="wordmark-geo"><b>Talk2</b></span><span class="wordmark-reader"><b>Escape</b></span> framework across five closed-loop stages:
+              <b>❶ Base Navigation Agents:</b> Model-agnostic continuous VLN agents (e.g., NavGPT, MapGPT, GTA) output spatial kinematics (<i>p</i><sub>0:<i>t</i></sub>, <i>ψ<sub>t</sub></i>, <i>d<sub>t</sub></i>) and actions from 4 orthogonal RGB-D views {0°, 90°, 180°, 270°}.
+              <b>❷ Kinematic Monitor &amp; Trigger:</b> Evaluates spatial progress at every step, firing a <i>Repeat Trigger</i> <i>C</i><sub>rep</sub>(<i>t</i>) = 𝟙[|{<i>τ</i> ∈ [0, <i>t</i>] : ||<i>p<sub>τ</sub></i> − <i>p<sub>t</sub></i>||<sub><i>xz</i></sub> &lt; 0.5 m}| ≥ 3] on localized loops or a <i>Deviation Trigger</i> <i>C</i><sub>away</sub>(<i>t</i>) = 𝟙[<i>d̄<sub>t,k</sub></i> &gt; <i>d̄<sub>t−k,k</sub></i>] (<i>k</i> = 2) when moving away from the target, proactively pausing the robot.
+              <b>❸ Vision-Language Translator:</b> Grounds the 4 current RGB-D views and trigger mode into a concise, landmark-anchored query <i>Q<sub>k</sub></i> (e.g., <i>“I am stuck at this intersection facing a sofa; which direction should I take?”</i>).
+              <b>❹ Human / Oracle Guide:</b> Responds with a targeted relative bearing and distance hint <i>h<sub>t</sub></i> (or human natural-language correction).
+              <b>❺ Prompt Integration &amp; Re-Planning:</b> Injects (<i>Q<sub>k</sub></i>, <i>h<sub>t</sub></i>) into the MLLM prompt's <code>[Navigation Assistance]</code> block between historical context and current visuals to escape the failure state.
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/arch_1.png" rel="noopener" target="_blank"><img alt="Talk2Escape Architecture" decoding="async" loading="lazy" src="./static/images/arch_1.png"/></a></figure>
+</section>
+
+<section id="when-to-speak" class="section" aria-labelledby="when-to-speak-title">
+<h2 id="when-to-speak-title">When to Speak: Strategic Sparsity</h2>
+<p>
+              More frequent dialogue is <i>not</i> always better. Comparing six trigger strategies on R2R-CE reveals a striking phenomenon we term <b>“intervention fatigue”</b>:
+              <br/><br/>
+              While the targeted <b>Deviation Trigger (<i>C</i><sub>away</sub>, 15.0% trigger rate)</b> achieves the best autonomous performance (<b>66.0% SR, 49.4% SPL</b>), combining Repeat + Deviation into a <b>Hybrid Trigger (23.1% rate)</b> causes SR to drop to <b>54.0%</b>.
+              As shown in the frequency curve (left), a vanilla agent like <b>NavGPT</b> degrades linearly as guidance becomes sparser, whereas a strong planner with internal memory like <b>GTA</b> follows an <b>inverted U-shape</b>: overly frequent polling (<i>k</i> &lt; 5) disrupts its internal counterfactual reasoning, while moderate or deviation-triggered sparsity rescues it only when needed.
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/frequency.png" rel="noopener" target="_blank"><img alt="Impact of Intervention Frequency" decoding="async" loading="lazy" src="./static/images/frequency.png"/></a></figure>
+</section>
+
+<section id="grounding" class="section" aria-labelledby="grounding-title">
+<h2 id="grounding-title">Active Dialogue vs. Passive CoT &amp; Coordinate Mismatch</h2>
+<p>
+              Can internal Chain-of-Thought (CoT) reasoning replace external conversational grounding? On the high-fidelity <b>VLNVerse</b> benchmark, adding passive CoT lifts NavGPT by only +9.40% SR (19.30% → 28.70%), whereas <span class="wordmark-geo"><b>Talk2</b></span><span class="wordmark-reader"><b>Escape</b></span> propels it by <b>+65.30% to 84.60% SR</b> (and lifts SPL from 8.13 to 35.20).
+              <br/><br/>
+<b>The Modality Mismatch Insight:</b> Although MapGPT outperforms NavGPT in open-loop execution (25.53% vs. 19.30% SR) thanks to dense 3D coordinate prompts, it scales less effectively with dialogue hints (67.02% vs. 84.60% SR). Overloading the MLLM prompt with absolute 3D coordinates conflicts with the relative, egocentric semantics of human/oracle hints—showing that a clean, action-centric history aligns far better with conversational corrections.
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/teaser_anim.gif" rel="noopener" target="_blank"><img alt="Talk2Escape Animated Recovery" decoding="async" loading="lazy" src="./static/images/teaser_anim.gif"/></a></figure>
+</section>
+
+<section id="real-world" class="section" aria-labelledby="real-world-title">
+<h2 id="real-world-title">Sim-to-Real Rescue on a Unitree Go2</h2>
+<p>
+              We deploy <span class="wordmark-geo"><b>Talk2</b></span><span class="wordmark-reader"><b>Escape</b></span> on a physical <b>Unitree Go2 quadruped</b> equipped with a servo-sweeping RGB-D camera, decoupling low-frequency MLLM cognition from high-frequency point-to-point locomotion.
+              <br/><br/>
+              Under a strict human-in-the-loop protocol that mirrors the Deviation trigger <i>C</i><sub>away</sub>, grounded conversational hints rescue the robot from perceptual aliasing (such as stopping at a wrong door near trash bins) and kinematic drift, boosting real-world Success Rate from <b>40.0% (open-loop GTA) to 62.0%</b> and reducing Navigation Error to <b>3.31 m</b>. Our experiments also identify the <b>“asymmetric context” bottleneck</b> when human guides only see static frames without spatio-temporal orientation history.
+            </p>
+<figure class="figure-frame"><a class="figure-image-link" href="./static/images/realworld.png" rel="noopener" target="_blank"><img alt="Real-World Go2 Execution" decoding="async" loading="lazy" src="./static/images/realworld.png"/></a></figure>
+</section>
+
+<section id="examples" class="section" aria-labelledby="examples-title">
+<h2 id="examples-title">Interactive Failure-Detection &amp; Dialogue-Rescue Explorer</h2>
+<p>
+                Select an interactive recovery scenario below to inspect how <span class="wordmark-geo"><b>Talk2</b></span><span class="wordmark-reader"><b>Escape</b></span> detects kinematic anomalies, formulates grounded visual queries, and injects corrective guidance to rescue the navigation agent:
+              </p>
+<div class="demo-tags">
+<span class="tag"><b>Repeat Trigger <i>C</i><sub>rep</sub></b>: <i>r</i> = 0.5 m, <i>n</i> ≥ 3</span>
+<span class="tag"><b>Deviation Trigger <i>C</i><sub>away</sub></b>: <i>d̄</i><sub><i>t</i>,2</sub> &gt; <i>d̄</i><sub><i>t</i>−2,2</sub></span>
+<span class="tag"><b>Reasoning Engine</b>: Gemini 3.1 Pro (Zero-Shot)</span>
+</div>
+<div class="query-container">
+<button aria-pressed="true" class="query-item active" onclick="updateT2eQuery(0, this)" type="button">
+<span aria-hidden="true" class="query-dot"></span>
+<span><b>[Real-World Go2 Rescue · Wrong Door Aliasing]</b> Instruction: “Leave the printing room, walk to the end of the hallway on your right, then pass the bin and stop at the door.”</span>
+</button>
+<button aria-pressed="false" class="query-item" onclick="updateT2eQuery(1, this)" type="button">
+<span aria-hidden="true" class="query-dot"></span>
+<span><b>[Deviation Trigger <i>C</i><sub>away</sub> · Intersection Ambiguity]</b> Grounded Query: “I am stuck at this intersection facing a sofa; which direction should I take?” (SR: 66.0%, SPL: 49.4%)</span>
+</button>
+<button aria-pressed="false" class="query-item" onclick="updateT2eQuery(2, this)" type="button">
+<span aria-hidden="true" class="query-dot"></span>
+<span><b>[Trigger Strategy Comparison · Avoiding Intervention Fatigue]</b> Comparing Deviation (15.0% rate) vs. Repeat (4.74% rate) vs. Hybrid Over-Querying (23.1% rate)</span>
+</button>
+</div>
+<div class="demo-panels">
+<div class="demo-panel">
+<p class="demo-panel-title"><b>Open-Loop Failure &amp; Kinematic Trigger Activation</b></p>
+<div class="demo-panel-box">
+<div class="demo-img-wrap">
+<img alt="Open-Loop Failure State" decoding="async" id="t2eLeftImg" loading="lazy" src="./static/images/realworld_fail.png"/>
+</div>
+<div aria-live="polite" class="demo-meta-box" id="t2eLeftMeta">
+<b>Open-Loop Error (<span>✘ Red Cross</span>):</b> The Go2 robot spots bins near a side door in its left view and prematurely decides: <i>“I've just passed the bins and there's a door right in front of me, so I'm going to stop here.”</i>
+</div>
+</div>
+</div>
+<div class="demo-panel">
+<p class="demo-panel-title"><b>Grounded Dialogue Hint &amp; Closed-Loop Escape</b></p>
+<div class="demo-panel-box">
+<div class="demo-img-wrap">
+<img alt="Dialogue Rescue State" decoding="async" id="t2eRightImg" loading="lazy" src="./static/images/realworld_rescue.png"/>
+</div>
+<div aria-live="polite" class="demo-meta-box" id="t2eRightMeta">
+<b>Guide Intervention:</b> <i>“This is not the door I meant. You should go to the area behind you.”</i><br/>
+<b>Re-Planned Execution (<span class="wordmark-reader">✔ Green Check</span>):</b> Injected into <code>[Navigation Assistance]</code>, the MLLM turns around, reaches the true target door, and receives <i>“Correct!!!”</i>
+</div>
+</div>
+</div>
+</div>
+<script>
+const t2eQueries = [
+  {
+    leftImg: './static/images/realworld_fail.png',
+    rightImg: './static/images/realworld_rescue.png',
+    leftMeta: '<b>Open-Loop Error (<span style="color: #d9534f;">&#10008; Red Cross</span>):</b> The Go2 robot spots bins near a side door in its left view and prematurely decides: <i>&ldquo;I\'ve just passed the bins and there\'s a door right in front of me, so I\'m going to stop here.&rdquo;</i>',
+    rightMeta: '<b>Guide Intervention:</b> <i>&ldquo;This is not the door I meant. You should go to the area behind you.&rdquo;</i><br/><b>Re-Planned Execution (<span style="color: #01B1A0;">&#10004; Green Check</span>):</b> Injected into <code>[Navigation Assistance]</code>, the MLLM turns around and reaches the true target door.'
+  },
+  {
+    leftImg: './static/images/teaser.png',
+    rightImg: './static/images/arch_1.png',
+    leftMeta: '<b>Kinematic Trigger Activation:</b> Moving-average distance to goal increases over <i>k</i> = 2 steps (<i>d&#772;</i><sub><i>t</i>,2</sub> &gt; <i>d&#772;</i><sub><i>t</i>&minus;2,2</sub>), activating <i>C</i><sub>away</sub> and pausing physical locomotion.',
+    rightMeta: '<b>Oracle Corrective Hint:</b> Computes relative turn angle <i>&theta;<sub>t</sub></i> = <i>&phi;<sub>t</sub></i> &minus; <i>&psi;<sub>t</sub></i> and responds: <i>&ldquo;The goal is on your [dir], turn [dir] about |<i>&theta;<sub>t</sub></i>|&deg;. Distance to goal: <i>d<sub>t</sub></i> m.&rdquo;</i>'
+  },
+  {
+    leftImg: './static/images/frequency.png',
+    rightImg: './static/images/teaser_anim.gif',
+    leftMeta: '<b>Intervention Fatigue Analysis:</b> Hybrid triggering fires on 23.1% of all steps (477 times), overloading the prompt history and dropping SR to 54.0%.',
+    rightMeta: '<b>Optimal Sparsity:</b> Deviation triggering fires on only 15.0% of steps (279 times) when divergence actually occurs, achieving <b>66.0% SR and 49.4% SPL</b> autonomously.'
+  }
+];
+
+function updateT2eQuery(idx, btn) {
+  document.querySelectorAll('.query-item').forEach(button => {
+    button.classList.toggle('active', button === btn);
+    button.setAttribute('aria-pressed', String(button === btn));
+  });
+  const item = t2eQueries[idx];
+  document.getElementById('t2eLeftImg').src = item.leftImg;
+  document.getElementById('t2eRightImg').src = item.rightImg;
+  document.getElementById('t2eLeftMeta').innerHTML = item.leftMeta;
+  document.getElementById('t2eRightMeta').innerHTML = item.rightMeta;
+}
+</script>
+</section>
+
+<section id="results" class="section" aria-labelledby="results-title">
+<h2 id="results-title">Experimental results</h2>
+<h3 class="sub-title" id="results-table-1">
+  Quantitative Results on R2R-CE &amp; RxR-CE
+              </h3>
+<div aria-labelledby="results-table-1" class="table-wrap" role="region" tabindex="0">
+<table class="result-table">
+<thead>
+<tr>
+<th rowspan="2">Method</th>
+<th rowspan="2">Paradigm</th>
+<th colspan="5">R2R-CE Val-Unseen (100-Ep Protocol)</th>
+<th colspan="4">RxR-CE Val-Unseen (260-Ep Protocol)</th>
+</tr>
+<tr>
+<th>NE (↓)</th>
+<th>OSR (↑)</th>
+<th>SR (↑)</th>
+<th>SPL (↑)</th>
+<th>nDTW (↑)</th>
+<th>NE (↓)</th>
+<th>SR (↑)</th>
+<th>SPL (↑)</th>
+<th>nDTW (↑)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>CMA</td><td>Supervised</td><td>6.30</td><td>49.0</td><td>38.0</td><td>33.0</td><td>–</td><td>10.4</td><td>24.1</td><td>19.1</td><td>37.4</td></tr>
+<tr><td>VLN-BERT</td><td>Supervised</td><td>5.74</td><td>53.0</td><td>44.0</td><td>39.0</td><td>–</td><td>8.98</td><td>27.1</td><td>22.7</td><td>46.7</td></tr>
+<tr><td>ETPNav</td><td>Supervised</td><td>4.71</td><td>65.0</td><td>57.0</td><td>49.0</td><td>–</td><td>5.64</td><td>54.8</td><td>44.9</td><td>61.9</td></tr>
+<tr><td>BEVBert</td><td>Supervised</td><td>4.70</td><td>67.0</td><td>59.0</td><td>50.0</td><td>–</td><td>4.80</td><td>64.4</td><td>–</td><td>65.4</td></tr>
+<tr><td>HNR</td><td>Supervised</td><td>4.42</td><td>67.0</td><td>61.0</td><td>51.0</td><td>–</td><td>5.51</td><td>56.4</td><td>46.7</td><td>63.6</td></tr>
+<tr><td>NavFoM</td><td>Supervised</td><td>4.61</td><td>72.1</td><td>61.7</td><td>55.3</td><td>–</td><td>4.74</td><td>64.4</td><td><b>56.2</b></td><td>65.8</td></tr>
+<tr><td>Efficient-VLN</td><td>Supervised</td><td><b>4.18</b></td><td><b>73.7</b></td><td><b>64.2</b></td><td><b>55.9</b></td><td>–</td><td><b>3.88</b></td><td><b>67.0</b></td><td>54.3</td><td><b>68.4</b></td></tr>
+<tr><td>Open-Nav</td><td>Zero-Shot (Open-Loop)</td><td>6.70</td><td>23.0</td><td>19.0</td><td>16.1</td><td>45.8</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><td>CA-Nav</td><td>Zero-Shot (Open-Loop)</td><td>7.58</td><td>48.0</td><td>25.3</td><td>10.8</td><td>–</td><td>10.37</td><td>19.0</td><td>6.0</td><td>–</td></tr>
+<tr><td>SmartWay</td><td>Zero-Shot (Open-Loop)</td><td>7.01</td><td>51.0</td><td>29.0</td><td>22.5</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><td>STRIDER</td><td>Zero-Shot (Open-Loop)</td><td>6.91</td><td>39.0</td><td>35.0</td><td>30.3</td><td>51.8</td><td>11.19</td><td>21.2</td><td>9.6</td><td>30.1</td></tr>
+<tr><td>VLN-Zero</td><td>Zero-Shot (Open-Loop)</td><td>5.97</td><td>51.6</td><td>42.4</td><td>26.3</td><td>–</td><td>9.13</td><td>30.8</td><td>19.0</td><td>–</td></tr>
+<tr><td>BZS-VLN</td><td>Zero-Shot (Open-Loop)</td><td>6.12</td><td>55.0</td><td>41.0</td><td>25.4</td><td>–</td><td>7.56</td><td>35.7</td><td>21.7</td><td>42.4</td></tr>
+<tr><td>GTA</td><td>Zero-Shot (Open-Loop)</td><td>4.95</td><td>56.2</td><td>48.8</td><td>41.8</td><td><b>60.4</b></td><td>6.29</td><td>46.2</td><td><b>39.3</b></td><td><b>57.4</b></td></tr>
+<tr class="ours">
+<td><span class="wordmark-geo"><b>Talk2</b></span><span class="wordmark-reader"><b>Escape</b></span> <b>+ NavGPT (Ours)</b></td>
+<td><b>Zero-Shot (Closed-Loop)</b></td>
+<td>4.84</td><td>60.0</td><td>64.0</td><td>46.4</td><td>49.9</td><td>6.01</td><td>50.4</td><td>27.2</td><td>45.7</td>
+</tr>
+<tr class="ours">
+<td><span class="wordmark-geo"><b>Talk2</b></span><span class="wordmark-reader"><b>Escape</b></span> <b>+ GTA (Ours)</b></td>
+<td><b>Zero-Shot (Closed-Loop)</b></td>
+<td><u><b>4.80</b></u></td><td><u><b>66.0</b></u></td><td><u><b>72.0</b></u></td><td><u><b>49.4</b></u></td><td>51.4</td><td><u><b>5.89</b></u></td><td><u><b>62.9</b></u></td><td>34.2</td><td>49.9</td>
+</tr>
+</tbody>
+</table>
+<span>
+<b>Table 1 (Paper Table I).</b> Comparison in continuous environments on R2R-CE and RxR-CE Val-Unseen splits. Without a single in-domain training trajectory, <span class="wordmark-geo"><b>Talk2</b></span><span class="wordmark-reader"><b>Escape</b></span> + GTA reaches <b>72.0% SR (66.0% OSR)</b> on R2R-CE and <b>62.9% SR</b> on RxR-CE.
+                </span>
+</div>
+<h3 class="sub-title" id="results-table-2">Zero-Shot on VLNVerse</h3>
+<div aria-labelledby="results-table-2" class="table-wrap" role="region" tabindex="0">
+<table class="result-table">
+<thead>
+<tr>
+<th>Agent Variant</th>
+<th>NE (↓)</th>
+<th>SR (↑)</th>
+<th>SPL (↑)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>NavGPT (Open-Loop)</td><td>6.10</td><td>19.30</td><td>8.13</td></tr>
+<tr><td>NavGPT + CoT</td><td>5.25</td><td>28.70</td><td>9.91</td></tr>
+<tr class="ours">
+<td><b>NavGPT + T2E</b></td>
+<td><b>2.92</b></td><td><b>84.60</b></td><td><b>35.20</b></td>
+</tr>
+<tr><td>MapGPT (Open-Loop)</td><td>5.62</td><td>25.53</td><td>7.57</td></tr>
+<tr><td>MapGPT + CoT</td><td>4.51</td><td>42.19</td><td>11.32</td></tr>
+<tr class="ours">
+<td><b>MapGPT + T2E</b></td>
+<td><b>4.14</b></td><td><b>67.02</b></td><td><b>30.46</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 class="sub-title" id="results-table-3">Trigger Strategy Ablation</h3>
+<div aria-labelledby="results-table-3" class="table-wrap" role="region" tabindex="0">
+<table class="result-table">
+<thead>
+<tr>
+<th>Trigger Strategy</th>
+<th>SR (↑)</th>
+<th>SPL (↑)</th>
+<th>Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>None (Baseline)</td><td>48.8</td><td>41.8</td><td>0.0%</td></tr>
+<tr><td>Repeat (<i>C</i><sub>rep</sub>)</td><td>57.0</td><td>45.1</td><td>4.74%</td></tr>
+<tr class="ours">
+<td><b>Deviation (<i>C</i><sub>away</sub>)</b></td>
+<td><b>66.0</b></td><td><b>49.4</b></td><td><b>15.0%</b></td>
+</tr>
+<tr><td>Hybrid (Both)</td><td>54.0</td><td>44.5</td><td>23.1%</td></tr>
+<tr><td>Periodic (<i>k</i> = 5)</td><td>63.0</td><td>46.5</td><td>10.2%</td></tr>
+<tr><td>Human-in-the-Loop</td><td>74.5</td><td>61.2</td><td>9.8%</td></tr>
+</tbody>
+</table>
+</div>
+<h3 class="sub-title" id="results-table-4">Real-World Unitree Go2</h3>
+<div aria-labelledby="results-table-4" class="table-wrap" role="region" tabindex="0">
+<table class="result-table">
+<thead>
+<tr>
+<th>Method</th>
+<th>SR (↑)</th>
+<th>NE (↓)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>VLN-BERT (Supervised)</td><td>16.0%</td><td>5.36 m</td></tr>
+<tr><td>RDP (Supervised)</td><td>20.0%</td><td>5.45 m</td></tr>
+<tr><td>SmartWay (Zero-Shot)</td><td>32.0%</td><td>4.85 m</td></tr>
+<tr><td>GTA (Zero-Shot)</td><td>40.0%</td><td>3.66 m</td></tr>
+<tr class="ours">
+<td><b>Talk2Escape + GTA</b></td>
+<td><b>62.0%</b></td><td><b>3.31 m</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="BibTeX" class="section authors-section" aria-labelledby="BibTeX-title">
+<h2 id="BibTeX-title">Authors &amp; citation</h2>
+<p class="author-list"><span><a href="https://zeruili22.github.io/" rel="noopener noreferrer" target="_blank"><strong>Zerui Li</strong></a><sup>1†</sup></span> <span><strong>Sihao Lin</strong><sup>1†‡</sup></span> <span><strong>Yanyan Shao</strong><sup>2</sup></span> <span><strong>Jiwen Zhang</strong><sup>3</sup></span> <span><strong>Xiangyu Shi</strong><sup>1</sup></span> <span><a href="https://sj-li.com/" rel="noopener noreferrer" target="_blank"><strong>Shijie Li</strong></a><sup>4</sup></span> <span><a href="http://www.qi-wu.me/" rel="noopener noreferrer" target="_blank"><strong>Qi Wu</strong></a><sup>1‡✉</sup></span></p>
+<p class="affiliations"><span><sup>1</sup>AIML, Adelaide University</span> <span><sup>2</sup>Zhejiang Wanli University</span> <span><sup>3</sup>Fudan University</span> <span><sup>4</sup>A*STAR</span></p>
+<div class="citation-head"><span>BIBTEX</span><button id="copy-citation" type="button" aria-live="polite">Copy BibTeX</button></div>
+<pre id="citation"><code>@inproceedings{li2026talk2escape,
+  title     = {Talk2Escape: Conversational Grounding for Vision-and-Language Navigation},
+  author    = {Zerui Li and Sihao Lin and Yanyan Shao and Jiwen Zhang and Xiangyu Shi and Shijie Li and Qi Wu},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2026}
+}</code></pre>
+</section>
+
+<section id="related" class="section" aria-labelledby="related-title">
+<h2 id="related-title">Related work</h2>
+<p>Explore our related works on interactive embodied navigation and spatial intelligence:</p>
+<p>- <a href="../gta/index.html">One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation (CoRL 2026)</a></p>
+<p>- <a href="https://billzhao1030.github.io/IVLN/" rel="noopener noreferrer" target="_blank">Ask When It Pays: Cost-Aware Open-Ended Interaction for Instance Goal Navigation (arXiv 2026)</a></p>
+<p>- <a href="https://arxiv.org/abs/2605.23187" rel="noopener noreferrer" target="_blank">IntentionNav: A Benchmark for Intent-Driven Object Navigation from Implicit Human Instruction (arXiv 2026)</a></p>
+<p>- <a href="https://iris0329.github.io/georeader-homepage/">GeoReader: Learning Latent Geometry for Spatial Reasoning in Vision-Language Models (arXiv 2026)</a></p>
+<p>- <a href="../ego2world/index.html">Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning (arXiv 2026)</a></p>
+<p>- <a href="https://seeground.github.io/" rel="noopener noreferrer" target="_blank">SeeGround: See and Ground for Zero-Shot Open-Vocabulary 3D Visual Grounding (CVPR 2025)</a></p>
+</section>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="page-width">
+      <a class="brand" href="#top" aria-label="Talk2Escape, back to top"><span>Talk2</span><span>Escape</span><i aria-hidden="true"></i></a>
+      <p>Design adapted from the <a href="https://iris0329.github.io/georeader-homepage/">GeoReader project page</a>.
+        <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>

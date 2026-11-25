@@ -2251,5 +2251,18 @@
     "width": 792,
     "height": 397,
     "kind": "paper-figure-crop"
+  },
+  {
+    "id": 45,
+    "title": "THEN: Evaluating Embodied Agents through Vision-and-Language Navigation in Persistent Worlds",
+    "file": "assets/papers/paper-45.webp",
+    "animation": "gif/THEN.gif",
+    "source": "ThreeDayChallenge_A_sched0240a_3days.mp4",
+    "description": "Three-Day Challenge rollout in THEN. The robot turns on the TV for guests on Day 1, switches it off on Day 2, and meets the resident by the sofa on Day 3.",
+    "selection_rationale": "A short edit of the supplied rollout highlights the television instruction carried over across days. The final frame provides the reduced-motion still.",
+    "selected": true,
+    "width": 512,
+    "height": 288,
+    "kind": "video-frame"
   }
 ]

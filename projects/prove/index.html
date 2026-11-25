@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html data-theme="dark" lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f7fa">
+  <meta name="theme-color" content="#0f1117">
   <meta name="description" content="PROVE specifies scene-grounded success conditions and checks them against rollout observations. PROVE-Lite turns terminal diagnoses into graded rewards for policy learning.">
   <title>PROVE: Predict-to-Specify and Observe-to-Verify for Human-Aligned Evaluation of Mobile Manipulation</title>
   <link rel="canonical" href="https://sj-li.com/projects/prove/">
@@ -12,8 +12,11 @@
   <meta property="og:description" content="Specify success before seeing the outcome. Verify it against the robot's observations.">
   <meta property="og:url" content="https://sj-li.com/projects/prove/">
   <meta property="og:image" content="https://sj-li.com/projects/prove/images/coffee-demo.webp">
-  <link rel="stylesheet" href="../shared/style.css">
-  <link rel="stylesheet" href="style.css">
+  <script src="../../assets/js/site-theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/site-colors.css">
+  <link rel="stylesheet" href="../../assets/css/fonts.css">
+  <link rel="stylesheet" href="../shared/style.css?v=20261125-theme">
+  <link rel="stylesheet" href="style.css?v=20261125-theme">
   <script src="../shared/main.js" defer></script>
   <script src="examples.js" defer></script>
 </head>
@@ -29,6 +32,7 @@
     <div class="top-resources">
       <a class="top-paper" href="images/prove-preview.pdf">Paper PDF</a>
       <a class="top-paper" href="../../index.html#publications">Publications</a>
+      <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" title="Toggle theme" type="button"><span aria-hidden="true" id="theme-icon">☀</span></button>
     </div>
   </header>
 

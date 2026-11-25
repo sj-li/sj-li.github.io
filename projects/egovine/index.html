@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html data-theme="dark" lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f5ef">
+  <meta name="theme-color" content="#0f1117">
   <meta name="description" content="EgoVine trains compact planners to compare alternative actions and recover from mistakes in executable worlds compiled from real egocentric videos.">
   <title>EgoVine: Post-Training with Branching Experience Compiled from Real-World Videos</title>
   <link rel="canonical" href="https://sj-li.com/projects/egovine/">
@@ -12,8 +12,11 @@
   <meta property="og:description" content="Explore alternative actions and verified repairs in executable worlds compiled from real egocentric videos.">
   <meta property="og:image" content="https://sj-li.com/projects/egovine/images/training-loop.webp">
   <meta property="og:url" content="https://sj-li.com/projects/egovine/">
-  <link rel="stylesheet" href="../shared/style.css">
-  <link rel="stylesheet" href="style.css">
+  <script src="../../assets/js/site-theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/site-colors.css">
+  <link rel="stylesheet" href="../../assets/css/fonts.css">
+  <link rel="stylesheet" href="../shared/style.css?v=20261125-theme">
+  <link rel="stylesheet" href="style.css?v=20261125-theme">
   <script src="../shared/main.js" defer></script>
   <script src="routes.js" defer></script>
 </head>
@@ -23,7 +26,9 @@
     <nav class="topnav" aria-label="Main navigation">
       <a href="#example">Interactive example</a><a href="#method">Method</a><a href="#results">Results</a><a href="#BibTeX">Citation</a>
     </nav>
-    <div class="top-resources"><a class="top-paper" href="https://arxiv.org/abs/2610.23907">arXiv</a><a class="top-paper" href="../../index.html#publications">Publications</a></div>
+    <div class="top-resources"><a class="top-paper" href="https://arxiv.org/abs/2610.23907">arXiv</a><a class="top-paper" href="../../index.html#publications">Publications</a>
+      <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" title="Toggle theme" type="button"><span aria-hidden="true" id="theme-icon">☀</span></button>
+    </div>
   </header>
 
   <main id="top">

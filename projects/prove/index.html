@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fa">
+  <meta name="description" content="PROVE specifies scene-grounded success conditions and checks them against rollout observations. PROVE-Lite turns terminal diagnoses into graded rewards for policy learning.">
+  <title>PROVE: Predict-to-Specify and Observe-to-Verify for Human-Aligned Evaluation of Mobile Manipulation</title>
+  <link rel="canonical" href="https://sj-li.com/projects/prove/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PROVE | Human-Aligned Evaluation of Mobile Manipulation">
+  <meta property="og:description" content="Specify success before seeing the outcome. Verify it against the robot's observations.">
+  <meta property="og:url" content="https://sj-li.com/projects/prove/">
+  <meta property="og:image" content="https://sj-li.com/projects/prove/images/coffee-demo.webp">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="../shared/main.js" defer></script>
+  <script src="examples.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="PROVE, back to top"><span>PR</span><span>OVE</span></a>
+    <nav class="topnav" aria-label="Main navigation">
+      <a href="#method">Method</a>
+      <a href="#prove-lite">PROVE-Lite</a>
+      <a href="#results">Results</a>
+      <a href="#BibTeX">Citation</a>
+    </nav>
+    <div class="top-resources">
+      <a class="top-paper" href="images/prove-preview.pdf">Paper PDF</a>
+      <a class="top-paper" href="../../index.html#publications">Publications</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <p class="hero-kicker"><span class="kicker-line" aria-hidden="true"></span>Preprint 2026</p>
+      <h1 id="hero-title" class="hero-paper-heading"><span class="wordmark"><span class="wordmark-geo">PR</span><span class="wordmark-reader">OVE</span></span>: Predict-to-Specify and Observe-to-Verify for Human-Aligned Evaluation of Mobile Manipulation</h1>
+      <div class="hero-authors">
+        <p class="author-names"><span>Bowen Lyu</span> <span>Yunan Liu</span> <span>Liaoyuan Fan</span> <span>Qinchuan Cheng</span> <span>Jiafei Duan</span> <span>Cheston Tan</span> <span><a href="../../index.html">Shijie Li</a></span></p>
+      </div>
+      <p class="hero-summary">Define what success looks like before seeing the outcome. Verify it against what the robot actually did.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="images/prove-preview.pdf">Read the paper</a>
+        <a class="button button-outline" href="#demo">Watch the demo</a>
+      </div>
+    </section>
+
+    <div class="page-width intro">
+      <figure class="demo-feature" id="demo">
+        <video controls playsinline preload="none" width="768" height="524" poster="images/coffee-demo.webp" aria-label="RoboCasa365 rollout for placing a mug under the coffee dispenser">
+          <source src="images/coffee-demo.mp4" type="video/mp4">
+          <a href="images/coffee-demo.mp4">Download the rollout video</a>
+        </video>
+        <figcaption>
+          <h2>A mug can reach the dispenser and still fail</h2>
+          <p>The task is to place a mug under the coffee dispenser. The native check passes because the mug is nearby and the gripper has moved away. The wrist view shows the mug lying on its side, so PROVE and human reviewers mark the rollout as a failure.</p>
+          <dl class="hero-verdicts">
+            <div><dt>RoboCasa</dt><dd class="verdict pass">Success</dd></div>
+            <div><dt>PROVE</dt><dd class="verdict fail">Failure</dd></div>
+            <div><dt>Human</dt><dd class="verdict fail">Failure</dd></div>
+          </dl>
+        </figcaption>
+      </figure>
+      <dl class="headline-metrics">
+        <div><dt>Human agreement with PROVE</dt><dd>96.83%</dd></div>
+        <div><dt>Human-annotated rollouts</dt><dd>6,500</dd></div>
+        <div><dt>Atomic actions in RoboCasa365</dt><dd>65</dd></div>
+        <div><dt>Speedup with PROVE-Lite</dt><dd>~38×</dd></div>
+      </dl>
+    </div>
+
+    <div class="story page-width">
+      <nav class="contents" aria-label="On this page">
+        <span class="contents-label">CONTENTS</span>
+        <a href="#abstract" class="active" aria-current="location">Abstract</a>
+        <a href="#method">Method</a>
+        <a href="#examples">Examples</a>
+        <a href="#prove-lite">PROVE-Lite</a>
+        <a href="#results">Results</a>
+        <a href="#BibTeX">Citation</a>
+      </nav>
+      <div class="story-main">
+        <section class="section section-first" id="abstract" aria-labelledby="abstract-title">
+          <h2 id="abstract-title">Abstract</h2>
+          <p>Household manipulation admits several valid outcomes, even for the same instruction. Evaluators must account for the scene layout, the target object and the state of fixtures. On RoboCasa365, native simulator predicates agree with human labels on 69.09% of rollouts, and a frontier direct VLM judge reaches 86.12%.</p>
+          <p><strong>PROVE</strong> builds a scene-specific success specification before evaluating a rollout. It progressively refines textual conditions using the instruction, initial scene, object reference and a generated goal image. To verify success, it checks the resulting conditions against terminal observations. On 6,500 human-annotated rollouts across 65 atomic actions, PROVE achieves <strong>96.83% human agreement</strong> and changes the ranking of four open-source robot policies relative to native evaluation.</p>
+          <p><strong>PROVE-Lite</strong> distills the evaluator into a reference-free 4B model that jointly predicts the outcome and the physical state of each task condition. It reaches 91.20% human agreement at about 38× lower latency than PROVE. Its diagnoses support a graded terminal reward that improves PPO post-training over simulator and binary PROVE-Lite rewards.</p>
+        </section>
+
+        <section class="section" id="method" aria-labelledby="method-title">
+          <h2 id="method-title">Predict to specify. Observe to verify.</h2>
+          <p>One frozen Qwen3-VL-8B model refines the success criteria in three stages. In the paper’s cabinet example, early criteria require putting the mug inside and closing the door. The initial scene shows the door was already open, and a target-object reference identifies the blue mug. A generated goal image then helps specify full containment, stable support and release.</p>
+          <figure class="figure-frame">
+            <a class="figure-image-link" href="images/method.webp"><img src="images/method.webp" width="1488" height="534" loading="lazy" decoding="async" alt="PROVE grounds the goal, refines the conditions through M1, M2 and M3, then checks verified outcomes using terminal camera observations."></a>
+            <figcaption class="figure-note"><strong>PROVE overview.</strong> The goal image informs the textual criteria during specification. Once those criteria are fixed, the verifier checks six terminal frames across three camera views and returns a verdict and the main observable reason for failure.</figcaption>
+          </figure>
+        </section>
+
+        <section class="section" id="examples" aria-labelledby="examples-title">
+          <h2 id="examples-title">Inspect the evidence</h2>
+          <p>Three rollouts from the paper show how each evaluator handles physical evidence at the end of an episode.</p>
+          <div class="case-controls" hidden aria-label="Choose an evaluation example" role="group">
+            <button type="button" aria-pressed="true" aria-controls="case-mushroom">Mushroom on plate</button>
+            <button type="button" aria-pressed="false" aria-controls="case-mug">Mug under dispenser</button>
+            <button type="button" aria-pressed="false" aria-controls="case-broccoli">Broccoli on plate</button>
+          </div>
+          <div class="case-list">
+            <article class="case" id="case-mushroom">
+              <img src="images/mushroom.webp" alt="Final view and crop showing the mushroom resting on the plate." width="496" height="240" loading="lazy" decoding="async">
+              <div class="case-body">
+                <h3>Place the mushroom on the plate</h3>
+                <p>The close-up shows the mushroom resting on the plate. The native check rejects it because the placement falls outside its distance threshold.</p>
+                <dl class="case-verdicts">
+                  <div><dt>RoboCasa</dt><dd class="verdict fail">Failure</dd></div>
+                  <div><dt>PROVE</dt><dd class="verdict pass">Success</dd></div>
+                  <div><dt>PROVE-Lite</dt><dd class="verdict pass">Success</dd></div>
+                  <div><dt>Human</dt><dd class="verdict pass">Success</dd></div>
+                </dl>
+              </div>
+            </article>
+            <article class="case" id="case-mug">
+              <img src="images/mug.webp" alt="Final view and crop showing the mug tilted against the coffee machine." width="496" height="240" loading="lazy" decoding="async">
+              <div class="case-body">
+                <h3>Place the mug under the coffee dispenser</h3>
+                <p>The mug is in the target region but rests at an angle. PROVE and PROVE-Lite both diagnose unstable placement, matching the human verdict.</p>
+                <dl class="case-verdicts">
+                  <div><dt>RoboCasa</dt><dd class="verdict pass">Success</dd></div>
+                  <div><dt>PROVE</dt><dd class="verdict fail">Failure</dd></div>
+                  <div><dt>PROVE-Lite</dt><dd class="verdict fail">Failure</dd></div>
+                  <div><dt>Human</dt><dd class="verdict fail">Failure</dd></div>
+                </dl>
+              </div>
+            </article>
+            <article class="case" id="case-broccoli">
+              <img src="images/broccoli.webp" alt="Final view and crop showing the broccoli on the plate." width="496" height="236" loading="lazy" decoding="async">
+              <div class="case-body">
+                <h3>Place the broccoli on the plate</h3>
+                <p>Humans accept the broccoli placement. PROVE misjudges containment and support, and PROVE-Lite inherits the error.</p>
+                <dl class="case-verdicts">
+                  <div><dt>RoboCasa</dt><dd class="verdict pass">Success</dd></div>
+                  <div><dt>PROVE</dt><dd class="verdict fail">Failure</dd></div>
+                  <div><dt>PROVE-Lite</dt><dd class="verdict fail">Failure</dd></div>
+                  <div><dt>Human</dt><dd class="verdict pass">Success</dd></div>
+                </dl>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="prove-lite" aria-labelledby="lite-title">
+          <h2 id="lite-title">PROVE-Lite for policy learning</h2>
+          <p>PROVE labels 32,500 training rollouts from scenes disjoint from the benchmark. PROVE-Lite learns from these pseudo-labels and reads the task prompt and terminal frames in a single forward pass. Two heads predict binary success and the terminal state of each active condition. The model needs no reference images during inference.</p>
+          <div class="lite-layout">
+            <figure class="figure-frame">
+              <a class="figure-image-link" href="images/prove-lite.webp"><img src="images/prove-lite.webp" width="952" height="1084" loading="lazy" decoding="async" alt="PROVE labels rollouts offline, then PROVE-Lite predicts success and condition states in one pass. The diagnosis produces a graded PPO reward."></a>
+              <figcaption class="figure-note">Offline distillation, single-pass diagnosis and diagnosis-guided PPO.</figcaption>
+            </figure>
+            <div>
+              <h3>Grade failures by severity</h3>
+              <p>For a fridge-closing task, the condition class can be <em>closed</em>, <em>narrow gap</em> or <em>open</em>. Their severity penalties are 0, 0.3 and 1.0, respectively.</p>
+              <p>The terminal reward combines a binary success prediction <var>S</var> with physical completion <var>C</var>.</p>
+              <p class="formula">R = 0.8 S + 0.2 C</p>
+              <p>A failed rollout with a narrow gap earns 0.14. A failed rollout that leaves the door open earns 0.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="results" aria-labelledby="results-title">
+          <h2 id="results-title">Experimental results</h2>
+          <h3 class="sub-title" id="alignment-title">Agreement with humans</h3>
+          <p>Adding the initial scene and target reference raises agreement from 82.52% (M1) to 87.89% (M2). Goal-guided specification raises it to 96.83% (M3). Providing the generated goal again at verification lowers M3 agreement to 90.42%.</p>
+          <div class="table-wrap" role="region" tabindex="0" aria-labelledby="alignment-title">
+            <table class="result-table paper-table">
+              <thead><tr><th scope="col">Evaluator</th><th scope="col">Agreement</th><th scope="col">Wrong acceptance</th><th scope="col">Success rejection</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Native simulator predicate</th><td>69.09%</td><td>22.32%</td><td>37.16%</td></tr>
+                <tr><th scope="row">GPT-6.1 Sol, direct judge</th><td>86.12%</td><td>14.50%</td><td>13.42%</td></tr>
+                <tr class="highlight"><th scope="row">PROVE (M3)</th><td>96.83%</td><td>5.84%</td><td>1.22%</td></tr>
+                <tr><th scope="row">PROVE-Lite</th><td>91.20%</td><td>6.21%</td><td>10.69%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-caption">Selected rows from Table 2. Wrong acceptance is measured over human-labeled failures. Success rejection is measured over human-labeled successes.</p>
+
+          <h3 class="sub-title" id="ranking-title">Re-evaluating robot policies</h3>
+          <p>Blind human review agreed with PROVE on <strong>8,280 of 8,677 disagreements (95.42%)</strong>. Among four open-source policies, RLDX-1 moved from second to fourth while PRTS moved from third to second.</p>
+          <div class="table-wrap" role="region" tabindex="0" aria-labelledby="ranking-title">
+            <table class="result-table paper-table">
+              <thead><tr><th scope="col">Policy</th><th scope="col">Native success (rank)</th><th scope="col">PROVE success (rank)</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Awomo-0.5I</th><td>86.75% (1)</td><td>46.29% (1)</td></tr>
+                <tr><th scope="row">PRTS</th><td>66.08% (3)</td><td>43.91% (2)</td></tr>
+                <tr><th scope="row">GR00T N1.5</th><td>53.06% (4)</td><td>41.12% (3)</td></tr>
+                <tr><th scope="row">RLDX-1</th><td>69.98% (2)</td><td>40.11% (4)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="sub-title">Latency and post-training</h3>
+          <p>On one NVIDIA RTX PRO 4500 GPU, PROVE-Lite averages <strong>0.27 s per episode</strong> versus 10.21 s for PROVE. Its peak memory is 8.97 GB versus 16.95 GB.</p>
+          <p>Across 15 RoboCasa365 tasks and four seeds, graded PROVE-Lite rewards achieve <strong>56.58% PROVE-judged success</strong>, up 4.58 percentage points over simulator rewards (52.00%) and 2.00 points over binary PROVE-Lite rewards (54.58%). The base policy achieves 50.17%.</p>
+          <figure class="figure-frame ppo-figure">
+            <a class="figure-image-link" href="images/ppo-results.webp"><img src="images/ppo-results.webp" width="948" height="500" loading="lazy" decoding="async" alt="PROVE-judged success across four seeds. Base policy 50.17%, simulator reward 52.00%, binary reward 54.58%, and graded reward 56.58%."></a>
+            <figcaption class="figure-note">Held-out PPO results. Small markers show individual seeds. Diamonds and error bars show the mean and sample standard deviation.</figcaption>
+          </figure>
+        </section>
+
+        <section class="section authors-section" id="BibTeX" aria-labelledby="citation-title">
+          <h2 id="citation-title">Citation</h2>
+          <div class="citation-head"><span>BibTeX</span><button id="copy-citation" type="button">Copy BibTeX</button></div>
+          <pre id="citation"><code>@unpublished{lyu2026prove,
+  title  = {{PROVE}: Predict-to-Specify and Observe-to-Verify for Human-Aligned Evaluation of Mobile Manipulation},
+  author = {Lyu, Bowen and Liu, Yunan and Fan, Liaoyuan and Cheng, Qinchuan and Duan, Jiafei and Tan, Cheston and Li, Shijie},
+  year   = {2026},
+  note   = {Preprint}
+}</code></pre>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="page-width">
+      <a class="brand" href="#top" aria-label="PROVE, back to top"><span>PR</span><span>OVE</span></a>
+      <a href="../../index.html#publications">Back to publications</a>
+    </div>
+  </footer>
+</body>
+</html>

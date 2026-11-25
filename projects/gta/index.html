@@ -13,6 +13,7 @@
   <meta property="og:description" content="An explicit world representation lets multimodal models follow language instructions across wheeled, legged, and aerial robots.">
   <meta property="og:image" content="https://sj-li.com/projects/gta/static/images/teaser.png">
   <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="style.css">
   <script src="../shared/main.js" defer></script>
 </head>
 <body>
@@ -35,15 +36,26 @@
       <h1 id="hero-title" class="hero-paper-heading"><em>One Agent to Guide Them All</em>: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation</h1>
       <div class="hero-authors">
         <p class="author-names"><span><a href="https://zeruili22.github.io/" rel="noopener noreferrer" target="_blank"><strong>Zerui Li</strong></a><sup>1†</sup></span> <span><strong>Hongpei Zheng</strong><sup>2†</sup></span> <span><strong>Fangguo Zhao</strong><sup>3</sup></span> <span><strong>Yanyan Shao</strong><sup>4</sup></span> <span><strong>Jian Zhou</strong><sup>1</sup></span> <span><strong>Sihao Lin</strong><sup>1,6</sup></span> <span><a href="https://sj-li.com/" rel="noopener noreferrer" target="_blank"><strong>Shijie Li</strong></a><sup>5</sup></span> <span><a href="http://www.qi-wu.me/" rel="noopener noreferrer" target="_blank"><strong>Qi Wu</strong></a><sup>1,6✉</sup></span></p>
-        <p class="author-affils"><span><sup>1</sup>AIML, Adelaide University</span> <span><sup>2</sup>The University of Manchester</span> <span><sup>3</sup>Zhejiang University</span> <span><sup>4</sup>Zhejiang Wanli University</span> <span><sup>5</sup>A*STAR</span> <span><sup>6</sup>Responsible AI Research Centre, AIML, Adelaide University</span></p>
+        <p class="author-affils"><span><sup>1</sup>AIML, Adelaide University</span> <span><sup>2</sup>The University of Manchester</span> <span><sup>3</sup>Zhejiang University</span> <span><sup>4</sup>Zhejiang Wanli University</span> <span><sup>5</sup>IAIC, A*STAR</span> <span><sup>6</sup>Responsible AI Research Centre, AIML, Adelaide University</span></p>
         <p class="author-notes"><span><sup>†</sup>Joint first authors     <sup>✉</sup>Corresponding author</span></p>
       </div>
       <p class="hero-summary">An explicit world representation lets multimodal models follow language instructions across wheeled, legged, and aerial robots.</p>
       <div class="hero-actions">
-        <a class="button button-primary" href="#abstract">Read the overview</a>
-        <a class="button button-outline" href="https://arxiv.org/pdf/2602.15400" target="_blank" rel="noopener noreferrer">Paper</a>
+        <a class="button button-primary" href="#examples">Explore navigation examples</a>
+        <a class="button button-outline" href="https://arxiv.org/pdf/2602.15400v2">Read the paper</a>
       </div>
     </section>
+    <div class="hero-overview page-width">
+      <figure class="figure-frame">
+        <a class="figure-image-link" href="./static/images/teaser.png"><img alt="GTA links navigation instructions to an explicit metric map and demonstrates its use across multiple robot platforms." decoding="async" width="1341" height="448" src="./static/images/teaser.png"></a>
+        <figcaption class="figure-note">A shared world representation grounds language-guided navigation across different environments and robot platforms.</figcaption>
+      </figure>
+      <dl class="metric-grid">
+        <div class="metric"><dt>R2R-CE success, full unseen split (1,839 episodes)</dt><dd>48.8%</dd></div>
+        <div class="metric"><dt>RxR-CE success, English unseen subset (260 episodes)</dt><dd>46.2%</dd></div>
+        <div class="metric"><dt>Physical platforms tested with GTA</dt><dd>3</dd></div>
+      </dl>
+    </div>
     <div class="story page-width">
       <nav class="contents" aria-label="On this page">
         <span class="contents-label">CONTENTS</span>
@@ -67,10 +79,10 @@
               We propose <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> (<b>Guide Them All</b>), a decoupled zero-shot Vision-and-Language Navigation (VLN) framework that separates low-level spatial state estimation from high-level semantic planning.
               We introduce an <b>explicit metric world representation</b> <i>W<sub>t</sub></i> = ⟨<i>M</i><sub>vol</sub>, <i>G</i><sub>topo</sub>⟩ that combines accumulated TSDF geometry with topological navigation history and exposes this information to the MLLM through a queryable multimodal interface.
               We further introduce <b>counterfactual branch reasoning</b> that records branch-specific expectations at decision junctions, checks anticipated outcomes against subsequent observations, and physically backtracks when they disagree.
-              <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> achieves state-of-the-art zero-shot performance with <b>48.8% Success Rate (SR) / 41.8% SPL</b> on the full R2R-CE Val-Unseen split (1,839 episodes) and <b>46.2% SR</b> on RxR-CE, while our distilled 8B variant <span class="wordmark-geo"><b>GTA</b></span><span class="wordmark-reader"><b>-Light</b></span> retains <b>45.1% SR</b> locally.
+              <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> achieves state-of-the-art zero-shot performance with <b>48.8% Success Rate (SR) / 41.8% SPL</b> on the full R2R-CE Val-Unseen split (1,839 episodes) and <b>46.2% SR</b> on a 260-episode English RxR-CE Val-Unseen subset, while our distilled 8B variant <span class="wordmark-geo"><b>GTA</b></span><span class="wordmark-reader"><b>-Light</b></span> retains <b>45.1% SR</b> locally.
               Finally, we demonstrate zero-shot sim-to-real transfer across <b>wheeled, quadrupedal, and aerial robots</b> in unseen physical environments.
             </p>
-<figure class="figure-frame"><a class="figure-image-link" href="./static/images/teaser.png" rel="noopener" target="_blank"><img alt="GTA Teaser" decoding="async" loading="lazy" src="./static/images/teaser.png"/></a></figure>
+
 </section>
 
 <section id="method" class="section" aria-labelledby="method-title">
@@ -97,7 +109,7 @@
 <section id="branching" class="section" aria-labelledby="branching-title">
 <h2 id="branching-title">Counterfactual Branching &amp; <span class="wordmark-geo">GTA</span><span class="wordmark-reader">-Light</span></h2>
 <p>
-<b>Imagine, Checkpoint, Verify, Backtrack.</b> Greedy step-by-step planners cannot recover once they commit to a wrong hallway. At any junction with |<i>B<sub>t</sub></i>| &gt; 1 viable branches, <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> logs a natural-language expectation <i>e<sub>t</sub></i><sup>(<i>k</i>)</sup> for each branch on checkpoint stack <i>K</i>. If subsequent observations disagree with <i>e<sub>t</sub></i><sup>(<i>k</i>*)</sup>, the agent physically retraces <i>G</i><sub>topo</sub> back to <i>p<sub>t'</sub></i>, blocks <i>k</i>* ∈ <i>B<sub>t'</sub></i><sup>blk</sup>, and selects the best remaining branch—boosting SR from <b>31.0% (greedy) to 47.0% (+16.0 pp)</b>.
+<b>Imagine, Checkpoint, Verify, Backtrack.</b> Greedy step-by-step planners cannot recover once they commit to a wrong hallway. At any junction with |<i>B<sub>t</sub></i>| &gt; 1 viable branches, <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> logs a natural-language expectation <i>e<sub>t</sub></i><sup>(<i>k</i>)</sup> for each branch on checkpoint stack <i>K</i>. If subsequent observations disagree with <i>e<sub>t</sub></i><sup>(<i>k</i>*)</sup>, the agent physically retraces <i>G</i><sub>topo</sub> back to <i>p<sub>t'</sub></i>, blocks <i>k</i>* ∈ <i>B<sub>t'</sub></i><sup>blk</sup>, and selects the best remaining branch—raising observed SR from <b>31.0% with greedy decisions to 47.0% with the full branch reasoning pipeline</b> on the same 100 R2R-CE episodes.
               <br/><br/>
 <b>Distilling into an 8B Local Interpreter.</b> To remove dependency on frontier cloud APIs, we distill GPT-5.1 trajectories on R2R training scenes into a 4-bit QLoRA <b>InternVL3-8B</b> model (<span class="wordmark-geo"><b>GTA</b></span><span class="wordmark-reader"><b>-Light</b></span>) with input-state and prompt robustness augmentations, achieving <b>45.1% SR / 39.6% SPL</b> locally at 3.96 s per reasoning step.
             </p>
@@ -111,7 +123,13 @@
               <br/><br/>
               Because <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> anchors semantic decisions in an accumulated TSDF metric map and topological graph (<i>“a wall is a wall in both simulation and reality”</i>) and overlaps high-frequency perception (0.097 s TSDF/BEV update) with asynchronous MLLM reasoning, the exact same pipeline transfers zero-shot across a <b>TurtleBot 4 Wheeled Robot (40.0% SR)</b>, a <b>Unitree Go2 Quadruped (40.0% SR)</b>, and a <b>6-DoF Aerial Quadrotor Drone (42.0% SR)</b> without platform-specific tuning.
             </p>
-<figure class="figure-frame"><a class="figure-image-link" href="./static/images/teaser_anim.gif" rel="noopener" target="_blank"><img alt="GTA Real-World Quadruped Deployment" decoding="async" loading="lazy" src="./static/images/teaser_anim.gif"/></a></figure>
+<figure class="figure-frame lab-demo">
+  <video controls playsinline preload="none" width="380" height="216" poster="./static/images/lab-rollout.webp" aria-label="GTA real-world navigation footage in a robotics lab">
+    <source src="./static/images/lab-rollout.mp4" type="video/mp4">
+    <a href="./static/images/lab-rollout.mp4">Download the rollout</a>
+  </video>
+  <figcaption class="figure-note">Real-world navigation footage. The selected trajectories for all three robot platforms are shown in <a href="#rollouts">the rollout gallery</a>.</figcaption>
+</figure>
 </section>
 
 <section id="examples" class="section" aria-labelledby="examples-title">
@@ -220,7 +238,7 @@ function updateGtaQuery(idx, btn) {
 <th rowspan="2">Method</th>
 <th rowspan="2">Setting</th>
 <th colspan="5">R2R-CE Val-Unseen (1,839 Episodes)</th>
-<th colspan="4">RxR-CE Val-Unseen (260 Episodes)</th>
+<th colspan="4">RxR-CE English Val-Unseen Subset (260 Episodes)</th>
 </tr>
 <tr>
 <th>NE (↓)</th>
@@ -261,11 +279,9 @@ function updateGtaQuery(idx, btn) {
 </tr>
 </tbody>
 </table>
-<span>
-<b>Table 1.</b> Comparison on R2R-CE and RxR-CE Val-Unseen splits. <span class="wordmark-geo"><b>G</b></span><span class="wordmark-reader"><b>TA</b></span> sets a new zero-shot state of the art, outperforming BZS-VLN by <b>+7.8% SR and +16.4% SPL</b> on R2R-CE and <b>+10.5% SR and +17.6% SPL</b> on RxR-CE.
-                </span>
 </div>
-<h3 class="sub-title" id="results-table-2">Counterfactual Reasoning</h3>
+<p class="table-caption">GTA-Light (†) is trained by distillation. VLN-Zero (‡) pre-explores scenes to build a map. In the shared 100-episode R2R-CE comparison with GPT-5.1 for both methods, GTA achieves 47.0% SR and 38.8% SPL, compared with 40.0% SR and 36.5% SPL for STRIDER.</p>
+<h3 class="sub-title" id="results-table-2">Counterfactual Reasoning on 100 Shared R2R-CE Episodes</h3>
 <div aria-labelledby="results-table-2" class="table-wrap" role="region" tabindex="0">
 <table class="result-table">
 <thead>
@@ -339,7 +355,7 @@ function updateGtaQuery(idx, btn) {
 <section id="BibTeX" class="section authors-section" aria-labelledby="BibTeX-title">
 <h2 id="BibTeX-title">Authors &amp; citation</h2>
 <p class="author-list"><span><a href="https://zeruili22.github.io/" rel="noopener noreferrer" target="_blank"><strong>Zerui Li</strong></a><sup>1†</sup></span> <span><strong>Hongpei Zheng</strong><sup>2†</sup></span> <span><strong>Fangguo Zhao</strong><sup>3</sup></span> <span><strong>Yanyan Shao</strong><sup>4</sup></span> <span><strong>Jian Zhou</strong><sup>1</sup></span> <span><strong>Sihao Lin</strong><sup>1,6</sup></span> <span><a href="https://sj-li.com/" rel="noopener noreferrer" target="_blank"><strong>Shijie Li</strong></a><sup>5</sup></span> <span><a href="http://www.qi-wu.me/" rel="noopener noreferrer" target="_blank"><strong>Qi Wu</strong></a><sup>1,6✉</sup></span></p>
-<p class="affiliations"><span><sup>1</sup>AIML, Adelaide University</span> <span><sup>2</sup>The University of Manchester</span> <span><sup>3</sup>Zhejiang University</span> <span><sup>4</sup>Zhejiang Wanli University</span> <span><sup>5</sup>A*STAR</span> <span><sup>6</sup>Responsible AI Research Centre, AIML, Adelaide University</span></p>
+<p class="affiliations"><span><sup>1</sup>AIML, Adelaide University</span> <span><sup>2</sup>The University of Manchester</span> <span><sup>3</sup>Zhejiang University</span> <span><sup>4</sup>Zhejiang Wanli University</span> <span><sup>5</sup>IAIC, A*STAR</span> <span><sup>6</sup>Responsible AI Research Centre, AIML, Adelaide University</span></p>
 <div class="citation-head"><span>BIBTEX</span><button id="copy-citation" type="button" aria-live="polite">Copy BibTeX</button></div>
 <pre id="citation"><code>@inproceedings{li2026gta,
   title     = {One Agent to Guide Them All: Empowering MLLMs for Vision-and-Language Navigation via Explicit World Representation},

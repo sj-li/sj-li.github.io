@@ -1,0 +1,18 @@
+.hero { min-height: auto; padding-block: 56px 38px; }
+.hero h1.hero-paper-heading { font-size: clamp(2rem, 4.1vw, 3.5rem); max-width: 1080px; }
+.hero-overview { max-width: 1080px; margin-bottom: 12px; }
+.hero-overview .figure-frame { margin: 18px 0 0; }
+.hero-overview .metric-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.hero-overview .metric { padding: 15px 20px; }
+.hero-overview .metric dt { font-size: .95rem; color: var(--muted); }
+.hero-overview .metric dd { margin: 0 0 6px; font-size: clamp(1.55rem, 3vw, 2.5rem); font-weight: 700; color: var(--forest); }
+.hero-overview .metric { display: flex; flex-direction: column-reverse; }
+.lab-demo { max-width: 560px; }
+.lab-demo video { width: 100%; height: auto; display: block; background: #17271e; }
+.section .figure-note, .hero-overview .figure-note { padding: 13px 17px; border-top: 1px solid var(--line); color: var(--muted); line-height: 1.55; }
+@media (max-width: 640px) {
+  .hero { padding-block: 40px 25px; }
+  .hero h1.hero-paper-heading { font-size: clamp(1.65rem, 7vw, 2rem); }
+  .hero-overview .metric-grid { grid-template-columns: 1fr; gap: 7px; }
+  .hero-overview .metric { padding: 10px 14px; }
+}

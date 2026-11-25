@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5ef">
+  <meta name="description" content="EgoVine trains compact planners to compare alternative actions and recover from mistakes in executable worlds compiled from real egocentric videos.">
+  <title>EgoVine: Post-Training with Branching Experience Compiled from Real-World Videos</title>
+  <link rel="canonical" href="https://sj-li.com/projects/egovine/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EgoVine: Post-Training with Branching Experience Compiled from Real-World Videos">
+  <meta property="og:description" content="Explore alternative actions and verified repairs in executable worlds compiled from real egocentric videos.">
+  <meta property="og:image" content="https://sj-li.com/projects/egovine/images/training-loop.webp">
+  <meta property="og:url" content="https://sj-li.com/projects/egovine/">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="../shared/main.js" defer></script>
+  <script src="routes.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="EgoVine, back to top"><span>Ego</span><span>Vine</span></a>
+    <nav class="topnav" aria-label="Main navigation">
+      <a href="#example">Interactive example</a><a href="#method">Method</a><a href="#results">Results</a><a href="#BibTeX">Citation</a>
+    </nav>
+    <div class="top-resources"><a class="top-paper" href="https://arxiv.org/abs/2610.23907">arXiv</a><a class="top-paper" href="../../index.html#publications">Publications</a></div>
+  </header>
+
+  <main id="top">
+    <section class="vine-hero page-width" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="hero-kicker"><span class="kicker-line" aria-hidden="true"></span>arXiv 2026</p>
+        <h1 id="hero-title"><span class="wordmark">EgoVine</span><span class="paper-title">Post-Training with Branching Experience Compiled from Real-World Videos</span></h1>
+        <div class="hero-authors">
+          <p class="author-names">
+            <span>Qinchuan Cheng<sup>1</sup></span> <span>Bowen Lyu<sup>2</sup></span> <span>Zhantao Gong<sup>3</sup></span>
+            <span>Angela Yao<sup>4</sup></span> <span>Cheston Tan<sup>5</sup></span> <span><a href="../../index.html">Shijie Li</a><sup>6</sup></span>
+          </p>
+          <p class="author-affils">
+            <span><sup>1</sup>Xi’an Jiaotong University</span> <span><sup>2</sup>Beijing Institute of Technology</span> <span><sup>3</sup>Nankai University</span>
+            <span><sup>4</sup>National University of Singapore</span> <span><sup>5</sup>A*STAR</span> <span><sup>6</sup>IAIC, A*STAR</span>
+          </p>
+        </div>
+        <p class="hero-summary">A cooking video records one way through a task. EgoVine turns it into a world where a planner can try other actions, see their consequences, and learn how to recover.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#example">Explore a branch</a>
+          <a class="button button-outline" href="https://arxiv.org/pdf/2610.23907">Read the paper</a>
+        </div>
+      </div>
+      <figure class="hero-demo">
+        <video controls playsinline preload="none" width="512" height="288" poster="images/branch-poster.webp" aria-label="Animated explanation of EgoVine comparing branches and learning from a verified repair">
+          <source src="images/branch-demo.mp4" type="video/mp4">
+          <a href="images/branch-demo.mp4">Download the explainer</a>
+        </video>
+        <figcaption><strong>Restore one decision. Explore several futures.</strong><br>Animated walkthrough of the paper’s branch-learning diagram.</figcaption>
+      </figure>
+    </section>
+
+    <div class="story page-width">
+      <nav class="contents" aria-label="On this page">
+        <span class="contents-label">CONTENTS</span>
+        <a href="#abstract" class="active" aria-current="location">Abstract</a><a href="#example">Interactive example</a>
+        <a href="#method">Training loop</a><a href="#results">Results</a><a href="#BibTeX">Citation</a>
+      </nav>
+      <div class="story-main">
+        <section class="section section-first" id="abstract" aria-labelledby="abstract-title">
+          <h2 id="abstract-title">Beyond the recorded trajectory</h2>
+          <p class="lead">To retrieve a bag and leave its cabinet closed, the planner may first have to open the cabinet. That action breaks a final goal condition temporarily, yet it makes the rest of the task possible.</p>
+          <p>With <a href="../ego2world/">Ego2World</a>, annotations from real egocentric videos become rules for an executable symbolic environment. The executor tracks the full world state. The planner acts from a textual goal, visible facts, and permitted interaction history. During training, EgoVine restores decision states and checks what actually follows each alternative, including mistakes and recovery paths beyond the recording.</p>
+        </section>
+
+        <section class="section" id="example" aria-labelledby="example-title">
+          <h2 id="example-title">Same decision, different futures</h2>
+          <p>The planner is holding a clean, dry bottle. It must stage the bottle at <code>microwave_03</code>, then retrieve and place a bag. Both navigation choices are valid and leave goal progress unchanged at the first step.</p>
+          <div class="route-explorer">
+            <div class="route-options">
+              <button type="button" aria-pressed="true" data-route="direct"><span>Go to <code>microwave_03</code></span><strong>8 actions</strong></button>
+              <button type="button" aria-pressed="false" data-route="detour"><span>Go to <code>microwave_02</code></span><strong>9 actions</strong></button>
+            </div>
+            <p class="route-summary" id="route-summary" aria-live="polite">Direct route. The first action reaches the start of the verified seven-action continuation.</p>
+            <ol class="route-steps">
+              <li id="first-action">Navigate to <code id="destination">microwave_03</code></li>
+              <li class="connector" id="connector" hidden>Navigate to <code>microwave_03</code> to rejoin</li>
+              <li>Place the bottle</li>
+              <li>Navigate to the bag</li>
+              <li>Open the cupboard</li>
+              <li>Retrieve the bag</li>
+              <li>Close the cupboard</li>
+              <li>Navigate to the destination</li>
+              <li>Place the bag</li>
+            </ol>
+          </div>
+          <p class="figure-note">Based on a replayed training prefix in Appendix E. Both paths completed the formal goal. The detour adds a connector before the same seven-action continuation.</p>
+        </section>
+
+        <section class="section" id="method" aria-labelledby="method-title">
+          <h2 id="method-title">The executable learning loop</h2>
+          <figure class="figure-frame">
+            <a class="figure-image-link" href="images/training-loop.webp"><img src="images/training-loop.webp" width="1584" height="793" decoding="async" loading="lazy" alt="EgoVine compiles video annotations into a symbolic world, aligns supervision with Union, compares branches with BunchFusion and updates a compact planner."></a>
+            <figcaption class="figure-note">EgoVine’s training and deployment pipeline. The updated planner returns to the executable worlds to collect experience from its own decisions.</figcaption>
+          </figure>
+          <div class="method-notes">
+            <div><h3>Union aligns four targets</h3><p><strong>Act</strong> learns what to do. <strong>Predict</strong> learns applicability and effects. <strong>Select</strong> compares candidate actions. <strong>Rejoin</strong> predicts whether a bounded connector can reach a checked route. A verified connector also supplies action targets.</p></div>
+            <div><h3>BunchFusion restores the decision</h3><p>Alternatives start from the same saved state, visible context, goal and remaining budget. Sampled continuations reveal longer-term effects. A separate bounded search checks whether a repair actually completes the task.</p></div>
+            <div><h3>The planner collects again</h3><p>Bunch TreeRL assigns relative credit within each fork using the outcomes of sampled continuations. Verified repairs supply supervised targets. After the update, the planner visits new states and exposes new mistakes to learn from.</p></div>
+          </div>
+          <details class="figure-disclosure">
+            <summary>See how branch outcomes assign credit</summary>
+            <figure class="figure-frame">
+              <a class="figure-image-link" href="images/branch-training.webp"><img src="images/branch-training.webp" width="1584" height="653" decoding="async" loading="lazy" alt="Two sampled branches have success rates of two thirds and one third. Relative credit is centered at each fork. A separate verified repair supplies supervision."></a>
+              <figcaption class="figure-note">The illustrated branches complete two of three and one of three continuations. Their outcomes determine relative credit. A separately verified repair contributes a supervised target.</figcaption>
+            </figure>
+          </details>
+        </section>
+
+        <section class="section" id="results" aria-labelledby="results-title">
+          <h2 id="results-title">Planning and recovery</h2>
+          <p>On the shared benchmark, <strong>EgoVine-1.5B leads Main and ties Luna on Long</strong>. <strong>EgoVine-0.5B leads the observed Recovery and Deviation scores</strong>. Each model receives the same permitted observations, executable actions and 12-decision allowance within a panel.</p>
+          <div class="table-wrap" role="region" tabindex="0" aria-label="Shared benchmark success rates">
+            <table class="result-table paper-table">
+              <thead><tr><th scope="col">Planner</th><th scope="col">Main<br><small>99 tasks</small></th><th scope="col">Long<br><small>51 tasks</small></th><th scope="col">Recovery<br><small>100 cases</small></th><th scope="col">Deviation<br><small>100 cases</small></th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Qwen Flash</th><td>44.4%</td><td>29.4%</td><td>46.0%</td><td>44.0%</td></tr>
+                <tr><th scope="row">DeepSeek Flash</th><td>59.6%</td><td>47.1%</td><td>61.0%</td><td>60.0%</td></tr>
+                <tr><th scope="row">Luna</th><td>74.7%</td><td class="best">66.7%</td><td>69.0%</td><td>67.0%</td></tr>
+                <tr><th scope="row">EgoVine-0.5B</th><td>79.8%</td><td>58.8%</td><td class="best">76.0%</td><td class="best">77.0%</td></tr>
+                <tr><th scope="row">EgoVine-1.5B</th><td class="best">81.8%</td><td class="best">66.7%</td><td>66.0%</td><td>66.0%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <details class="figure-disclosure">
+            <summary>Breakdowns by task family and reference length</summary>
+            <figure class="figure-frame"><a class="figure-image-link" href="images/task-breakdown.webp"><img src="images/task-breakdown.webp" width="1496" height="612" decoding="async" loading="lazy" alt="Main success rates by task family and Long success rates by reference length, with task counts shown for each group."></a></figure>
+          </details>
+          <div class="repair-result">
+            <h3>Recovery experience made the largest difference</h3>
+            <p>In a separate 0.5B training-stage comparison, adding recovery-expanded supervision raised success from <strong>63.6%</strong> to <strong>79.6%</strong>. The released checkpoint reached <strong>81.1%</strong> after the subsequent policy update. All stages were evaluated on the same 338 episodes across two seeds.</p>
+            <p>Bounded search found <strong>401 replay-verified repairs</strong> from 487 saved contexts, including 200 from episodes the actor ultimately failed.</p>
+          </div>
+          <p class="figure-note">The experiments use symbolic worlds compiled from real videos. Executable rule coverage determines which alternatives can be explored. Transfer to new video sources remains an open question.</p>
+        </section>
+
+        <section class="section authors-section" id="BibTeX" aria-labelledby="citation-title">
+          <h2 id="citation-title">Citation</h2>
+          <div class="citation-head"><span>BibTeX</span><button id="copy-citation" type="button">Copy BibTeX</button></div>
+          <pre id="citation"><code>@article{cheng2026egovine,
+  title   = {{EgoVine}: Post-Training with Branching Experience Compiled from Real-World Videos},
+  author  = {Cheng, Qinchuan and Lyu, Bowen and Gong, Zhantao and Yao, Angela and Tan, Cheston and Li, Shijie},
+  journal = {arXiv preprint arXiv:2610.23907},
+  year    = {2026}
+}</code></pre>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><div class="page-width"><a class="brand" href="#top"><span>Ego</span><span>Vine</span></a><a href="../../index.html#publications">Back to publications</a></div></footer>
+</body>
+</html>

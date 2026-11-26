@@ -2280,7 +2280,7 @@
     "description": "A UUBench interaction example showing user video and audio cues alongside the digital human’s audiovisual reply.",
     "selection_rationale": "The interaction example shows the user input and digital human reply side by side at thumbnail scale.",
     "reading_scope": "arXiv metadata, introduction, and Figure 2.",
-    "selected": false,
+    "selected": true,
     "width": 768,
     "height": 417,
     "kind": "paper-figure-crop"

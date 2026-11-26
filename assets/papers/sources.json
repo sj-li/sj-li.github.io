@@ -2264,5 +2264,25 @@
     "width": 512,
     "height": 288,
     "kind": "video-frame"
+  },
+  {
+    "id": 46,
+    "title": "UUBench: Understanding the Unspoken toward Full-Duplex Multimodal Interaction",
+    "file": "assets/papers/paper-46.webp",
+    "source": "https://arxiv.org/html/2611.30157v1/method.png",
+    "figure": "2(a)",
+    "crop": [
+      8,
+      0,
+      861,
+      463
+    ],
+    "description": "A UUBench interaction example showing user video and audio cues alongside the digital human’s audiovisual reply.",
+    "selection_rationale": "The interaction example shows the user input and digital human reply side by side at thumbnail scale.",
+    "reading_scope": "arXiv metadata, introduction, and Figure 2.",
+    "selected": false,
+    "width": 768,
+    "height": 417,
+    "kind": "paper-figure-crop"
   }
 ]
